@@ -6,7 +6,12 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    padding-top: 60px; /* Adds padding to the top of the body to prevent content from being hidden behind the header */
 }
+
+
+
+
 
 a {
     text-decoration: none;
@@ -19,10 +24,12 @@ a:hover {
 
 /* Header and Navigation */
 #header {
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu {
@@ -128,4 +135,19 @@ a:hover {
     height: 24px; /* Adjust this value to your preferred size */
     vertical-align: middle; /* Aligns the SVG with the text */
     margin-right: 8px; /* Adds some spacing between the SVG and the text */
+}
+
+
+@media (min-width: 768px) {
+    #header {
+        position: fixed; /* Makes the header stick to the top */
+        top: 0; /* Positions it at the top of the viewport */
+        left: 0; /* Aligns it to the left edge */
+        z-index: 1000; /* Ensures the header stays above other content */
+    }
+
+    /* Adjust the main content to account for the fixed header */
+    body {
+        padding-top: 60px; /* Adds padding to the top of the body to prevent content from being hidden behind the header */
+    }
 }
