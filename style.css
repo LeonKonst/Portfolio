@@ -1,75 +1,131 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Category Container */
-.category {
-    background: #fff;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-/* Titles */
-.CategoryTitle {
-    font-size: 2em;
+a:hover {
+    color: #0073e6;
+}
+
+/* Header and Navigation */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    margin: 0 15px;
+    color: #fff;
     font-weight: bold;
-    color: #333;
+}
+
+.menu a:hover {
+    color: #0073e6;
+}
+
+/* Personal Info Section */
+#personal-info {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.CategoryTitle {
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-h2 {
+#titles {
     font-size: 1.5em;
-    color: #555;
-    margin-bottom: 15px;
+    color: #0073e6;
+    margin-bottom: 20px;
 }
 
-h3 {
+#links h3 {
     font-size: 1.2em;
-    color: #777;
-    display: flex;
-    align-items: center;
+    margin: 10px 0;
 }
 
-/* Location Icon */
-h3 svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-/* Links Container */
-#links {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-}
-
-/* About Me Section */
 #aboutme {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #444;
-    margin-top: 15px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-top: 20px;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .category {
-        padding: 15px;
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .menu a {
+        margin: 10px 0;
+    }
+
     .CategoryTitle {
-        font-size: 1.5em;
+        font-size: 2em;
     }
-    h2 {
+
+    #titles {
         font-size: 1.2em;
     }
+
+    #links h3 {
+        font-size: 1em;
+    }
+
+    #aboutme {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #personal-info {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .CategoryTitle {
+        font-size: 1.8em;
+    }
+
+    #titles {
+        font-size: 1em;
+    }
+
+    #links h3 {
+        font-size: 0.9em;
+    }
+
+    #aboutme {
+        font-size: 0.9em;
+    }
+}
+
+#links h3 svg {
+    width: 24px; /* Adjust this value to your preferred size */
+    height: 24px; /* Adjust this value to your preferred size */
+    vertical-align: middle; /* Aligns the SVG with the text */
+    margin-right: 8px; /* Adds some spacing between the SVG and the text */
 }
