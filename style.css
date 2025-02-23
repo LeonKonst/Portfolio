@@ -1,85 +1,110 @@
-/* General Styles */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    color: #333;
     background-color: #f4f4f4;
-    color: #333;
-    padding-top: 60px; /* Adds padding to the top of the body to prevent content from being hidden behind the header */
 }
 
-
-
-
-
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-a:hover {
-    color: #0073e6;
-}
-
-/* Header and Navigation */
+/* Header and navigation */
 #header {
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 1rem 0;
 }
 
 .menu a {
-    margin: 0 15px;
-    color: #fff;
-    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .menu a:hover {
-    color: #0073e6;
+    color: #007bff;
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
 
-/* Personal Info Section */
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Personal info section */
 #personal-info {
-    padding: 20px;
     background-color: #fff;
-    margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .CategoryTitle {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #007bff;
 }
 
 #titles {
-    font-size: 1.5em;
-    color: #0073e6;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 #links h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
+    font-size: 1rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+#links h3 svg {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    vertical-align: middle;
 }
 
 #aboutme {
-    font-size: 1.1em;
+    margin-top: 2rem;
+    font-size: 1.1rem;
     line-height: 1.8;
-    margin-top: 20px;
 }
 
-/* Responsive Design */
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
@@ -87,67 +112,40 @@ a:hover {
     }
 
     .menu a {
-        margin: 10px 0;
+        margin: 0.5rem 0;
     }
 
-    .CategoryTitle {
-        font-size: 2em;
-    }
-
-    #titles {
-        font-size: 1.2em;
-    }
-
-    #links h3 {
-        font-size: 1em;
-    }
-
-    #aboutme {
-        font-size: 1em;
+    #links {
+        flex-direction: column;
     }
 }
 
-@media (max-width: 480px) {
-    #personal-info {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    .CategoryTitle {
-        font-size: 1.8em;
-    }
-
-    #titles {
-        font-size: 1em;
-    }
-
-    #links h3 {
-        font-size: 0.9em;
-    }
-
-    #aboutme {
-        font-size: 0.9em;
-    }
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-#links h3 svg {
-    width: 24px; /* Adjust this value to your preferred size */
-    height: 24px; /* Adjust this value to your preferred size */
-    vertical-align: middle; /* Aligns the SVG with the text */
-    margin-right: 8px; /* Adds some spacing between the SVG and the text */
+#personal-info {
+    animation: fadeIn 0.8s ease-out;
 }
 
+.menu a {
+    position: relative;
+}
 
-@media (min-width: 768px) {
-    #header {
-        position: fixed; /* Makes the header stick to the top */
-        top: 0; /* Positions it at the top of the viewport */
-        left: 0; /* Aligns it to the left edge */
-        z-index: 1000; /* Ensures the header stays above other content */
-    }
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+}
 
-    /* Adjust the main content to account for the fixed header */
-    body {
-        padding-top: 60px; /* Adds padding to the top of the body to prevent content from being hidden behind the header */
-    }
+.menu a:hover::after {
+    width: 100%;
+    left: 0;
 }
