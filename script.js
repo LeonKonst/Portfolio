@@ -7,7 +7,7 @@ const personalInfo = {
     city:"Copenhagen",},
     email:"le.kostas93@gmail.com",
     phonenumber:{prefix:"+45",
-        number:"50 65 35 39",
+        number:"11 22 33 44",
     },
     linkedin:{profilelink:"https://www.linkedin.com/in/konleon/",
         name:"Konstantinos Leontiadis, Ph.D.",
@@ -61,19 +61,19 @@ mymail.innerHTML = `<a href="mailto:${personalInfo.email}">
 ${personalInfo.email.toString()}
 </a>`;
 
-myphone.innerHTML = `<a href="tel:${personalInfo.phonenumber.prefix}${personalInfo.phonenumber.number}">
-<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                            </g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier"> 
-                                <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z" fill="#000000">
-                                </path> 
-                            </g>
-                        </svg>
-${personalInfo.phonenumber.number}
-</a>`;
+// myphone.innerHTML = `<a href="tel:${personalInfo.phonenumber.prefix}${personalInfo.phonenumber.number}">
+// <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+//                             <g id="SVGRepo_bgCarrier" stroke-width="0">
+//                             </g>
+//                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+//                             </g>
+//                             <g id="SVGRepo_iconCarrier"> 
+//                                 <path d="M1 5V1H7V5L4.5 7.5L8.5 11.5L11 9H15V15H11C5.47715 15 1 10.5228 1 5Z" fill="#000000">
+//                                 </path> 
+//                             </g>
+//                         </svg>
+// ${personalInfo.phonenumber.number}
+// </a>`;
 
 mylinkedin.innerHTML = `<a href="${personalInfo.linkedin.profilelink}">
 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
