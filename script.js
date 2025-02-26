@@ -1,3 +1,156 @@
+// Info that will be displayed in the webpage
+
+const personalInfo = {
+    name:"Konstantinos",
+    surname:"Leontiadis",
+    location:{country:"Denmark",
+    city:"Copenhagen",},
+    email:"le.kostas93@gmail.com",
+    phonenumber:{prefix:"+45",
+        number:"11 22 33 44",
+    },
+    linkedin:{profilelink:"https://www.linkedin.com/in/konleon/",
+        name:"Konstantinos Leontiadis, Ph.D.",
+    },
+    github:{profilelink:"https://github.com/LeonKonst",
+        name:"LeonKonst",
+    },
+
+}
+
+const titles = [
+    ["Chemical Engineer", "CM"],
+    ["Polymer Scientist","PS"],
+    ["Material Scientist", "MS"],
+    ["Web developer", "WD"],
+];
+
+
+//publications
+
+publications = [
+    {artOrProc:"Article",
+    title:"Solubility of CO<sub>2</sub> in 3-amino-1-propanol and in N-methyldiethanolamine aqueous solutions: Experimental investigation and correlation using the CPA equation of state",
+    journal : "Fluid Phase Equilibria",
+    volume : 500,
+    issue: "",
+    pages : "112254",
+    year : 2019,
+    doi :"https://doi.org/10.1016/j.fluid.2019.112254",
+    url : "https://www.sciencedirect.com/science/article/pii/S0378381219303073",
+    author : [["Konstantinos","Leontiadis"],
+         ["Evangelos", "Tzimpilis"],
+         ["Dimitra", "Aslanidou"], 
+         ["Ioannis", "Tsivintzelis"]],
+    titleTags:["CM"],
+    keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
+    },
+    
+    {artOrProc:"Article",
+        title:"Surface Response Analysis for the Optimization of Mechanical and Thermal Properties of Polypropylene Composite Drawn Fibers with Talc and Carbon Nanotubes",
+        journal : "Polymers",
+        volume : 14,
+        issue: 7,
+        pages : "1329",
+        year : 2022,
+        doi :"https://doi.org/10.3390/polym14071329",
+        url : "https://www.mdpi.com/2073-4360/14/7/1329",
+        author : [["Konstantinos","Leontiadis"],
+             ["Costas", "Tsioptsias"],
+             ["Stavros", "Messaritakis"], 
+             ["Aikaterini", "Terzaki"],
+             ["Panagiotis", "Xidas"],
+             ["Kyriakos", "Mystikos"],
+             ["Evangelos", "Tzimpilis"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "Polypropylene"],
+    },
+
+    {artOrProc:"Article",
+        title:"Optimization of Thermal and Mechanical Properties of Polypropylene-Wollastonite Composite Drawn Fibers Based on Surface Response Analysis",
+        journal : "Polymers",
+        volume : 14,
+        issue: 5,
+        pages : "924",
+        year : 2022,
+        doi :"https://doi.org/10.3390/polym14050924",
+        url : "https://www.mdpi.com/2073-4360/14/5/924",
+        author : [["Konstantinos","Leontiadis"],
+             ["Costas", "Tsioptsias"],
+             ["Stavros", "Messaritakis"], 
+             ["Aikaterini", "Terzaki"],
+             ["Panagiotis", "Xidas"],
+             ["Kyriakos", "Mystikos"],
+             ["Evangelos", "Tzimpilis"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "DoE"],
+    },
+
+    {artOrProc:"Article",
+        title:"Effect of the Filler Modification on the Thermal and Mechanical Properties of Composite Polypropylene/Wollastonite Drawn Fibers",
+        journal : "Polymers",
+        volume : 15,
+        issue: 14,
+        pages : "2986",
+        year : 2023,
+        doi :"https://doi.org/10.3390/polym15142986",
+        url : "https://www.mdpi.com/2073-4360/15/14/2986",
+        author : [["Konstantinos","Leontiadis"],
+             ["Dimitris", "Achilias"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "DoE"],
+    },
+    
+    
+    // @INPROCEEDINGS{Leontiadis2022,
+    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //   title = {\emph{Optimization of polypropylene-wollastonite nanocomposite drawn
+    // fibers through response surface methodology}},
+    //   booktitle = {13th Panhellenic Scientific conference of Chemical
+    // Engineering},
+    //   year = {2022},
+    //   address = {Patra, Greece}
+    // }
+    
+    
+    // @INPROCEEDINGS{Leontiadis2021,
+    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and  Karatasos Kostas and Tsivintzelis, Ioannis},
+    //   title = {\emph{Nanocomposite polypropylene drawn fibers with high tensile strength}},
+    // booktitle = {18th International Conference on Nanosciences \&
+    // Nanotechnologies (NN21)},
+    //   year = {2021},
+    //   address = {Thessaloniki, Greece}
+    // }
+    
+    // @INPROCEEDINGS{Leontiadis2021b,
+    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //   title = {\emph{Development of nanocomposite polypropylene-wollastonite fibers}},
+    // booktitle = {1st Online
+    // Conference for new scientists “Mineral resources- Environment-Chemical Engineering”},
+    //   year = {2021},
+    //   address = {Kozani, Greece}
+    // }
+    
+    
+    
+    // @Article{Leontiadis2024,
+    // AUTHOR = {Leontiadis, Konstantinos and Theodoratou, Katerina and Tsioptsias, Costas and Tsivintzelis, Ioannis},
+    // TITLE = {Properties Optimization of Polypropylene/Montmorillonite Nanocomposite Drawn Fibers},
+    // JOURNAL = {Nanomaterials},
+    // VOLUME = {14},
+    // YEAR = {2024},
+    // NUMBER = {2},
+    // ARTICLE-NUMBER = {223},
+    // URL = {https://www.mdpi.com/2079-4991/14/2/223},
+    // ISSN = {2079-4991},
+    // ABSTRACT = {In this study, the mechanical properties and thermal stability of composite polypropylene (PP) drawn fibers with two different organically modified montmorillonites were experimentally investigated and optimized using a response surface methodology. Specifically, the Box-Behnken Design of Experiments method was used in order to investigate the effect of the filler content, the compatibilizer content, and the drawing temperature on the tensile strength and the onset decomposition temperature of the PP composite drawn fibers. The materials were characterized by tensile tests, thermogravimetry, and X-ray diffraction. Two types of composites were investigated with the only difference being the type of filler, namely, Cloisite&reg; 10A or Cloisite&reg; 15A. In both cases, statistically significant models were obtained regarding the effect of design variables on tensile strength, while poor significance was observed for the onset decomposition temperature. Nanocomposite fibers with tensile strength up to 540 MPa were obtained. Among the design variables, the drawing temperature exhibited the most notable effect on tensile strength, while the effect of both clays was not significant.},
+    // DOI = {10.3390/nano14020223}
+    // }
+];
+
 
 
 
@@ -8,6 +161,7 @@ const mytitles = document.getElementById("titles");
 const mylinkedin = document.getElementById("linkedin");
 const mygithub = document.getElementById("github");
 const aboutme = document.getElementById("aboutme");
+const track = document.getElementById("carousel-track");
 
 // Display info in the webpage
 
@@ -72,6 +226,19 @@ mygithub.innerHTML = `<a href="${personalInfo.github.profilelink}">
 ${personalInfo.github.name}
 </a>`;
 
+publications.forEach(element => {
+    track.innerHTML += `
+    <button class="publication">
+        <p>${element.artOrProc}</p>
+        <h4>${element.title}</h4>
+    </button>
+    <div class="panel">
+        <a href="${element.url}">Link</a>
+    </div>
+    `;
+});
+
+
 //about me paragraph
 aboutme.innerText = "Lorem";
 
@@ -85,6 +252,7 @@ function toggleMenu() {
 }
 
 
+
 const currentYear = new Date().getFullYear();
             // Insert the current year into the footer
 document.getElementById('current-year').textContent = currentYear;
@@ -95,3 +263,5 @@ document.getElementById('current-year').textContent = currentYear;
 // - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
 // - na valo se kapoia auto to parathiro poy anaptisete. 
 // - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
+
+
