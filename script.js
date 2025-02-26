@@ -37,7 +37,7 @@ const aboutme = document.getElementById("aboutme");
 // Display info in the webpage
 
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
-mytitles.innerText = `I am a `
+mytitles.innerText = `I am a `;
 
 
 mylocation.innerHTML = `<a href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
