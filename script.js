@@ -101,54 +101,154 @@ publications = [
              ["Dimitris", "Achilias"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM","MS","PS"],
-        keywords:["Polymer Composites", "DoE"],
+        keywords:["Polymer Composites", "Wollastonite"],
     },
     
-    
-    // @INPROCEEDINGS{Leontiadis2022,
-    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //   title = {\emph{Optimization of polypropylene-wollastonite nanocomposite drawn
-    // fibers through response surface methodology}},
-    //   booktitle = {13th Panhellenic Scientific conference of Chemical
-    // Engineering},
-    //   year = {2022},
-    //   address = {Patra, Greece}
-    // }
-    
-    
-    // @INPROCEEDINGS{Leontiadis2021,
-    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and  Karatasos Kostas and Tsivintzelis, Ioannis},
-    //   title = {\emph{Nanocomposite polypropylene drawn fibers with high tensile strength}},
-    // booktitle = {18th International Conference on Nanosciences \&
-    // Nanotechnologies (NN21)},
-    //   year = {2021},
-    //   address = {Thessaloniki, Greece}
-    // }
-    
-    // @INPROCEEDINGS{Leontiadis2021b,
-    //   author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //   title = {\emph{Development of nanocomposite polypropylene-wollastonite fibers}},
-    // booktitle = {1st Online
-    // Conference for new scientists “Mineral resources- Environment-Chemical Engineering”},
-    //   year = {2021},
-    //   address = {Kozani, Greece}
-    // }
-    
-    
-    
-    // @Article{Leontiadis2024,
-    // AUTHOR = {Leontiadis, Konstantinos and Theodoratou, Katerina and Tsioptsias, Costas and Tsivintzelis, Ioannis},
-    // TITLE = {Properties Optimization of Polypropylene/Montmorillonite Nanocomposite Drawn Fibers},
-    // JOURNAL = {Nanomaterials},
-    // VOLUME = {14},
-    // YEAR = {2024},
-    // NUMBER = {2},
-    // ARTICLE-NUMBER = {223},
-    // URL = {https://www.mdpi.com/2079-4991/14/2/223},
-    // ISSN = {2079-4991},
-    // ABSTRACT = {In this study, the mechanical properties and thermal stability of composite polypropylene (PP) drawn fibers with two different organically modified montmorillonites were experimentally investigated and optimized using a response surface methodology. Specifically, the Box-Behnken Design of Experiments method was used in order to investigate the effect of the filler content, the compatibilizer content, and the drawing temperature on the tensile strength and the onset decomposition temperature of the PP composite drawn fibers. The materials were characterized by tensile tests, thermogravimetry, and X-ray diffraction. Two types of composites were investigated with the only difference being the type of filler, namely, Cloisite&reg; 10A or Cloisite&reg; 15A. In both cases, statistically significant models were obtained regarding the effect of design variables on tensile strength, while poor significance was observed for the onset decomposition temperature. Nanocomposite fibers with tensile strength up to 540 MPa were obtained. Among the design variables, the drawing temperature exhibited the most notable effect on tensile strength, while the effect of both clays was not significant.},
-    // DOI = {10.3390/nano14020223}
-    // }
+    {artOrProc:"Article",
+        title:"Effect of an Antioxidant and a Compatibilizer on the Mechanical Properties of Virgin and Thermally Aged Polypropylene Drawn Fibers",
+        journal : "Textiles",
+        volume : 2,
+        issue: 3,
+        pages : "499-510",
+        year : 2022,
+        doi :"https://doi.org/10.3390/textiles2030028",
+        url : "https://www.mdpi.com/2673-7248/2/3/28",
+        author : [["Costas","Tsioptsias"],
+            ["Georgia", "Gkouzouma"],
+            ["Konstantinos", "Leontiadis"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "Aging"],
+    },
+
+    {artOrProc:"Article",
+        title:"Properties Optimization of Polypropylene/Montmorillonite Nanocomposite Drawn Fibers",
+        journal : "Nanomaterials",
+        volume : 14,
+        issue: 2,
+        pages : "223",
+        year : 2024,
+        doi :"https://doi.org/10.3390/nano14020223",
+        url : "https://www.mdpi.com/2079-4991/14/2/223",
+        author : [["Konstantinos","Leontiadis"],
+            ["Katerina", "Theodoratou"],
+            ["Costas", "Tsioptsias"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "Aging"],
+        abstract:"In this study, the mechanical properties and thermal stability of composite polypropylene (PP) drawn fibers with two different organically modified montmorillonites were experimentally investigated and optimized using a response surface methodology. Specifically, the Box-Behnken Design of Experiments method was used in order to investigate the effect of the filler content, the compatibilizer content, and the drawing temperature on the tensile strength and the onset decomposition temperature of the PP composite drawn fibers. The materials were characterized by tensile tests, thermogravimetry, and X-ray diffraction. Two types of composites were investigated with the only difference being the type of filler, namely, Cloisite&reg; 10A or Cloisite&reg; 15A. In both cases, statistically significant models were obtained regarding the effect of design variables on tensile strength, while poor significance was observed for the onset decomposition temperature. Nanocomposite fibers with tensile strength up to 540 MPa were obtained. Among the design variables, the drawing temperature exhibited the most notable effect on tensile strength, while the effect of both clays was not significant."
+    },
+        
+    //     @Article{Tsioptsias2024,
+    //     AUTHOR = {Tsioptsias, Costas and Leontiadis, Konstantinos and Ntampou, Xanthi and Tsivintzelis, Ioannis},
+    //     TITLE = {Modification of Talc and Mechanical Properties of Polypropylene-Modified Talc Composite Drawn Fibers},
+    //     JOURNAL = {Journal of Composites Science},
+    //     VOLUME = {8},
+    //     YEAR = {2024},
+    //     NUMBER = {3},
+    //     ARTICLE-NUMBER = {91},
+    //     URL = {https://www.mdpi.com/2504-477X/8/3/91},
+    //     ISSN = {2504-477X},
+    //     %ABSTRACT = {A large amount of the polypropylene (PP) produced worldwide is used in the form of fibers. In this work, a new modification route for talc and PP is investigated, which is based on the in situ polymerization of a silane–siloxane monomer mixture on the surface of talc particles or PP pellets, respectively. The obtained modified talc and PP samples were used for the development of PP-talc composite drawn fibers. Tensile tests, thermogravimetry (TGA), and X-ray diffraction (XRD) were used for the characterization of the materials. It was observed that such a modification procedure resulted in the exfoliation of some talc particles. Enhanced tensile strength was observed for composite drawn fibers of a low talc content (1% with respect to PP) and a low modifier content (2% with respect to talc), while co-aggregation of talc and silicone may occur at high silicone and talc contents, resulting in the inferior mechanical performance of the corresponding composites. It was concluded that the produced silicone polymer simultaneously acts as a modifier, antioxidant, and compatibilizer. The proposed modification route is promising and should be further optimized.},
+    //     DOI = {10.3390/jcs8030091}
+    //     }
+        
+    //     @article{KONTOS2023113800,
+    //     title = {CO2 solubility in aqueous solutions of blended amines: Experimental data for mixtures with MDEA, AMP and MPA and modeling with the modified Kent-Eisenberg model},
+    //     journal = {Fluid Phase Equilibria},
+    //     volume = {570},
+    //     pages = {113800},
+    //     year = {2023},
+    //     issn = {0378-3812},
+    //     doi = {https://doi.org/10.1016/j.fluid.2023.113800},
+    //     url = {https://www.sciencedirect.com/science/article/pii/S037838122300081X},
+    //     author = {Giannis Kontos and Konstantinos Leontiadis and Ioannis Tsivintzelis},
+    //     keywords = {CO capture, Alkanolamines, Chemical absorption, Phase equilibrium, MDEA, AMP, MPA}
+    //     }       
+        
+    //     @article{polym14020260,
+    //     AUTHOR = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //     TITLE = {Experimental Investigation of Polypropylene Composite Drawn Fibers with Talc, Wollastonite, Attapulgite and Single-Wall Carbon Nanotubes},
+    //     JOURNAL = {Polymers},
+    //     VOLUME = {14},
+    //     YEAR = {2022},
+    //     NUMBER = {2},
+    //     ARTICLE-NUMBER = {260},
+    //     URL = {https://www.mdpi.com/2073-4360/14/2/260},
+    //     PubMedID = {35054667},
+    //     ISSN = {2073-4360}
+    //     }
+        
+    //     @article{Tsioptsias2021b,
+    //     author = {C Tsioptsias and K Leontiadis and E Tzimpilis and I Tsivintzelis},
+    //     title ={Polypropylene nanocomposite fibers: A review of current trends and new developments},
+    //     journal = {Journal of Plastic Film \& Sheeting},
+    //     volume = {37},
+    //     number = {3},
+    //     pages = {283-311},
+    //     year = {2021},
+    //     doi = {10.1177/8756087920972146},
+    //     URL = {https://doi.org/10.1177/8756087920972146},
+    //     eprint = {https://doi.org/10.1177/8756087920972146}
+    //     }
+                        
+    //     @INPROCEEDINGS{Leontiadis2022,
+    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //       title = {\emph{Optimization of polypropylene-wollastonite nanocomposite drawn
+    //     fibers through response surface methodology}},
+    //       booktitle = {13th Panhellenic Scientific conference of Chemical
+    //     Engineering},
+    //       year = {2022},
+    //       address = {Patra, Greece}
+    //     }
+        
+    //     @INPROCEEDINGS{Tsioptsias2022,
+    //     author = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //     title = {\emph{Development and characterization of composite drawn polypropylene fibers}},
+    //     booktitle = {13th Panhellenic Scientific conference of Chemical Engineering},
+    //     year = {2022},
+    //     address = {Patra, Greece}
+    //     }
+        
+    //     @INPROCEEDINGS{Tsioptsias2021,
+    //       author = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //       title = {\emph{Nanocomposite polypropylene drawn fibers with various inorganic fillers}},
+    //     booktitle = {13th Hellenic Polymer Society International Conference},
+    //       year = {2021},
+    //       address = {Virtual Event}
+    //     }
+        
+    //     @INPROCEEDINGS{Leontiadis2021,
+    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and  Karatasos Kostas and Tsivintzelis, Ioannis},
+    //       title = {\emph{Nanocomposite polypropylene drawn fibers with high tensile strength}},
+    //     booktitle = {18th International Conference on Nanosciences \&
+    //     Nanotechnologies (NN21)},
+    //       year = {2021},
+    //       address = {Thessaloniki, Greece}
+    //     }
+        
+    //     @INPROCEEDINGS{Leontiadis2021b,
+    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //       title = {\emph{Development of nanocomposite polypropylene-wollastonite fibers}},
+    //     booktitle = {1st Online
+    //     Conference for new scientists “Mineral resources- Environment-Chemical Engineering”},
+    //       year = {2021},
+    //       address = {Kozani, Greece}
+    //     }
+        
+    //     @INPROCEEDINGS{Kontos2019,
+    //       author = {Kontos, Giannis and Leontiadis, Konstantinos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
+    //       title = {\emph{Experimental definition of CO2 solubility in aqueous alkanolamine
+    //     solutions}},
+    //     booktitle = {12th Panhellenic Scientific conference of Chemical
+    //     Engineering},
+    //       year = {2019},
+    //       address = {Athens, Greece}
+    //     }
+        
+        
+
+           
 ];
 
 
