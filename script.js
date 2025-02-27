@@ -44,6 +44,7 @@ publications = [
          ["Ioannis", "Tsivintzelis"]],
     titleTags:["CM"],
     keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
+    abstract:"The solubility of CO<sub>2</sub> in 1.3M and 2M aqueous N-methyldiethanolamine (MDEA) and 3-amino-1-propanol (MPA) solutions was experimentally measured at 298, 313, 323 and 333 K, using a pressure decay method. Since only limited experimental data exist in literature for MPA aqueous systems, the results of this study were compared with literature data mainly for 2M MDEA solutions, showing satisfactory agreement. The obtained new experimental data were used to parameterize the Cubic-plus-Association (CPA) equation of state using a pseudo chemical reaction approach, i.e. to account for chemical interactions as very strong specific intermolecular interactions, which is a crude approximation, but is necessary for applying equation of state models. It was found that the model satisfactorily describes the experimental data using six or four binary parameters for the CO<sub>2</sub>-MPA or CO<sub>2</sub>-MDEA interactions, respectively, which, however, are less than the number of adjustable parameters in similar literature models.", 
     },
     
     {artOrProc:"Article",
@@ -65,6 +66,7 @@ publications = [
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM","MS","PS"],
         keywords:["Polymer Composites", "Polypropylene"],
+        abstract:"A large portion of the produced Polypropylene (PP) is used in the form of fibers. In this industrially oriented study, the development of composite PP drawn fibers was investigated. Two types of fillers were used (ultra-fine talc and single-wall carbon nanotubes). Optimization of the thermal and mechanical properties of the produced composite drawn fibers was performed, based on the Box-Behnken design of experiments method (surface response analysis). The effect of additives, other than the filler, but typical in industrial applications, such as an antioxidant and a common compatibilizer, was investigated. The drawing ratio, the filler, and the compatibilizer or the antioxidant content were selected as design variables, whereas the tensile strength and the onset decomposition temperature were set as response variables. Fibers with very high tensile strength (up to 806 MPa) were obtained. The results revealed that the maximization of both the tensile strength and the thermal stability was not feasible for composites with talc due to multiple interactions among the used additives (antioxidant, compatibilizer, and filler). Additionally, it was found that the addition of talc in the studied particle size improved the mechanical strength of fibers only if low drawing ratios were used. On the other hand, the optimization targeting maximization of both tensile strength and thermal stability was feasible in the case of SWCNT composite fibers. It was found that the addition of carbon nanotubes improved the tensile strength; however, such improvement was rather small compared with the tremendous increase of tensile strength due to drawing.",
     },
 
     {artOrProc:"Article",
@@ -86,6 +88,7 @@ publications = [
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM","MS","PS"],
         keywords:["Polymer Composites", "DoE"],
+        abstract:"The thermal and mechanical properties of polypropylene-wollastonite composite drawn fibers were optimized via experiments selected with the Box-Behnken approach. The drawing ratio, the filler and the compatibilizer content were chosen as design variables, while the tensile strength, the melting enthalpy and the onset decomposition temperature were set as response variables. Drawn fibers with tensile strength up to 535 MPa were obtained. Results revealed that the drawing ratio is the most important factor for the enhancement of tensile strength, followed by the filler content. All the design variables slightly affected the melting temperature and the crystallinity of the matrix. Also, it was found that the addition of polypropylene grafted with maleic anhydride as compatibilizer has a multiple effect on the final properties, i.e., it induces the dispersion of both the antioxidant and the filler, tending to increase thermal stability and tensile strength, while, on the same time, deteriorates mechanical and thermal properties due to its lower molecular weight and thermal stability. Such behavior does not allow for simultaneous maximization of thermal stability and tensile strength. Optimization based on a compromise, i.e., targeting maximization of tensile strength and onset decomposition temperature higher than 300 °C, yields high desirability values and predictions in excellent agreement with verification experiments."
     },
 
     {artOrProc:"Article",
@@ -102,6 +105,7 @@ publications = [
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM","MS","PS"],
         keywords:["Polymer Composites", "Wollastonite"],
+        abstract:"Polypropylene (PP) is one of the most commercially used thermoplastics, while a significant amount of PP is used in the form of fibers. In this study, the effects of modification of the filler on the thermal and mechanical properties of composite polypropylene/wollastonite drawn fibers were investigated. In this direction, the surface modification of wollastonite with various organic acids, such as myristic, maleic, malonic glutaric, pimelic, and suberic acid, and the use of two solvents were studied. The surface-modified wollastonite particles were used to produce composite polypropylene drawn fibers. The modification efficiency was found to be slightly better when a non-polar solvent (carbon tetrachloride) was used instead of a polar one (ethanol). FTIR experiments showed that myristic, maleic, malonic, and pimelic acid can strongly interact with wollastonite’s surface. However, the mechanical strength of the composite fibers was not increased compared to that of the neat PP fibers, suggesting inadequate interactions between PP and wollastonite particles. Furthermore, it was observed that the drawing process increased around 10% the crystallinity of all samples. Wollastonite modified with malonic acid acted as a nucleating agent for β-crystals. The onset decomposition temperature increased by 5–10 °C for all samples containing 2% wollastonite, either modified or not. The suggested modifications of wollastonite might be more suitable for less hydrophobic polymers.",
     },
     
     {artOrProc:"Article",
@@ -119,6 +123,7 @@ publications = [
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM","MS","PS"],
         keywords:["Polymer Composites", "Aging"],
+        abstract:"Polypropylene (PP), like all polymers, is susceptible to various forms of aging. Drawn fibers exhibit increased mechanical properties; however, the drawing results in non-equilibrium (decreased entropy) structures, due to the orientation of the polymer chains. Consequently, the drawn fibers are susceptible to an additional form of physical aging. In this work, the effect of common industrial additives on the mechanical strength of virgin and thermally aged PP fibers was studied. Thermogravimetry and tensile strength tests were used to characterize the drawn fibers, before and after physical thermal aging. PP drawn at 120 °C and at a drawing ratio of 7 exhibited a tensile strength of 549 MPa, while the incorporation of an antioxidant and a compatibilizer lowered the tensile strength down to 449 MPA. This reduction was related to the constraint of chain alignment due to the low molecular weight and poor dispersion of the additives. Depending on the aging temperature, shrinking occurred to different extents in pure PP fibers, accompanied by a 6–7% reduction in tensile strength. The fibers with incorporated additives exhibited higher rate and degree of shrinking. Briefly, the incorporation of such additives in drawn PP resulted in the deterioration of the fibers’ mechanical tensile properties. Since such additives have an indisputable value for non-drawn samples and their usage is necessary for various reasons also in drawn samples, e.g., for their protection from chemical aging/decomposition, additives specific for drawn samples should be developed.",
     },
 
     {artOrProc:"Article",
@@ -138,120 +143,82 @@ publications = [
         keywords:["Polymer Composites", "Aging"],
         abstract:"In this study, the mechanical properties and thermal stability of composite polypropylene (PP) drawn fibers with two different organically modified montmorillonites were experimentally investigated and optimized using a response surface methodology. Specifically, the Box-Behnken Design of Experiments method was used in order to investigate the effect of the filler content, the compatibilizer content, and the drawing temperature on the tensile strength and the onset decomposition temperature of the PP composite drawn fibers. The materials were characterized by tensile tests, thermogravimetry, and X-ray diffraction. Two types of composites were investigated with the only difference being the type of filler, namely, Cloisite&reg; 10A or Cloisite&reg; 15A. In both cases, statistically significant models were obtained regarding the effect of design variables on tensile strength, while poor significance was observed for the onset decomposition temperature. Nanocomposite fibers with tensile strength up to 540 MPa were obtained. Among the design variables, the drawing temperature exhibited the most notable effect on tensile strength, while the effect of both clays was not significant."
     },
-        
-    //     @Article{Tsioptsias2024,
-    //     AUTHOR = {Tsioptsias, Costas and Leontiadis, Konstantinos and Ntampou, Xanthi and Tsivintzelis, Ioannis},
-    //     TITLE = {Modification of Talc and Mechanical Properties of Polypropylene-Modified Talc Composite Drawn Fibers},
-    //     JOURNAL = {Journal of Composites Science},
-    //     VOLUME = {8},
-    //     YEAR = {2024},
-    //     NUMBER = {3},
-    //     ARTICLE-NUMBER = {91},
-    //     URL = {https://www.mdpi.com/2504-477X/8/3/91},
-    //     ISSN = {2504-477X},
-    //     %ABSTRACT = {A large amount of the polypropylene (PP) produced worldwide is used in the form of fibers. In this work, a new modification route for talc and PP is investigated, which is based on the in situ polymerization of a silane–siloxane monomer mixture on the surface of talc particles or PP pellets, respectively. The obtained modified talc and PP samples were used for the development of PP-talc composite drawn fibers. Tensile tests, thermogravimetry (TGA), and X-ray diffraction (XRD) were used for the characterization of the materials. It was observed that such a modification procedure resulted in the exfoliation of some talc particles. Enhanced tensile strength was observed for composite drawn fibers of a low talc content (1% with respect to PP) and a low modifier content (2% with respect to talc), while co-aggregation of talc and silicone may occur at high silicone and talc contents, resulting in the inferior mechanical performance of the corresponding composites. It was concluded that the produced silicone polymer simultaneously acts as a modifier, antioxidant, and compatibilizer. The proposed modification route is promising and should be further optimized.},
-    //     DOI = {10.3390/jcs8030091}
-    //     }
-        
-    //     @article{KONTOS2023113800,
-    //     title = {CO2 solubility in aqueous solutions of blended amines: Experimental data for mixtures with MDEA, AMP and MPA and modeling with the modified Kent-Eisenberg model},
-    //     journal = {Fluid Phase Equilibria},
-    //     volume = {570},
-    //     pages = {113800},
-    //     year = {2023},
-    //     issn = {0378-3812},
-    //     doi = {https://doi.org/10.1016/j.fluid.2023.113800},
-    //     url = {https://www.sciencedirect.com/science/article/pii/S037838122300081X},
-    //     author = {Giannis Kontos and Konstantinos Leontiadis and Ioannis Tsivintzelis},
-    //     keywords = {CO capture, Alkanolamines, Chemical absorption, Phase equilibrium, MDEA, AMP, MPA}
-    //     }       
-        
-    //     @article{polym14020260,
-    //     AUTHOR = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //     TITLE = {Experimental Investigation of Polypropylene Composite Drawn Fibers with Talc, Wollastonite, Attapulgite and Single-Wall Carbon Nanotubes},
-    //     JOURNAL = {Polymers},
-    //     VOLUME = {14},
-    //     YEAR = {2022},
-    //     NUMBER = {2},
-    //     ARTICLE-NUMBER = {260},
-    //     URL = {https://www.mdpi.com/2073-4360/14/2/260},
-    //     PubMedID = {35054667},
-    //     ISSN = {2073-4360}
-    //     }
-        
-    //     @article{Tsioptsias2021b,
-    //     author = {C Tsioptsias and K Leontiadis and E Tzimpilis and I Tsivintzelis},
-    //     title ={Polypropylene nanocomposite fibers: A review of current trends and new developments},
-    //     journal = {Journal of Plastic Film \& Sheeting},
-    //     volume = {37},
-    //     number = {3},
-    //     pages = {283-311},
-    //     year = {2021},
-    //     doi = {10.1177/8756087920972146},
-    //     URL = {https://doi.org/10.1177/8756087920972146},
-    //     eprint = {https://doi.org/10.1177/8756087920972146}
-    //     }
-                        
-    //     @INPROCEEDINGS{Leontiadis2022,
-    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //       title = {\emph{Optimization of polypropylene-wollastonite nanocomposite drawn
-    //     fibers through response surface methodology}},
-    //       booktitle = {13th Panhellenic Scientific conference of Chemical
-    //     Engineering},
-    //       year = {2022},
-    //       address = {Patra, Greece}
-    //     }
-        
-    //     @INPROCEEDINGS{Tsioptsias2022,
-    //     author = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //     title = {\emph{Development and characterization of composite drawn polypropylene fibers}},
-    //     booktitle = {13th Panhellenic Scientific conference of Chemical Engineering},
-    //     year = {2022},
-    //     address = {Patra, Greece}
-    //     }
-        
-    //     @INPROCEEDINGS{Tsioptsias2021,
-    //       author = {Tsioptsias, Costas and Leontiadis, Konstantinos and Messaritakis, Stavros and Terzaki, Aikaterini and Xidas, Panagiotis and Mystikos, Kyriakos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //       title = {\emph{Nanocomposite polypropylene drawn fibers with various inorganic fillers}},
-    //     booktitle = {13th Hellenic Polymer Society International Conference},
-    //       year = {2021},
-    //       address = {Virtual Event}
-    //     }
-        
-    //     @INPROCEEDINGS{Leontiadis2021,
-    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and  Karatasos Kostas and Tsivintzelis, Ioannis},
-    //       title = {\emph{Nanocomposite polypropylene drawn fibers with high tensile strength}},
-    //     booktitle = {18th International Conference on Nanosciences \&
-    //     Nanotechnologies (NN21)},
-    //       year = {2021},
-    //       address = {Thessaloniki, Greece}
-    //     }
-        
-    //     @INPROCEEDINGS{Leontiadis2021b,
-    //       author = {Leontiadis, Konstantinos and Tsioptsias, Costas  and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //       title = {\emph{Development of nanocomposite polypropylene-wollastonite fibers}},
-    //     booktitle = {1st Online
-    //     Conference for new scientists “Mineral resources- Environment-Chemical Engineering”},
-    //       year = {2021},
-    //       address = {Kozani, Greece}
-    //     }
-        
-    //     @INPROCEEDINGS{Kontos2019,
-    //       author = {Kontos, Giannis and Leontiadis, Konstantinos and Tzimpilis, Evangelos and Tsivintzelis, Ioannis},
-    //       title = {\emph{Experimental definition of CO2 solubility in aqueous alkanolamine
-    //     solutions}},
-    //     booktitle = {12th Panhellenic Scientific conference of Chemical
-    //     Engineering},
-    //       year = {2019},
-    //       address = {Athens, Greece}
-    //     }
-        
-        
 
-           
+    {artOrProc:"Article",
+        title:"Modification of Talc and Mechanical Properties of Polypropylene-Modified Talc Composite Drawn Fibers",
+        journal : "Journal of Composites Science",
+        volume : 8,
+        issue: 3,
+        pages : "91",
+        year : 2024,
+        doi :"https://doi.org/10.3390/jcs8030091",
+        url : "https://www.mdpi.com/2504-477X/8/3/91",
+        author : [["Costas","Tsioptsias"],
+            ["Konstantinos", "Leontiadis"],
+            ["Xanthi", "Ntampou"],
+             ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "Aging"],
+        abstract:"A large amount of the polypropylene (PP) produced worldwide is used in the form of fibers. In this work, a new modification route for talc and PP is investigated, which is based on the in situ polymerization of a silane–siloxane monomer mixture on the surface of talc particles or PP pellets, respectively. The obtained modified talc and PP samples were used for the development of PP-talc composite drawn fibers. Tensile tests, thermogravimetry (TGA), and X-ray diffraction (XRD) were used for the characterization of the materials. It was observed that such a modification procedure resulted in the exfoliation of some talc particles. Enhanced tensile strength was observed for composite drawn fibers of a low talc content (1% with respect to PP) and a low modifier content (2% with respect to talc), while co-aggregation of talc and silicone may occur at high silicone and talc contents, resulting in the inferior mechanical performance of the corresponding composites. It was concluded that the produced silicone polymer simultaneously acts as a modifier, antioxidant, and compatibilizer. The proposed modification route is promising and should be further optimized."
+    },
+      
+    {artOrProc:"Article",
+        title:"Experimental Investigation of Polypropylene Composite Drawn Fibers with Talc, Wollastonite, Attapulgite and Single-Wall Carbon Nanotubes",
+        journal : "Polymers",
+        volume : 14,
+        issue: 2,
+        pages : "260",
+        year : 2022,
+        doi :"https://www.mdpi.com/2073-4360/14/2/260",
+        url : "https://www.mdpi.com/2073-4360/14/2/260",
+        author : [["Costas","Tsioptsias"],
+            ["Konstantinos", "Leontiadis"],
+            ["Stavros", "Messaritakis"], 
+            ["Aikaterini", "Terzaki"],
+            ["Panagiotis", "Xidas"],
+            ["Kyriakos", "Mystikos"],
+            ["Evangelos", "Tzimpilis"],
+            ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM","MS","PS"],
+        keywords:["Polymer Composites", "Aging"],
+        abstract:"Isotactic polypropylene (PP) composite drawn fibers were prepared using melt extrusion and high-temperature solid-state drawing at a draw ratio of 7. Five different fillers were used as reinforcement agents (microtalc, ultrafine talc, wollastonite, attapulgite and single-wall carbon nanotubes). In all the prepared samples, antioxidant was added, while all samples were prepared with and without using PP grafted with maleic anhydride as compatibilizer. Material characterization was performed by tensile tests, differential scanning calorimetry, thermogravimetric analysis and Fourier transform infrared spectroscopy. Attapulgite composite fibers exhibited poor results in terms of tensile strength and thermal stability. The use of ultrafine talc particles yields better results, in terms of thermal stability and tensile strength, compared to microtalc. Better results were observed using needle-like fillers, such as wollastonite and single-wall carbon nanotubes, since, as was previously observed, high aspect ratio particles tend to align during the drawing process and, thus, contribute to a more symmetrical distribution of stresses. Competitive and synergistic effects were recognized to occur among the additives and fillers, such as the antioxidant effect being enhanced by the addition of the compatibilizer, while the antioxidant itself acts as a compatibilizing agent."
+    },
+
+    {artOrProc:"Article",
+        title:"CO<sub>2</sub> solubility in aqueous solutions of blended amines: Experimental data for mixtures with MDEA, AMP and MPA and modeling with the modified Kent-Eisenberg model",
+        journal : "Fluid Phase Equilibria",
+        volume : 570,
+        issue: 2,
+        pages : "113800",
+        year : 2023,
+        doi :"https://doi.org/10.1016/j.fluid.2023.113800",
+        url : "https://www.sciencedirect.com/science/article/pii/S037838122300081X",
+        author : [["Giannis","Kontos"],
+            ["Konstantinos", "Leontiadis"],
+            ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM"],
+        keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
+        abstract:"Recently, a vast quantity of new amine-based solvent systems, alternative to aqueous ethanolamine solutions, have been suggested for CO2 capture applications. In numerous cases amine blends are used, since a careful selection of the amine ratio may effectively alter the absorption capacity, the absorption kinetics and the regeneration efficiency. In this direction accurate experimental data are needed for screening applications, but most importantly for parameterizing and evaluating theoretical models used in design applications. In this work, new experimental data are presented for the CO2 solubility in aqueous solutions of amine blends containing N-methyldiethanolamine (MDEA), 2-amino-2-methyl-1-propanol (AMP) and 3-amino-1-propanol (MPA) at 298, 313, 323 and 333 K and pressures up to approximately 800 kPa. The modified Kent-Eisenberg model, parameterized using experimental data solely for single amine solutions, is subsequently applied to predict the CO2 absorption in blended amine solutions. Satisfactory model predictions are observed. The average absolute deviations from the experimental data of this study range between 2 and 5%."
+    },     
+      
+    {artOrProc:"Article",
+        title:"Polypropylene nanocomposite fibers: A review of current trends and new developments",
+        journal : "Journal of Plastic Film & Sheeting",
+        volume : 37,
+        issue: 3,
+        pages : "283-311",
+        year : 2021,
+        doi :"https://doi.org/10.1177/8756087920972146",
+        url : "https://journals.sagepub.com/doi/10.1177/8756087920972146",
+        author : [["Costas","Tsioptsias"],
+            ["Konstantinos", "Leontiadis"],
+            ["Evangelos", "Tzimpilis"],
+            ["Ioannis", "Tsivintzelis"]],
+        titleTags:["CM"],
+        keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
+        abstract:"Recently, a vast quantity of new amine-based solvent systems, alternative to aqueous ethanolamine solutions, have been suggested for CO2 capture applications. In numerous cases amine blends are used, since a careful selection of the amine ratio may effectively alter the absorption capacity, the absorption kinetics and the regeneration efficiency. In this direction accurate experimental data are needed for screening applications, but most importantly for parameterizing and evaluating theoretical models used in design applications. In this work, new experimental data are presented for the CO2 solubility in aqueous solutions of amine blends containing N-methyldiethanolamine (MDEA), 2-amino-2-methyl-1-propanol (AMP) and 3-amino-1-propanol (MPA) at 298, 313, 323 and 333 K and pressures up to approximately 800 kPa. The modified Kent-Eisenberg model, parameterized using experimental data solely for single amine solutions, is subsequently applied to predict the CO2 absorption in blended amine solutions. Satisfactory model predictions are observed. The average absolute deviations from the experimental data of this study range between 2 and 5%."
+    },         
 ];
-
-
 
 
 // get HTML elements to display the info above
