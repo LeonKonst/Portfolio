@@ -48,6 +48,10 @@ main {
     padding: 0 2rem;
 }
 
+section{
+    padding-top:10px;
+}
+
 /* Personal info section */
 #personal-info {
     background-color: #fff;
@@ -150,3 +154,23 @@ footer {
     left: 0;
 }
 
+#carousel-track{
+    display:flex;
+}
+
+.panel{
+    min-width: 45%;
+    height:300px;
+    border:2px solid red;
+    padding:10px;
+    margin:10px;
+}
+
+.hidden{
+    height:0;
+    display:none;
+}
+
+.shown{
+    height:auto;
+}
