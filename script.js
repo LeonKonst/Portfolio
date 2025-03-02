@@ -295,9 +295,6 @@ mygithub.innerHTML = `<a href="${personalInfo.github.profilelink}">
                                 <title>
                                     github [#142]
                                 </title>
-                                <desc>
-                                    Created with Sketch.
-                                </desc>
                                 <defs>
                                 </defs>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -312,25 +309,6 @@ mygithub.innerHTML = `<a href="${personalInfo.github.profilelink}">
                         </svg>
 ${personalInfo.github.name}
 </a>`;
-
-publications.forEach(element => {
-    track.innerHTML += `<div class="panel">
-        <button class="publication" id="${element.id}">
-            <p>${element.artOrProc}</p>
-            <h4>${element.title}</h4>
-        </button>
-        <div class="hidden" id="div ${element.id}">
-            ${element.abstract.split(" ",150).join(" ")}
-            
-            
-            ...
-            <a href="${element.url}">Read more here</a>
-        </div>
-    </div>
-    `;
-});
-
-
 
 
 //about me paragraph
@@ -358,7 +336,43 @@ document.getElementById('current-year').textContent = currentYear;
 // - na valo se kapoia auto to parathiro poy anaptisete. 
 // - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
 
+
+
+
+
+const printPublications = (range)=> {
+// ) 
+    
+    track.innerHTML = ""; 
+    publications.forEach(element => {
+        if(element.id<=range[1]&&element.id>=range[0]){
+            track.innerHTML += `<div class="panel">
+                <button class="publication" id="${element.id}">
+                    <p>${element.artOrProc}</p>
+                    <h4>${element.title}</h4>
+                </button>
+                <div class="hidden" id="div ${element.id}">
+                    ${element.abstract.split(" ",150).join(" ")}
+                    
+                    
+                    ...
+                    <a href="${element.url}">Read more here</a>
+                </div>
+            </div>
+            `;
+        }
+    });
+    return range;
+};
+
+// const publicationStart = 0;
+// const publicationFinish = 2;
+currRange = printPublications([0,1]);
+console.log(currRange);
+// publicationStart,publicationFinish); 
+
 const accordeon = document.querySelectorAll("#carousel-track button");
+
 accordeon.forEach(button => {
     button.addEventListener('click', () => {
         const divEl = document.getElementById(`div ${button.id}`);
@@ -368,4 +382,32 @@ accordeon.forEach(button => {
         }
     });
   });
-console.log(accordeon);
+
+const nextBtn = document.getElementById("next");
+
+
+nextBtn.addEventListener("click",()=>{
+    
+    if(currRange[1]<publications.length){
+        currRange[0]+=1;
+        currRange[1]+=1;
+        
+        currRange = printPublications(currRange);
+        
+    }  
+
+}
+); 
+
+const prevBtn = document.getElementById("prev");
+
+
+prevBtn.addEventListener("click",()=>{    
+    if(currRange[0]>1){
+        currRange[0]-=1;
+        currRange[1]-=1;
+        console.log(currRange);
+        currRange = printPublications(currRange);
+    }  
+}
+);
