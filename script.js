@@ -236,7 +236,7 @@ publications = [
             ["Ioannis", "Tsivintzelis"]],
         titleTags:["CM"],
         keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
-        abstract:"Recently, a vast quantity of new amine-based solvent systems, alternative to aqueous ethanolamine solutions, have been suggested for CO2 capture applications. In numerous cases amine blends are used, since a careful selection of the amine ratio may effectively alter the absorption capacity, the absorption kinetics and the regeneration efficiency. In this direction accurate experimental data are needed for screening applications, but most importantly for parameterizing and evaluating theoretical models used in design applications. In this work, new experimental data are presented for the CO2 solubility in aqueous solutions of amine blends containing N-methyldiethanolamine (MDEA), 2-amino-2-methyl-1-propanol (AMP) and 3-amino-1-propanol (MPA) at 298, 313, 323 and 333 K and pressures up to approximately 800 kPa. The modified Kent-Eisenberg model, parameterized using experimental data solely for single amine solutions, is subsequently applied to predict the CO2 absorption in blended amine solutions. Satisfactory model predictions are observed. The average absolute deviations from the experimental data of this study range between 2 and 5%."
+        abstract:"In this review, traditional and novel techniques for producing micro- and nano- fibers are discussed and various nanofillers, their modifications and polypropylene (PP) functionalization routes are presented. Their influence on PP properties is discussed and new PP composite fiber applications are presented. This review reveals interesting conclusions, such as that in terms of mechanical reinforcement, there is no nano-filler that can improve tensile strength to the extent that it is improved by drawing. However, in some cases, composite drawn fibers are characterized by higher tensile strength than drawn neat PP. With some notable exceptions, the PP nanocomposites lack of “dramatic” properties improvement is mainly due to the non-polar nature of the hydrocarbon chain, which does not favor strong intermolecular interactions with most popular (mainly inorganic) nano-fillers. However, other properties such as electric conductivity, water contact angle and others can be effectively altered using various nanofillers in PP matrices."
     },         
 ];
 
@@ -338,38 +338,9 @@ document.getElementById('current-year').textContent = currentYear;
 
 
 
-
-
-const printPublications = (range)=> {
-// ) 
-    
-    track.innerHTML = ""; 
-    publications.forEach(element => {
-        if(element.id<=range[1]&&element.id>=range[0]){
-            track.innerHTML += `<div class="panel">
-                <button class="publication" id="${element.id}">
-                    <p>${element.artOrProc}</p>
-                    <h4>${element.title}</h4>
-                </button>
-                <div class="hidden" id="div ${element.id}">
-                    ${element.abstract.split(" ",150).join(" ")}
-                    
-                    
-                    ...
-                    <a href="${element.url}">Read more here</a>
-                </div>
-            </div>
-            `;
-        }
-    });
-    return range;
-};
-
-currRange = printPublications([1,2]);
-activateAccordeon(); 
-
 const activateAccordeon = () =>{
-    const accordeon = document.querySelectorAll("#carousel-track button");
+    const accordeon = document.querySelectorAll(".publication");
+    console.log(accordeon);
     accordeon.forEach(button => {
         button.addEventListener('click', () => {
             const divEl = document.getElementById(`div ${button.id}`);
@@ -377,9 +348,45 @@ const activateAccordeon = () =>{
                 divEl.classList.toggle('hidden');
                 divEl.classList.toggle('shown');
             }
+            else{
+                return;
+            }
+            return;
         });
     });
+    
 };
+
+const printPublications = (range)=> {
+    // ) 
+        
+        track.innerHTML = ""; 
+        publications.forEach(element => {
+            if(element.id<=range[1]&&element.id>=range[0]){
+                track.innerHTML += `<div class="panel">
+                    <button class="publication" id="${element.id}">
+                        <p>${element.artOrProc}</p>
+                        <h4>${element.title}</h4>
+                    </button>
+                    <div class="hidden" id="div ${element.id}">
+                        ${element.abstract.split(" ",60).join(" ")}
+                        
+                        
+                        ...
+                        <a href="${element.url}">Read more here</a>
+                    </div>
+                </div>
+                `;
+            }
+        });
+        activateAccordeon();
+        return range;
+    };
+
+currRange = printPublications([1,2]);
+
+
+
 
 
 const nextBtn = document.getElementById("next");
@@ -388,20 +395,17 @@ nextBtn.addEventListener("click",()=>{
     if(currRange[1]<publications.length){
         currRange[0]+=1;
         currRange[1]+=1;     
-        currRange = printPublications(currRange);
-        activateAccordeon(); 
+        currRange = printPublications(currRange); 
     }  
 }
 ); 
 
 const prevBtn = document.getElementById("prev");
 
-
 prevBtn.addEventListener("click",()=>{    
     if(currRange[0]>1){
         currRange[0]-=1;
         currRange[1]-=1;
-        console.log(currRange);
         currRange = printPublications(currRange);
     }  
 }
