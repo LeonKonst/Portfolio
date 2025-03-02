@@ -365,37 +365,32 @@ const printPublications = (range)=> {
     return range;
 };
 
-// const publicationStart = 0;
-// const publicationFinish = 2;
-currRange = printPublications([0,1]);
-console.log(currRange);
-// publicationStart,publicationFinish); 
+currRange = printPublications([1,2]);
+activateAccordeon(); 
 
-const accordeon = document.querySelectorAll("#carousel-track button");
-
-accordeon.forEach(button => {
-    button.addEventListener('click', () => {
-        const divEl = document.getElementById(`div ${button.id}`);
-        if (divEl) {
-            divEl.classList.toggle('hidden');
-            divEl.classList.toggle('shown');
-        }
+const activateAccordeon = () =>{
+    const accordeon = document.querySelectorAll("#carousel-track button");
+    accordeon.forEach(button => {
+        button.addEventListener('click', () => {
+            const divEl = document.getElementById(`div ${button.id}`);
+            if (divEl) {
+                divEl.classList.toggle('hidden');
+                divEl.classList.toggle('shown');
+            }
+        });
     });
-  });
+};
+
 
 const nextBtn = document.getElementById("next");
 
-
-nextBtn.addEventListener("click",()=>{
-    
+nextBtn.addEventListener("click",()=>{   
     if(currRange[1]<publications.length){
         currRange[0]+=1;
-        currRange[1]+=1;
-        
+        currRange[1]+=1;     
         currRange = printPublications(currRange);
-        
+        activateAccordeon(); 
     }  
-
 }
 ); 
 
