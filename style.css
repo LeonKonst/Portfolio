@@ -155,15 +155,15 @@ footer {
 
 #carousel-track{
     display:flex;
+    height:500px;
 
 }
 
 .panel{
     min-width: 45%;
-    height:300px;
-    border:2px solid red;
     padding:10px;
     margin:10px;
+    
 }
 
 .hidden{
@@ -173,4 +173,7 @@ footer {
 
 .shown{
     height:auto;
+    background-color: aquamarine;
+    border-radius: 3px;
+    padding:5px;
 }
