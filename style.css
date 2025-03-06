@@ -177,3 +177,7 @@ footer {
     border-radius: 3px;
     padding:5px;
 }
+
+#publications{
+    display:flex;
+}

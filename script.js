@@ -357,6 +357,9 @@ const activateAccordeon = () =>{
     
 };
 
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+
 const printPublications = (range)=> {
     // ) 
         
@@ -379,34 +382,47 @@ const printPublications = (range)=> {
                 `;
             }
         });
+        
         activateAccordeon();
         return range;
+        
     };
-
+prevBtn.disabled = true;
 currRange = printPublications([1,2]);
 
+const activateBtn = (btn) =>{
+    btn.disabled = false;
+}
+
+const disableBtn = (btn) =>{
+    btn.disabled = true;
+}
 
 
-
-
-const nextBtn = document.getElementById("next");
-
-nextBtn.addEventListener("click",()=>{   
-    if(currRange[1]<publications.length){
+nextBtn.addEventListener("click",()=>{  
+    activateBtn(prevBtn);
+    if(currRange[1]<publications.length){   
         currRange[0]+=1;
         currRange[1]+=1;     
-        currRange = printPublications(currRange); 
-    }  
+        currRange = printPublications(currRange);    
+    } 
+    if(currRange[1]==publications.length){
+        disableBtn(nextBtn);
+    }
 }
 ); 
 
-const prevBtn = document.getElementById("prev");
-
-prevBtn.addEventListener("click",()=>{    
+prevBtn.addEventListener("click",()=>{ 
+    activateBtn(nextBtn);  
     if(currRange[0]>1){
+        
         currRange[0]-=1;
         currRange[1]-=1;
         currRange = printPublications(currRange);
+        
+    }
+    if(currRange[0]==1){
+        disableBtn(prevBtn);
     }  
 }
 );
