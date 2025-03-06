@@ -25,10 +25,87 @@ const titles = [
     ["Web developer", "WD"],
 ];
 
+//Work experience
+
+const workExperience = [
+    {
+        id:1,
+        company:"AUTH",
+        position:"Researcher",
+        startYear:2019,
+        endYear:2022,
+        description:"Part of research group (as PhD student) for the project “NAno-Reinforced Polypropylene multifilament Yarns” (NAPRY) within operational programme “Competitiveness, Enterpreneurship and Innovation 2014-2020” and special act «AQUACULTURE» - «INDUSTRIAL MATERIALS» - «OPEN INNOVATION IN CULTURE»."
+    },
+    {
+        id:2,
+        company:"AUTH",
+        position:"Teaching Assistant",
+        startYear:2019,
+        endYear:2023,
+        description:" Teaching assistant for compulsory laboratory course “Physical Chemistry II” as a PhD student."
+    },
+    {
+        id:3,
+        company:"AUTH",
+        position:"Scientist 1",
+        startYear:2019,
+        endYear:2023,
+        description:" Technology Centers in the R&D department. \n - Exploring sustainable epoxies. \n -Responsible for design of experiments (statistical approach of experimentation)."
+    },
+    {
+        id:4,
+        company:"AUTH",
+        position:"Teaching Assistant",
+        startYear:2019,
+        endYear:2023,
+        description:" Teaching assistant for compulsory laboratory course “Physical Chemistry II” as a PhD student."
+    },
+];
+
+//Education
+
+const education = [
+    {
+        id:1,
+        institution:"AUTH",
+        degree:"Integrated Master",
+        startYear:2011,
+        endYear:2017,
+        field:"Chemical Engineering",
+        description:"Thesis title: Experimental study of CO<sub>2</sub> solubility in aqueous alkanolamine solutions",
+    },
+    {
+        id:2,
+        institution:"AUTH",
+        degree:"Master",
+        startYear:2020,
+        endYear:2022,
+        field:"Processes and Technology of !dvanced Materials",
+        description:"Thesis title: Mechanical and thermal properties of composite polypropylene / modified wollastonite fibers",
+    },
+    {
+        id:3,
+        institution:"AUTH",
+        degree:"PhD",
+        startYear:2019,
+        endYear:2024,
+        field:"Chemical Engineering",
+        description:"Thesis title: Development, characterization and optimization of  the properties of micro- and nano- composite drawn polypropylene fibers.",
+    },
+    {
+        id:4,
+        institution:"AUTH",
+        degree:"Integrated Master",
+        startYear:2022,
+        endYear:"Present",
+        field:"Electrical and Computer Engineering",
+        description:"Suspended since December 2023",
+    },
+];
 
 //publications
 
-publications = [
+const publications = [
     {
         id:1,
         artOrProc:"Article",
@@ -251,6 +328,8 @@ const aboutme = document.getElementById("aboutme");
 const track = document.getElementById("carousel-track");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
+const workExpContainer = document.getElementById("work-experience");
+const educationContainer = document.getElementById("education");
 
 // Display info in the webpage
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
@@ -315,20 +394,46 @@ ${personalInfo.github.name}
 //about me paragraph
 aboutme.innerText = "Lorem";
 
+//create the Title buttons
 titles.map((title)=>{
     mytitles.innerHTML += `<button class="title-tags" id="${title[1]}"> ${title[0]}</button>`;
 })
 
 
-function toggleMenu() {
-    document.querySelector(".menu").classList.toggle("active");
-}
-
-
-
 const currentYear = new Date().getFullYear();
             // Insert the current year into the footer
 document.getElementById('current-year').textContent = currentYear;
+
+
+const printEducation = ()=> {
+    education.forEach(element => {
+        educationContainer.innerHTML += `
+        <div class="work-tab">
+            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
+            <div class="work-position"> ${element.degree}</div>
+            <div class="work-company"> ${element.institution}</div>
+            <div class="work-description"> ${element.description}</div>
+        </div>`
+    });
+};
+
+printEducation();
+
+
+const printWorkExperience = ()=> {
+    workExperience.forEach(element => {
+        workExpContainer.innerHTML += `
+        <div class="work-tab">
+            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
+            <div class="work-position"> ${element.position}</div>
+            <div class="work-company"> ${element.company}</div>
+            <div class="work-description"> ${element.description}</div>
+        </div>`
+    });
+};
+
+printWorkExperience();
+
 
 const activateAccordeon = () =>{
     const accordeon = document.querySelectorAll(".publication");
@@ -378,6 +483,8 @@ const printPublications = (range)=> {
         return range;
         
     };
+
+//Creating the publications section
 prevBtn.disabled = true;
 currRange = printPublications([1,2]);
 
