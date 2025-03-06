@@ -249,9 +249,10 @@ const mylinkedin = document.getElementById("linkedin");
 const mygithub = document.getElementById("github");
 const aboutme = document.getElementById("aboutme");
 const track = document.getElementById("carousel-track");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
 // Display info in the webpage
-
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
 mytitles.innerText = `I am a `;
 
@@ -329,15 +330,6 @@ const currentYear = new Date().getFullYear();
             // Insert the current year into the footer
 document.getElementById('current-year').textContent = currentYear;
 
-// TODO
-// -from at the end of the page. 
-// - Na valo ta papers. 
-// - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
-// - na valo se kapoia auto to parathiro poy anaptisete. 
-// - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
-
-
-
 const activateAccordeon = () =>{
     const accordeon = document.querySelectorAll(".publication");
     console.log(accordeon);
@@ -357,8 +349,7 @@ const activateAccordeon = () =>{
     
 };
 
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
+
 
 const printPublications = (range)=> {
     // ) 
@@ -426,3 +417,10 @@ prevBtn.addEventListener("click",()=>{
     }  
 }
 );
+
+
+// TODO
+// -from at the end of the page. 
+// - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
+// - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
+
