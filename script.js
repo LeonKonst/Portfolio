@@ -68,6 +68,8 @@ const education = [
     {
         id:1,
         institution:"AUTH",
+        city:"Thessaloniki",
+        country:"Greece",
         degree:"Integrated Master",
         startYear:2011,
         endYear:2017,
@@ -77,6 +79,8 @@ const education = [
     {
         id:2,
         institution:"AUTH",
+        city:"Thessaloniki",
+        country:"Greece",
         degree:"Master",
         startYear:2020,
         endYear:2022,
@@ -86,6 +90,8 @@ const education = [
     {
         id:3,
         institution:"AUTH",
+        city:"Thessaloniki",
+        country:"Greece",
         degree:"PhD",
         startYear:2019,
         endYear:2024,
@@ -95,6 +101,8 @@ const education = [
     {
         id:4,
         institution:"AUTH",
+        city:"Thessaloniki",
+        country:"Greece",
         degree:"Integrated Master",
         startYear:2022,
         endYear:"Present",
