@@ -162,11 +162,10 @@ footer {
 
 .work-tab{
     position:relative;
-    border:3px solid black;
-    padding:10px;
-    margin-bottom:10px;
+    padding:1rem;
+    margin-bottom:1rem;
     border-radius:1rem;
-    background-color:#f39c12;
+    background-color:#f39d125a;
 
 }
 
@@ -174,29 +173,19 @@ footer {
     position:relative;
     top:1.5rem;
     text-align:justify;
-    padding-bottom:15px;
+    padding-bottom:1rem;
 }
 
-.work-company{
-    position:absolute;
-    top:0px;
-    left:10px;
+
+.work-info{
+    color:#402c0c;
+    display:flex;
+    justify-content: space-evenly;
     font-weight: bold;
     font-size: 1.3rem;
 }
 
-.work-position{
-    position:absolute;
-    top:0px;
-    left:35%;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
-.work-duration{
-    position:absolute;
-    top:0px;
-    right:10px;
-    font-weight: bold;
-    font-size: 1.3rem;
+.work-info a{
+    color:#b40c74;
+    text-decoration: none;
 }

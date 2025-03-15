@@ -31,6 +31,7 @@ const workExperience = [
     {
         id:1,
         company:"AUTH",
+        link:"https://cheng.auth.gr/en/",
         position:"Researcher",
         startYear:2019,
         endYear:2022,
@@ -39,6 +40,7 @@ const workExperience = [
     {
         id:2,
         company:"AUTH",
+        link:"https://cheng.auth.gr/en/",
         position:"Teaching Assistant",
         startYear:2019,
         endYear:2023,
@@ -47,6 +49,7 @@ const workExperience = [
     {
         id:3,
         company:"Hempel A/S",
+        link:"https://www.hempel.com/",
         position:"Scientist 1",
         startYear:2023,
         endYear:2024,
@@ -59,6 +62,7 @@ const workExperience = [
     {
         id:4,
         company:"Hempel A/S",
+        link:"https://www.hempel.com/",
         position:"Scientist 1",
         startYear:2024,
         endYear:"Present",
@@ -352,7 +356,7 @@ myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
 mytitles.innerText = `I am a `;
 
 
-mylocation.innerHTML = `<a href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+mylocation.innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     // <g id="SVGRepo_bgCarrier" stroke-width="0">
     // </g>
     // <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
@@ -367,7 +371,7 @@ mylocation.innerHTML = `<a href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg
 ${personalInfo.location.city}, ${personalInfo.location.country}
 </a>`;
 
-mylinkedin.innerHTML = `<a href="${personalInfo.linkedin.profilelink}">
+mylinkedin.innerHTML = `<a  target="_blank" href="${personalInfo.linkedin.profilelink}">
 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0">
                             </g>
@@ -381,7 +385,7 @@ mylinkedin.innerHTML = `<a href="${personalInfo.linkedin.profilelink}">
 ${personalInfo.linkedin.name}
 </a>`;
 
-mygithub.innerHTML = `<a href="${personalInfo.github.profilelink}">
+mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink}">
 <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0">
                             </g>
@@ -449,9 +453,11 @@ const printWorkExperience = ()=> {
     workExperience.forEach(element => {
         workExpContainer.innerHTML += `
         <div class="work-tab">
-            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
-            <div class="work-position"> ${element.position}</div>
-            <div class="work-company"> ${element.company}</div>
+            <div class="work-info">
+                <div class="work-position"> ${element.position}</div>
+                <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
+                <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
+            </div>
             <div class="work-description"> ${element.description}</div>
         </div>`
     });
@@ -497,7 +503,7 @@ const printPublications = (range)=> {
                         
                         
                         ...
-                        <a href="${element.url}">Read more here</a>
+                        <a  target="_blank" href="${element.url}">Read more here</a>
                     </div>
                 </div>
                 `;
