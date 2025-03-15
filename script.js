@@ -409,7 +409,7 @@ Over the years, I've developed expertise in material characterization (DSC, DMA,
 <p>Beyond my scientific career, I have a passion for technology and problem-solving.
 I’ve worked as a freelance sound engineer and lighting technician, blending technical knowledge with creativity.
 Recently, I’ve taken on a new challenge—teaching myself web development.
-I’m currently building my first project: this very portfolio!</p>`;
+I’m currently building my first project: <strong>this very portfolio!</strong></p>`;
 
 //create the Title buttons
 titles.map((title)=>{
