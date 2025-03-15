@@ -106,14 +106,25 @@ legend {
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    cursor: pointer;
     border-radius: 4px;
+    cursor:pointer;
     transition: background 0.3s ease;
 }
 
 .carousel-button:hover {
     background: #e08e0b;
 }
+
+.carousel-button:disabled {
+    background: #f2c06f;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor:not-allowed;
+    transition: background 0.3s ease;
+}
+
 
 footer {
     text-align: center;
@@ -147,4 +158,45 @@ footer {
     section {
         padding: 1rem;
     }
+}
+
+.work-tab{
+    position:relative;
+    border:3px solid black;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:1rem;
+    background-color:#f39c12;
+
+}
+
+.work-description{
+    position:relative;
+    top:1.5rem;
+    text-align:justify;
+    padding-bottom:15px;
+}
+
+.work-company{
+    position:absolute;
+    top:0px;
+    left:10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.work-position{
+    position:absolute;
+    top:0px;
+    left:35%;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.work-duration{
+    position:absolute;
+    top:0px;
+    right:10px;
+    font-weight: bold;
+    font-size: 1.3rem;
 }

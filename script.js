@@ -34,7 +34,7 @@ const workExperience = [
         position:"Researcher",
         startYear:2019,
         endYear:2022,
-        description:"Part of research group (as PhD student) for the project “NAno-Reinforced Polypropylene multifilament Yarns” (NAPRY) within operational programme “Competitiveness, Enterpreneurship and Innovation 2014-2020” and special act «AQUACULTURE» - «INDUSTRIAL MATERIALS» - «OPEN INNOVATION IN CULTURE»."
+        description:"<p>Part of research group (as PhD student) for the project “NAno-Reinforced Polypropylene multifilament Yarns” (NAPRY) within operational programme “Competitiveness, Enterpreneurship and Innovation 2014-2020” and special act «AQUACULTURE» - «INDUSTRIAL MATERIALS» - «OPEN INNOVATION IN CULTURE».</p>"
     },
     {
         id:2,
@@ -42,23 +42,31 @@ const workExperience = [
         position:"Teaching Assistant",
         startYear:2019,
         endYear:2023,
-        description:" Teaching assistant for compulsory laboratory course “Physical Chemistry II” as a PhD student."
+        description:"<p> Teaching assistant for compulsory laboratory course “Physical Chemistry II” as a PhD student.</p>"
     },
     {
         id:3,
-        company:"AUTH",
+        company:"Hempel A/S",
         position:"Scientist 1",
-        startYear:2019,
-        endYear:2023,
-        description:" Technology Centers in the R&D department. \n - Exploring sustainable epoxies. \n -Responsible for design of experiments (statistical approach of experimentation)."
+        startYear:2023,
+        endYear:2024,
+        description:`<p>Technology Centers in the R&D department.</p>
+        <ul>
+            <li>Exploring sustainable epoxies. </li>
+            <li>Responsible for design of experiments (statistical approach of experimentation).</li>
+        </ul>`,
     },
     {
         id:4,
-        company:"AUTH",
-        position:"Teaching Assistant",
-        startYear:2019,
-        endYear:2023,
-        description:" Teaching assistant for compulsory laboratory course “Physical Chemistry II” as a PhD student."
+        company:"Hempel A/S",
+        position:"Scientist 1",
+        startYear:2024,
+        endYear:"Present",
+        description:`<p>Wind Blades in the R&D department.</p>
+        <ul>
+            <li>Exploring materials with better performance against rain erosion.</li>
+            <li>Cross-segment assistance with data analysis.</li>
+        </ul>`,
     },
 ];
 
@@ -425,11 +433,11 @@ document.getElementById('current-year').textContent = currentYear;
 const printEducation = ()=> {
     education.forEach(element => {
         educationContainer.innerHTML += `
-        <div class="work-tab">
-            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
-            <div class="work-position"> ${element.degree}</div>
-            <div class="work-company"> ${element.institution}</div>
-            <div class="work-description"> ${element.description}</div>
+        <div class="edu-tab">
+            <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
+            <div class="edu-position"> ${element.degree}</div>
+            <div class="edu-company"> ${element.institution}</div>
+            <div class="edu-description"> ${element.description}</div>
         </div>`
     });
 };
@@ -544,7 +552,5 @@ prevBtn.addEventListener("click",()=>{
 
 
 // TODO
-// -from at the end of the page. 
 // - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
 // - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
-
