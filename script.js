@@ -400,7 +400,16 @@ ${personalInfo.github.name}
 
 
 //about me paragraph
-aboutme.innerText = "Lorem";
+aboutme.innerHTML = `
+<h2>About me</h2>
+<p>I'm a multidisciplinary researcher and engineer with a strong background in chemical engineering, composite materials, and coatings technology. 
+Currently, I work as an R&D Scientist at Hempel A/S, where I focus on developing innovative solutions in materials science.</p>
+<p> My academic journey includes a PhD in the development and characterization of (micro and nano) composite polymeric materials, complemented by hands-on experience in research, teaching, and statistical analysis (Design of Experiments, ANOVA etc.)
+Over the years, I've developed expertise in material characterization (DSC, DMA, TGA, Tensile testing, XRD etc.)</p> 
+<p>Beyond my scientific career, I have a passion for technology and problem-solving.
+I’ve worked as a freelance sound engineer and lighting technician, blending technical knowledge with creativity.
+Recently, I’ve taken on a new challenge—teaching myself web development.
+I’m currently building my first project: this very portfolio!</p>`;
 
 //create the Title buttons
 titles.map((title)=>{
