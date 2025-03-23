@@ -1,8 +1,7 @@
-/* Neobrutalist CSS */
 :root {
 --primary-bg: #ffcc00;
---primary-text: #000;
 --secondary-bg: #fff;
+--primary-text: #000;
 --accent: #ff3366;
 --border-color: #000;
 }
@@ -12,78 +11,139 @@ background: var(--primary-bg);
 color: var(--primary-text);
 font-family: 'Arial Black', sans-serif;
 margin: 0;
-padding: 20px;
+padding: 0;
 }
 
-.container {
-max-width: 800px;
-margin: 0 auto;
+/* HEADER & NAV */
+#header {
+background: var(--accent);
+padding: 10px;
+border-bottom: 4px solid var(--border-color);
+text-align: center;
+}
+
+.menu {
+display: flex;
+justify-content: center;
+gap: 15px;
+}
+
+.menu a {
+color: var(--primary-text);
+text-decoration: none;
+font-weight: bold;
+border: 3px solid var(--border-color);
+padding: 10px 15px;
+background: var(--secondary-bg);
+box-shadow: 4px 4px 0 var(--border-color);
+transition: transform 0.1s ease-in-out;
+}
+
+.menu a:hover {
+transform: scale(1.05);
+background: var(--accent);
+color: var(--secondary-bg);
+}
+
+/* MAIN SECTIONS */
+main {
+padding: 20px;
+max-width: 900px;
+margin: auto;
+}
+
+section {
 background: var(--secondary-bg);
 padding: 20px;
 border: 4px solid var(--border-color);
 box-shadow: 8px 8px 0px var(--border-color);
+margin-bottom: 20px;
 }
 
-h1, h2, h3 {
-font-weight: 900;
+legend {
+font-size: 24px;
+font-weight: bold;
 text-transform: uppercase;
-margin-bottom: 10px;
+background: var(--accent);
+color: var(--secondary-bg);
+padding: 5px 10px;
+display: inline-block;
+border: 3px solid var(--border-color);
+box-shadow: 4px 4px 0px var(--border-color);
 }
 
-button {
-background: var(--accent);
-color: var(--primary-text);
+/* PERSONAL INFO */
+.personal-info {
+text-align: center;
+}
+
+#name {
+font-size: 36px;
+font-weight: 900;
+}
+
+#titles {
+font-size: 24px;
+color: var(--accent);
+}
+
+#links h3 {
+display: inline-block;
+margin: 5px 10px;
+font-size: 18px;
 border: 3px solid var(--border-color);
-padding: 10px 20px;
-font-size: 16px;
+padding: 5px 10px;
+background: var(--secondary-bg);
+box-shadow: 4px 4px 0 var(--border-color);
+}
+
+#links h3:hover {
+background: var(--accent);
+color: var(--secondary-bg);
+}
+
+/* CAROUSEL (Publications) */
+.carousel-container {
+text-align: center;
+}
+
+#publications-carous {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.carousel-button {
+background: var(--primary-text);
+color: var(--secondary-bg);
+border: 3px solid var(--border-color);
+padding: 10px;
+font-size: 20px;
 cursor: pointer;
 box-shadow: 4px 4px 0px var(--border-color);
 transition: transform 0.1s ease-in-out;
 }
 
-button:hover {
-transform: scale(1.05);
-}
-
-a {
-color: var(--primary-text);
-text-decoration: none;
-font-weight: bold;
-border-bottom: 3px solid var(--border-color);
-}
-
-a:hover {
+.carousel-button:hover {
+transform: scale(1.1);
 background: var(--accent);
-color: var(--secondary-bg);
-border-bottom: none;
 }
 
-.card {
+#carousel-track {
+width: 80%;
+min-height: 150px;
+border: 3px solid var(--border-color);
+box-shadow: 4px 4px 0px var(--border-color);
 background: var(--secondary-bg);
-padding: 20px;
-border: 3px solid var(--border-color);
-box-shadow: 6px 6px 0px var(--border-color);
-margin-bottom: 20px;
 }
 
-.navbar {
-background: var(--accent);
-padding: 10px;
-border-bottom: 4px solid var(--border-color);
-}
-
-.navbar a {
-margin-right: 15px;
-padding: 5px 10px;
-border: 3px solid var(--border-color);
-display: inline-block;
-}
-
-.footer {
+/* FOOTER */
+footer {
 background: var(--primary-bg);
 padding: 20px;
 text-align: center;
 border-top: 4px solid var(--border-color);
+font-weight: bold;
 }
 
 #links h3 svg {
