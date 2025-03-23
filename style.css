@@ -189,3 +189,64 @@ footer {
     color:#b40c74;
     text-decoration: none;
 }
+
+#certificationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Individual certification tab */
+.certification-tab {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certification-tab:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Certification info section */
+.certification-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Certification name */
+.certification-position {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Issuing organization */
+.certification-company {
+    font-size: 1.1em;
+    color: #555555;
+}
+
+.certification-company a {
+    color: #0073b1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.certification-company a:hover {
+    color: #005582;
+}
+
+/* Certification duration */
+.certification-duration {
+    font-size: 0.9em;
+    color: #777777;
+    font-style: italic;
+}
