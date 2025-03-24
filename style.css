@@ -318,8 +318,26 @@ border: 3px solid var(--border-color);
 box-shadow: 4px 4px 0px var(--border-color);
 }
 
-
-
-
-/* Ta koumpia sto personal info
-ta akkornteon */
+.title-tags {
+    /* Base style */
+    padding: 8px 16px;
+    margin: 5px;
+    font-weight: bold;
+    background: var(--accent);
+    border: 3px solid var(--primary-text);
+    box-shadow: 4px 4px 0 var(--primary-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .title-tags:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 black;
+  }
+  
+  .title-tags[data-active="on"] {
+    /* Active state style */
+    background: var(--primary-bg);
+    color: white;
+    box-shadow: 4px 4px 0 var(--primary-text); /* Red shadow for contrast */
+  }

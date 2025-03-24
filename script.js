@@ -358,7 +358,7 @@ const certifications = [
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
         name:"JavaScript Algorithms and Data Structures",
-        titleTags:["WB"],
+        titleTags:["WD"],
     },
     {
         id:2,
@@ -369,7 +369,7 @@ const certifications = [
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
         name:"JavaScript Algorithms and Data Structures",
-        titleTags:["WB"],
+        titleTags:["WD"],
     },
     {
         id:3,
@@ -380,7 +380,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"",
         name:"Git Course",
-        titleTags:["WB"],
+        titleTags:["WD"],
     },
     {
         id:4,
@@ -391,7 +391,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"",
         name:"Python Course",
-        titleTags:["WB"],
+        titleTags:["WD"],
     },
     {
         id:5,
@@ -402,7 +402,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"https://opensea.io/assets/matic/0xdBf2138593aeC61d55d86E80b8ed86D7b9ba51F5/1686",
         name:"Solidity foundation Bootcamp",
-        titleTags:["WB"],
+        titleTags:["WD"],
     },
     {
         id:5,
@@ -506,7 +506,7 @@ I’m currently building my first project: <strong>this very portfolio!</strong>
 
 //create the Title buttons
 titles.map((title)=>{
-    mytitles.innerHTML += `<button class="title-tags" id="${title[1]}"> ${title[0]}</button>`;
+    mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
 })
 
 
@@ -518,7 +518,7 @@ document.getElementById('current-year').textContent = currentYear;
 const printEducation = ()=> {
     education.forEach(element => {
         educationContainer.innerHTML += `
-        <div class="edu-tab">
+        <div class="edu-tab ${element.titleTags.join(' ')}">
             <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
             <div class="edu-position"> ${element.degree}</div>
             <div class="edu-company"> ${element.institution}</div>
@@ -533,7 +533,7 @@ printEducation();
 const printWorkExperience = ()=> {
     workExperience.forEach(element => {
         workExpContainer.innerHTML += `
-        <div class="work-tab">
+        <div class="work-tab ${element.titleTags.join(' ')}">
             <div class="work-info">
                 <div class="work-position"> ${element.position}</div>
                 <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
@@ -545,6 +545,8 @@ const printWorkExperience = ()=> {
 };
 
 printWorkExperience();
+
+
 
 
 const activateAccordeon = () =>{
@@ -640,7 +642,7 @@ prevBtn.addEventListener("click",()=>{
 const printCertifications = ()=> {
     certifications.forEach(element => {
         certificationContainer.innerHTML += `
-        <div class="certification-tab">
+        <div class="certification-tab ${element.titleTags.join(' ')}">
             <div class="certification-info">
                 <div class="certification-position"> ${element.name}</div>
                 <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
@@ -651,6 +653,22 @@ const printCertifications = ()=> {
 };
 
 printCertifications();
+
+mytitles.addEventListener("click", (e) => {
+    if (e.target.classList.contains("title-tags")) {
+        const titleBtn = e.target;
+        const titleTag = titleBtn.id;
+        const ceEls = document.querySelectorAll(`[class*="${titleTag}"]`);
+        
+        ceEls.forEach(element => {
+            element.style.display = (element.style.display === "none") ? "block" : "none";
+        });
+
+        const isActive = titleBtn.getAttribute("data-active") === "on";
+        titleBtn.setAttribute("data-active", isActive ? "off" : "on");
+    }
+});
+
 
 // TODO
 // - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
