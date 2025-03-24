@@ -518,7 +518,7 @@ document.getElementById('current-year').textContent = currentYear;
 const printEducation = ()=> {
     education.forEach(element => {
         educationContainer.innerHTML += `
-        <div class="edu-tab ${element.titleTags.join(' ')}">
+        <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
             <div class="edu-position"> ${element.degree}</div>
             <div class="edu-company"> ${element.institution}</div>
@@ -530,10 +530,10 @@ const printEducation = ()=> {
 printEducation();
 
 
-const printWorkExperience = ()=> {
+const printWorkExperience = () => {
     workExperience.forEach(element => {
         workExpContainer.innerHTML += `
-        <div class="work-tab ${element.titleTags.join(' ')}">
+        <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="work-info">
                 <div class="work-position"> ${element.position}</div>
                 <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
@@ -545,9 +545,6 @@ const printWorkExperience = ()=> {
 };
 
 printWorkExperience();
-
-
-
 
 const activateAccordeon = () =>{
     const accordeon = document.querySelectorAll(".publication");
@@ -642,7 +639,7 @@ prevBtn.addEventListener("click",()=>{
 const printCertifications = ()=> {
     certifications.forEach(element => {
         certificationContainer.innerHTML += `
-        <div class="certification-tab ${element.titleTags.join(' ')}">
+        <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="certification-info">
                 <div class="certification-position"> ${element.name}</div>
                 <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
@@ -658,18 +655,22 @@ mytitles.addEventListener("click", (e) => {
     if (e.target.classList.contains("title-tags")) {
         const titleBtn = e.target;
         const titleTag = titleBtn.id;
-        const ceEls = document.querySelectorAll(`[class*="${titleTag}"]`);
+        const allTabs = document.querySelectorAll('[class*=-tab]');
         
-        ceEls.forEach(element => {
-            element.style.display = (element.style.display === "none") ? "block" : "none";
-        });
-
+        // Toggle button state
         const isActive = titleBtn.getAttribute("data-active") === "on";
         titleBtn.setAttribute("data-active", isActive ? "off" : "on");
+        
+        // Get all active tags (buttons that are "off" are the ones filtering)
+        const activeFilters = Array.from(document.querySelectorAll('.title-tags[data-active="off"]'))
+                                .map(btn => btn.id);
+        
+        // Update visibility
+        allTabs.forEach(tab => {
+            const tabTags = tab.getAttribute('data-tags').split(' ').filter(Boolean);
+            const hasAllTags = activeFilters.every(filter => tabTags.includes(filter));
+            tab.style.display = (activeFilters.length === 0 || hasAllTags) ? "block" : "none";
+        });
     }
 });
 
-
-// TODO
-// - Na skefto se poia tha anoigei extra selida sta deksia kai se poia oxi 
-// - Otan einai mikro to platos tis othonis na dimourgeite clickable menu me ta sections to opoio kai auto na akolouthei me to scroll 
