@@ -342,3 +342,142 @@ box-shadow: 4px 4px 0px var(--border-color);
     color: white;
     box-shadow: 4px 4px 0 var(--primary-text); /* Red shadow for contrast */
   }
+
+
+  /* ========== BASE RESPONSIVE SETTINGS ========== */
+@media (max-width: 768px) {
+  :root {
+    --primary-bg: #ffcc00;
+    --secondary-bg: #fff;
+    --primary-text: #000;
+    --accent: #ff3366;
+    --border-color: #000;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  /* HEADER & NAV */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu a {
+    width: 80%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  /* MAIN SECTIONS */
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  /* PERSONAL INFO */
+  #name {
+    font-size: 28px;
+  }
+
+  #titles {
+    font-size: 20px;
+  }
+
+  #links h3 {
+    display: block;
+    margin: 5px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* CERTIFICATIONS, WORK, EDUCATION SECTIONS */
+  .certification-tab,
+  .work-tab,
+  .edu-tab {
+    padding: 12px;
+    margin: 10px auto;
+    box-shadow: 4px 4px 0px var(--border-color);
+  }
+
+  .certification-position,
+  .work-position,
+  .edu-position {
+    font-size: 18px;
+  }
+
+  .certification-info,
+  .work-info,
+  .edu-company {
+    font-size: 16px;
+  }
+
+  /* TITLE TAGS */
+  .title-tags {
+    padding: 6px 12px;
+    margin: 3px;
+    box-shadow: 3px 3px 0 var(--primary-text);
+  }
+}
+
+/* ========== SMALLER MOBILE DEVICES ========== */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  #name {
+    font-size: 24px;
+  }
+
+  #titles {
+    font-size: 18px;
+  }
+
+  .menu a {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  legend {
+    font-size: 20px;
+    padding: 3px 8px;
+  }
+
+  .certification-position,
+  .work-position,
+  .edu-position {
+    font-size: 16px;
+  }
+
+  .work-description,
+  .edu-description {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .title-tags {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+}
+
+/* ========== TABLET/LAPTOP TRANSITION ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    max-width: 800px;
+  }
+
+  .certification-tab,
+  .work-tab,
+  .edu-tab {
+    max-width: 90%;
+  }
+}
