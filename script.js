@@ -655,21 +655,27 @@ mytitles.addEventListener("click", (e) => {
     if (e.target.classList.contains("title-tags")) {
         const titleBtn = e.target;
         const titleTag = titleBtn.id;
-        const allTabs = document.querySelectorAll('[class*=-tab]');
+        const allTabs = document.querySelectorAll('[class*="-tab"]');
         
         // Toggle button state
         const isActive = titleBtn.getAttribute("data-active") === "on";
         titleBtn.setAttribute("data-active", isActive ? "off" : "on");
         
-        // Get all active tags (buttons that are "off" are the ones filtering)
-        const activeFilters = Array.from(document.querySelectorAll('.title-tags[data-active="off"]'))
+        // Get all active filters (buttons that are "on")
+        const activeFilters = Array.from(document.querySelectorAll('.title-tags[data-active="on"]'))
                                 .map(btn => btn.id);
         
         // Update visibility
         allTabs.forEach(tab => {
             const tabTags = tab.getAttribute('data-tags').split(' ').filter(Boolean);
-            const hasAllTags = activeFilters.every(filter => tabTags.includes(filter));
-            tab.style.display = (activeFilters.length === 0 || hasAllTags) ? "block" : "none";
+            
+            // Show element if:
+            // 1. No filters are active (all buttons off), OR
+            // 2. Element contains at least one active tag
+            const shouldShow = activeFilters.length === 0 || 
+                             tabTags.some(tag => activeFilters.includes(tag));
+            
+            tab.style.display = shouldShow ? "block" : "none";
         });
     }
 });
