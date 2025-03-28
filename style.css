@@ -12,10 +12,11 @@ html {
   scroll-behavior: smooth; /* Optional: for smooth scrolling */
 }
 
+
 body {
 background: var(--primary-bg);
 color: var(--primary-text);
-font-family: 'Arial Black', sans-serif;
+font-family: 'Arial', sans-serif;
 margin: 0;
 padding: 0;
 padding-top: calc(1em + 40px + 4px); 
@@ -88,6 +89,11 @@ box-shadow: 4px 4px 0px var(--border-color);
 text-align: center;
 }
 
+.personal-info hr{
+  border: 2px solid var(--border-color);
+  margin-top:20px;
+}
+
 #name {
 font-size: 36px;
 font-weight: 900;
@@ -95,17 +101,15 @@ font-weight: 900;
 
 #titles {
 font-size: 24px;
-color: var(--secondary-bg);
+color: var(--border-color);
 }
 
 #links h3 {
 display: inline-block;
 margin: 5px 10px;
 font-size: 18px;
-border: 3px solid var(--border-color);
 padding: 5px 10px;
 background: var(--secondary-bg);
-box-shadow: 4px 4px 0 var(--border-color);
 }
 
 #links h3:hover {
@@ -113,40 +117,7 @@ background: var(--accent);
 color: var(--secondary-bg);
 }
 
-/* CAROUSEL (Publications) */
-.carousel-container {
-text-align: center;
-}
 
-#publications-carous {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.carousel-button {
-background: var(--primary-text);
-color: var(--secondary-bg);
-border: 3px solid var(--border-color);
-padding: 10px;
-font-size: 20px;
-cursor: pointer;
-box-shadow: 4px 4px 0px var(--border-color);
-transition: transform 0.1s ease-in-out;
-}
-
-.carousel-button:hover {
-transform: scale(1.1);
-background: var(--accent);
-}
-
-#carousel-track {
-width: 80%;
-min-height: 150px;
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0px var(--border-color);
-background: var(--secondary-bg);
-}
 
 /* FOOTER */
 footer {
@@ -174,66 +145,18 @@ height:auto;
 padding:5px;
 }
 
-
-
-/* CERTIFICATIONS SECTION */
-#certificates {
-text-align: center;
-}
-
-.certification-tab {
-background: var(--secondary-bg);
-padding: 15px;
-margin: 15px auto;
-max-width: 600px;
-text-align: left;
-}
-
-.certification-info {
-font-size: 18px;
-font-weight: normal;
-}
-
-.certification-position {
-font-size: 20px;
-font-weight: 900;
-color: var(--accent);
-text-transform: uppercase;
-}
-
-.certification-company {
-margin-top: 5px;
-font-size: 16px;
-}
-
-.certification-company a {
-color: var(--primary-text);
-text-decoration: none;
-border-bottom: 3px solid var(--border-color);
-font-weight: bold;
-}
-
-
-.certification-company a:hover {
-background: var(--accent);
-color: var(--secondary-bg);
-border-bottom: none;
-}
-
-.certification-duration {
-margin-top: 8px;
-font-size: 14px;
-font-style: italic;
-color: var(--primary-text);
-}
-
 /* WORK EXPERIENCE SECTION */
 .work-tab {
 background: var(--secondary-bg);
-padding: 20px;
+padding: 5px;
 margin: 15px auto;
 max-width: 700px;
 text-align: left;
+}
+
+.work-hr {
+  border: 2px solid var(--border-color);
+  margin-top:20px;
 }
 
 .work-info {
@@ -245,7 +168,6 @@ font-weight: normal;
 font-size: 22px;
 font-weight: 900;
 color: var(--accent);
-text-transform: uppercase;
 }
 
 .work-company {
@@ -287,10 +209,15 @@ box-shadow: 4px 4px 0px var(--border-color);
 /* EDUCATION SECTION */
 .edu-tab {
 background: var(--secondary-bg);
-padding: 20px;
+padding: 5px;
 margin: 15px auto;
 max-width: 700px;
 text-align: left;
+}
+
+.edu-hr {
+  border: 2px solid var(--border-color);
+  margin: 0px 0px 10px 20px;
 }
 
 .edu-duration {
@@ -303,7 +230,6 @@ color: var(--primary-text);
 font-size: 22px;
 font-weight: 900;
 color: var(--accent);
-text-transform: uppercase;
 margin-top: 5px;
 }
 
@@ -338,147 +264,101 @@ box-shadow: 4px 4px 0px var(--border-color);
   .title-tags:hover {
     transform: translate(2px, 2px); 
   
-    box-shadow: 2px 2px 0 black;
+    box-shadow: 2px 2px 0 var(--primary-text);
   }
   
   .title-tags[data-active="on"] {
     /* Active state style */
     background: var(--primary-bg);
-    color: white;
+    color: var(--border-color);
     box-shadow: 4px 4px 0 var(--primary-text); /* Red shadow for contrast */
   }
 
-
-  /* ========== BASE RESPONSIVE SETTINGS ========== */
-@media (max-width: 768px) {
-
-  body {
-    font-size: 16px;
+/* CAROUSEL (Publications) */
+.carousel-container {
+  text-align: center;
   }
-
-  /* HEADER & NAV */
-  .menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  
+  #publications-carous {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
-
-  .menu a {
-    width:80%;
-    text-align: center;
-    padding: 8px 0;
-  }
-  /* Dropdown container - match width of <a> elements */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  width: 80%; /* Match your <a> width */
-}
-
-/* Dropdown button - full width of container */
-.dropdown-btn {
-  width: 100%; /* Take full width */
-  padding: 8px 0; /* Match your <a> padding */
-  text-align: center; /* Match your <a> alignment */
-  font-weight: bold;
-  font-family: inherit;
-  font-size: inherit;
-  color: var(--primary-text);
-  background: var(--secondary-bg);
+  
+  .carousel-button {
+  background: var(--primary-text);
+  color: var(--secondary-bg);
   border: 3px solid var(--border-color);
-  box-shadow: 4px 4px 0 var(--border-color);
+  padding: 10px;
+  font-size: 20px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-/* Dropdown content - full width */
-.dropdown-content {
-  width: 100%; /* Match parent width */
-  display: none;
-  position: absolute;
-  background-color: var(--secondary-bg);
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.1s ease-in-out;
+  }
+  
+  .carousel-button:hover {
+  transform: scale(1.1);
+  background: var(--accent);
+  }
+  
+  #carousel-track {
+  width: 80%;
+  min-height: 150px;
   border: 3px solid var(--border-color);
-  box-shadow: 4px 4px 0 var(--border-color);
-  z-index: 1;
-}
+  box-shadow: 4px 4px 0px var(--border-color);
+  background: var(--secondary-bg);
+  }
 
-/* Dropdown links - match <a> styling */
-.dropdown-content a {
+/* CERTIFICATIONS SECTION */
+#certificates {
+  text-align: left;
+  }
+  
+  .certification-tab {
+  background: var(--secondary-bg);
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  text-align: left;
+  }
+  
+  .certification-info {
+  font-size: 18px;
+  font-weight: normal;
+  }
+  
+  .certification-position {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--accent);
+  text-transform: uppercase;
+  }
+  
+  .certification-company {
+  margin-top: 5px;
+  font-size: 16px;
+  }
+  
+  .certification-company a {
   color: var(--primary-text);
-  padding: 8px 0; /* Match your <a> padding */
   text-decoration: none;
-  display: block;
-  text-align: center; /* Match your <a> alignment */
-  transition: 0.1s;
-  width: 100%; /* Full width */
-}
-
-/* Arrow positioning */
-.dropdown .arrow {
-  margin-left: 8px;
-  transition: transform 0.2s ease;
-}
-
-/* Keep all other existing dropdown styles */
-
-  /* MAIN SECTIONS */
-  main {
-    padding: 10px;
+  border-bottom: 3px solid var(--border-color);
+  font-weight: bold;
   }
-
-  section {
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 4px 4px 0px var(--border-color);
+  
+  
+  .certification-company a:hover {
+  background: var(--accent);
+  color: var(--secondary-bg);
+  border-bottom: none;
   }
-
-  /* PERSONAL INFO */
-  #name {
-    font-size: 28px;
+  
+  .certification-duration {
+  margin-top: 8px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--primary-text);
   }
-
-  #titles {
-    font-size: 20px;
-  }
-
-  #links h3 {
-    display: block;
-    margin: 5px auto;
-    width: 80%;
-    text-align: center;
-  }
-
-  /* CERTIFICATIONS, WORK, EDUCATION SECTIONS */
-  .certification-tab,
-  .work-tab,
-  .edu-tab {
-    padding: 12px;
-    margin: 10px auto;
-    box-shadow: 4px 4px 0px var(--border-color);
-  }
-
-  .certification-position,
-  .work-position,
-  .edu-position {
-    font-size: 18px;
-  }
-
-  .certification-info,
-  .work-info,
-  .edu-company {
-    font-size: 16px;
-  }
-
-  /* TITLE TAGS */
-  .title-tags {
-    padding: 6px 12px;
-    margin: 3px;
-    box-shadow: 3px 3px 0 var(--primary-text);
-  }
-}
-
-
-
 
 /* Dropdown container */
 .dropdown {
@@ -556,65 +436,4 @@ box-shadow: 4px 4px 0px var(--border-color);
 .dropdown-btn {
   padding: 10px 15px 10px 15px; /* Added right padding */
   /* ... rest of your existing dropdown-btn styles ... */
-}
-
-
-/* ========== SMALLER MOBILE DEVICES ========== */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-
-  #name {
-    font-size: 24px;
-  }
-
-  #titles {
-    font-size: 18px;
-  }
-
-  .menu a {
-    width: 90%;
-    font-size: 14px;
-  }
-
-  legend {
-    font-size: 20px;
-    padding: 3px 8px;
-  }
-
-  .certification-position,
-  .work-position,
-  .edu-position {
-    font-size: 16px;
-  }
-
-  .work-description,
-  .edu-description {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .title-tags {
-    padding: 5px 10px;
-    font-size: 14px;
-  }
-  
-  .dropdown, .menu a {
-      width: 95%;
-    }
-  }
-}
-
-/* ========== TABLET/LAPTOP TRANSITION ========== */
-@media (min-width: 769px) and (max-width: 1024px) {
-  main {
-    max-width: 800px;
-  }
-
-  .certification-tab,
-  .work-tab,
-  .edu-tab {
-    max-width: 90%;
-  }
 }

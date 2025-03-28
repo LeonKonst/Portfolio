@@ -523,10 +523,8 @@ const printEducation = ()=> {
             <div class="edu-position"> ${element.degree}</div>
             <div class="edu-company">${element.field} - ${element.institution}</div>
             <div class="edu-description"> ${element.description}</div>
+        ${i !== education.length - 1 ? '<hr class="work-hr">' : ''}
         </div>`
-        if(i != education.length-1){
-            educationContainer.innerHTML += `<hr>`;
-        }
     });
 };
 
@@ -543,10 +541,8 @@ const printWorkExperience = () => {
                 <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
             </div>
             <div class="work-description"> ${element.description}</div>
+            ${i !== workExperience.length - 1 ? '<hr class="work-hr">' : ''}
         </div>`
-        if(i != workExperience.length-1){
-            workExpContainer.innerHTML += `<hr>`;
-        }
     });
 };
 
@@ -663,7 +659,6 @@ printCertifications();
 mytitles.addEventListener("click", (e) => {
     if (e.target.classList.contains("title-tags")) {
         const titleBtn = e.target;
-        const titleTag = titleBtn.id;
         const allTabs = document.querySelectorAll('[class*="-tab"]');
         
         // Toggle button state
