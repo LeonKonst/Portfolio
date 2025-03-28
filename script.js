@@ -697,14 +697,14 @@ document.addEventListener("DOMContentLoaded", function () {
         button.setAttribute("aria-expanded", "false");
         menu.setAttribute("tabindex", "0");
 
-        // Toggle dropdown on click
-        button.addEventListener("click", function (event) {
+        // Toggle dropdown on hover
+        button.addEventListener("mouseover", function (event) {
             event.stopPropagation(); // Prevent click from reaching document listener
             toggleDropdown(button, menu);
         });
 
         // Close dropdown when clicking outside
-        document.addEventListener("click", function (event) {
+        document.addEventListener("mouseout", function (event) {
             if (!button.contains(event.target) && !menu.contains(event.target)) {
                 closeDropdown(button, menu);
             }
