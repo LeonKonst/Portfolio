@@ -6,20 +6,30 @@
 --border-color: #000;
 }
 
+html {
+  scroll-padding-top: var(--header-height, 60px);
+  scroll-behavior: smooth; /* Optional: for smooth scrolling */
+}
+
 body {
 background: var(--primary-bg);
 color: var(--primary-text);
 font-family: 'Arial Black', sans-serif;
 margin: 0;
 padding: 0;
+padding-top: calc(1em + 40px + 4px); 
 }
 
-/* HEADER & NAV */
 #header {
-background: var(--accent);
-padding: 10px;
-border-bottom: 4px solid var(--border-color);
-text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--accent);
+  padding: 10px;
+  border-bottom: 4px solid var(--border-color);
+  text-align: center;
+  z-index: 1000; /* Ensures header stays above other content */
 }
 
 .menu {
@@ -480,4 +490,64 @@ box-shadow: 4px 4px 0px var(--border-color);
   .edu-tab {
     max-width: 90%;
   }
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--primary-text);
+    background: var(--secondary-bg);
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0 var(--border-color);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-bg);
+    min-width: 160px;
+    /* border: 3px solid var(--border-color); */
+    box-shadow: 4px 4px 0 var(--border-color);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--primary-text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.1s;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style dropdown links on hover */
+.dropdown-content a:hover {
+  background: var(--accent);
+  color: var(--secondary-bg);
+}
+
+/* Style dropdown button on hover */
+.dropdown:hover .dropdown-btn {
+  background: var(--accent);
+  color: var(--secondary-bg);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--border-color);
 }

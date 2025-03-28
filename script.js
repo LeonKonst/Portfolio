@@ -521,7 +521,7 @@ const printEducation = ()=> {
         <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
             <div class="edu-position"> ${element.degree}</div>
-            <div class="edu-company"> ${element.institution}</div>
+            <div class="edu-company">${element.field} - ${element.institution}</div>
             <div class="edu-description"> ${element.description}</div>
         </div>`
     });
