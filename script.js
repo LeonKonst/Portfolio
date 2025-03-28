@@ -550,7 +550,6 @@ printWorkExperience();
 
 const activateAccordeon = () =>{
     const accordeon = document.querySelectorAll(".publication");
-    console.log(accordeon);
     accordeon.forEach(button => {
         button.addEventListener('click', () => {
             const divEl = document.getElementById(`div ${button.id}`);
@@ -697,7 +696,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.setAttribute("aria-expanded", "false");
         menu.setAttribute("tabindex", "0");
 
-        // Toggle dropdown on hover
         button.addEventListener("mouseover", function (event) {
             event.stopPropagation(); // Prevent click from reaching document listener
             toggleDropdown(button, menu);
@@ -743,4 +741,4 @@ document.addEventListener("DOMContentLoaded", function () {
         button.setAttribute("aria-expanded", "false");
         menu.style.display = "none";
     }
-});
+})
