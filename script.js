@@ -684,3 +684,65 @@ mytitles.addEventListener("click", (e) => {
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll(".dropdown-btn");
+
+    dropdownButtons.forEach(button => {
+        const menu = button.nextElementSibling; // The dropdown menu
+
+        // Ensure menu is hidden initially
+        menu.style.display = "none";
+
+        // Set ARIA attributes
+        button.setAttribute("aria-haspopup", "true");
+        button.setAttribute("aria-expanded", "false");
+        menu.setAttribute("tabindex", "0");
+
+        // Toggle dropdown on click
+        button.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent click from reaching document listener
+            toggleDropdown(button, menu);
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+            if (!button.contains(event.target) && !menu.contains(event.target)) {
+                closeDropdown(button, menu);
+            }
+        });
+
+        // Close dropdown with ESC key
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeDropdown(button, menu);
+            }
+        });
+
+        // Allow keyboard navigation
+        menu.addEventListener("keydown", function (event) {
+            if (event.key === "Tab" && !menu.contains(event.target)) {
+                closeDropdown(button, menu);
+            }
+        });
+    });
+
+    function toggleDropdown(button, menu) {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        if (isExpanded) {
+            closeDropdown(button, menu);
+        } else {
+            openDropdown(button, menu);
+        }
+    }
+
+    function openDropdown(button, menu) {
+        button.setAttribute("aria-expanded", "true");
+        menu.style.display = "block";
+    }
+
+    function closeDropdown(button, menu) {
+        button.setAttribute("aria-expanded", "false");
+        menu.style.display = "none";
+    }
+});

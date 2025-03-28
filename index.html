@@ -12,7 +12,7 @@
                 <a href="#personal-info">Personal Info</a>
                 <a href="#work-experience">Work Experience</a>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Academia <span class="dropdown arrow">▼</span></button>
+                    <button class="dropdown-btn" tabindex="0" aria-haspopup="true" aria-expanded="false">Academia <span class="dropdown arrow">▼</span></button>
                     <div class="dropdown-content">
                         <a href="#education">Education</a>
                         <a href="#publications">Publications</a>
@@ -20,7 +20,7 @@
                 </div>
                 <a href="#projects">Projects</a>
                 <div class="dropdown">
-                    <button class="dropdown-btn">Skills & More <span class="dropdown arrow">▼</span></button>
+                    <button class="dropdown-btn" tabindex="0" aria-haspopup="true" aria-expanded="false">Skills & More <span class="dropdown arrow">▼</span></button>
                     <div class="dropdown-content">
                         <a href="#certificates">Certificates</a>
                         <a href="#others">Others</a>
@@ -30,7 +30,7 @@
         </header>
         <main>
             <section id="personal-info">
-                <legend>Personal Info</legend>
+                <h1 class="section-title">Personal Info</h1>
 
             <!-- Main information that will be pinned -->
                 <div class="personal-info" id="MainInfo">
@@ -59,15 +59,15 @@
             </section>
 
             <section id="work-experience">
-                <legend>Work Experience</legend>
+                <h1 class="section-title">Work Experience</h1>
             </section>
 
             <section id="education">
-                <legend>Education</legend>
+                <h1 class="section-title">Education</h1>
             </section>
 
             <section id="publications" class="carousel-container">
-                <legend>Academic Publications</legend>
+                <h1 class="section-title">Academic Publications</h1>
                 <div id="publications-carous">
                     <button class="carousel-button" id="prev">&#10094;</button>
                     <div id="carousel-track">
@@ -78,22 +78,21 @@
             </section>
 
             <section id="projects">
-                <legend>Projects</legend>
+                <h1 class="section-title">Projects</h1>
             </section>
 
             <section id="certificates">
-                <legend>Certificates</legend>
+                <h1 class="section-title">Certificates</h1>
             </section>
 
             <section id="others">
-                <legend>Other</legend>
+                <h1 class="section-title">Other</h1>
             </section>
 
         </main>
         <footer>
             <p> <span id="current-year"></span> &copy All rights reserved. </p>
         </footer>
-        <script src="data.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
