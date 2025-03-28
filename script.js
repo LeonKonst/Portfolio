@@ -516,7 +516,7 @@ document.getElementById('current-year').textContent = currentYear;
 
 
 const printEducation = ()=> {
-    education.forEach(element => {
+    education.forEach((element, i) => {
         educationContainer.innerHTML += `
         <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
@@ -524,6 +524,9 @@ const printEducation = ()=> {
             <div class="edu-company">${element.field} - ${element.institution}</div>
             <div class="edu-description"> ${element.description}</div>
         </div>`
+        if(i != education.length-1){
+            educationContainer.innerHTML += `<hr>`;
+        }
     });
 };
 
@@ -531,7 +534,7 @@ printEducation();
 
 
 const printWorkExperience = () => {
-    workExperience.forEach(element => {
+    workExperience.forEach((element,i) => {
         workExpContainer.innerHTML += `
         <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="work-info">
@@ -541,6 +544,9 @@ const printWorkExperience = () => {
             </div>
             <div class="work-description"> ${element.description}</div>
         </div>`
+        if(i != workExperience.length-1){
+            workExpContainer.innerHTML += `<hr>`;
+        }
     });
 };
 
@@ -637,7 +643,7 @@ prevBtn.addEventListener("click",()=>{
 );
 
 const printCertifications = ()=> {
-    certifications.forEach(element => {
+    certifications.forEach((element,i) => {
         certificationContainer.innerHTML += `
         <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="certification-info">
@@ -646,6 +652,9 @@ const printCertifications = ()=> {
                 <div class="certification-duration"> ${element.month} of ${element.year}</div>
             </div>
         </div>`
+        if(i != certifications.length-1){
+            certificationContainer.innerHTML += `<hr>`;
+        }
     });
 };
 
