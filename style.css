@@ -1,15 +1,14 @@
 :root {
-  --primary-bg: #e0f7fa;  /* Ice pearl */
-  --secondary-bg: #ffffff; /* White */
-/* Deeper petrol variation */
+--primary-bg: #e0f7fa;  
+--secondary-bg: #ffffff; 
 --primary-text: #005f6b;
 --accent: #00acc1;
 --border-color: #005f6b;
 }
 
 html {
-  scroll-padding-top: var(--header-height, 80px);
-  scroll-behavior: smooth; /* Optional: for smooth scrolling */
+scroll-padding-top: var(--header-height, 80px);
+scroll-behavior: smooth;
 }
 
 
@@ -23,15 +22,15 @@ padding-top: calc(1em + 40px + 4px);
 }
 
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--accent);
-  padding: 10px;
-  border-bottom: 4px solid var(--border-color);
-  text-align: center;
-  z-index: 1000; /* Ensures header stays above other content */
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+background: var(--accent);
+padding: 10px;
+border-bottom: 4px solid var(--border-color);
+text-align: center;
+z-index: 1000;
 }
 
 .menu {
@@ -67,8 +66,8 @@ margin: auto;
 section {
 background: var(--secondary-bg);
 padding: 20px;
-border: 4px solid var(--border-color);
-box-shadow: 8px 8px 0px var(--border-color);
+border: 3px solid var(--border-color);
+box-shadow: 6px 6px 10px var(--border-color);
 margin-bottom: 20px;
 }
 
@@ -90,8 +89,8 @@ text-align: center;
 }
 
 .personal-info hr{
-  border: 2px solid var(--border-color);
-  margin-top:20px;
+border: 2px solid var(--border-color);
+margin-top:20px;
 }
 
 #name {
@@ -155,8 +154,8 @@ text-align: left;
 }
 
 .work-hr {
-  border: 2px solid var(--border-color);
-  margin-top:20px;
+border: 2px solid var(--border-color);
+margin-top:20px;
 }
 
 .work-info {
@@ -216,8 +215,8 @@ text-align: left;
 }
 
 .edu-hr {
-  border: 2px solid var(--border-color);
-  margin: 0px 0px 10px 20px;
+border: 2px solid var(--border-color);
+margin: 0px 0px 10px 20px;
 }
 
 .edu-duration {
@@ -250,189 +249,192 @@ box-shadow: 4px 4px 0px var(--border-color);
 }
 
 .title-tags {
-    /* Base style */
-    padding: 8px 16px;
-    margin: 5px;
-    font-weight: bold;
-    background: var(--accent);
-    border: 3px solid var(--primary-text);
-    box-shadow: 4px 4px 0 var(--primary-text);
-    cursor: pointer;
-    transition: all 0.1s;
-  }
-  
-  .title-tags:hover {
-    transform: translate(2px, 2px); 
-  
-    box-shadow: 2px 2px 0 var(--primary-text);
-  }
-  
-  .title-tags[data-active="on"] {
-    /* Active state style */
-    background: var(--primary-bg);
-    color: var(--border-color);
-    box-shadow: 4px 4px 0 var(--primary-text); /* Red shadow for contrast */
-  }
+padding: 8px 16px;
+margin: 5px;
+font-weight: bold;
+background: var(--accent);
+border: 3px solid var(--primary-text);
+box-shadow: 4px 4px 0 var(--primary-text);
+cursor: pointer;
+transition: all 0.1s;
+}
+
+.title-tags:hover {
+transform: translate(2px, 2px); 
+
+box-shadow: 2px 2px 0 var(--primary-text);
+}
+
+.title-tags[data-active="on"] {
+/* Active state style */
+background: var(--primary-bg);
+color: var(--border-color);
+box-shadow: 4px 4px 0 var(--primary-text);
+}
 
 /* CAROUSEL (Publications) */
 .carousel-container {
-  text-align: center;
-  }
-  
-  #publications-carous {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
-  
-  .carousel-button {
-  background: var(--primary-text);
-  color: var(--secondary-bg);
-  border: 3px solid var(--border-color);
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0px var(--border-color);
-  transition: transform 0.1s ease-in-out;
-  }
-  
-  .carousel-button:hover {
-  transform: scale(1.1);
-  background: var(--accent);
-  }
-  
-  #carousel-track {
-  width: 80%;
-  min-height: 150px;
-  border: 3px solid var(--border-color);
-  box-shadow: 4px 4px 0px var(--border-color);
-  background: var(--secondary-bg);
-  }
+text-align: center;
+}
+
+#publications-carous {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.carousel-button {
+background: var(--primary-text);
+color: var(--secondary-bg);
+border: 3px solid var(--border-color);
+padding: 10px;
+font-size: 20px;
+cursor: pointer;
+box-shadow: 4px 4px 0px var(--border-color);
+transition: transform 0.1s ease-in-out;
+}
+
+.carousel-button:hover {
+transform: scale(1.1);
+background: var(--accent);
+}
+
+#carousel-track {
+width: 80%;
+min-height: 150px;
+border: 3px solid var(--border-color);
+box-shadow: 4px 4px 0px var(--border-color);
+background: var(--secondary-bg);
+}
 
 /* CERTIFICATIONS SECTION */
 #certificates {
-  text-align: left;
+text-align: left;
+}
+
+.certification-tab {
+background: var(--secondary-bg);
+padding: 5px;
+margin: 15px auto;
+max-width: 600px;
+text-align: left;
+}
+
+.certification-hr {
+  border: 2px solid var(--border-color);
+  margin: 20px 0px 0px 0px;
   }
-  
-  .certification-tab {
-  background: var(--secondary-bg);
-  padding: 15px;
-  margin: 15px auto;
-  max-width: 600px;
-  text-align: left;
-  }
-  
-  .certification-info {
-  font-size: 18px;
-  font-weight: normal;
-  }
-  
-  .certification-position {
-  font-size: 20px;
-  font-weight: 900;
-  color: var(--accent);
-  }
-  
-  .certification-company {
-  margin-top: 5px;
-  font-size: 16px;
-  }
-  
-  .certification-company a {
-  color: var(--primary-text);
-  text-decoration: none;
-  border-bottom: 3px solid var(--border-color);
-  font-weight: bold;
-  }
-  
-  
-  .certification-company a:hover {
-  background: var(--accent);
-  color: var(--secondary-bg);
-  border-bottom: none;
-  }
-  
-  .certification-duration {
-  margin-top: 8px;
-  font-size: 14px;
-  font-style: italic;
-  color: var(--primary-text);
-  }
+
+.certification-info {
+font-size: 18px;
+font-weight: normal;
+}
+
+.certification-position {
+font-size: 20px;
+font-weight: 900;
+color: var(--accent);
+}
+
+.certification-company {
+margin-top: 5px;
+font-size: 16px;
+}
+
+.certification-company a {
+color: var(--primary-text);
+text-decoration: none;
+border-bottom: 3px solid var(--border-color);
+font-weight: bold;
+}
+
+
+.certification-company a:hover {
+background: var(--accent);
+color: var(--secondary-bg);
+border-bottom: none;
+}
+
+.certification-duration {
+margin-top: 8px;
+font-size: 14px;
+font-style: italic;
+color: var(--primary-text);
+}
 
 /* Dropdown container */
 .dropdown {
-    position: relative;
-    display: inline-block;
+position: relative;
+display: inline-block;
 }
 
 /* Dropdown button */
 .dropdown-btn {
-    padding: 10px 15px;
-    font-weight: bold;
-    font-family: inherit;
-    font-size: inherit;
-    color: var(--primary-text);
-    background: var(--secondary-bg);
-    border: 3px solid var(--border-color);
-    box-shadow: 4px 4px 0 var(--border-color);
-    cursor: pointer;
-    transition: all 0.1s ease-in-out;
+padding: 10px 15px;
+font-weight: bold;
+font-family: inherit;
+font-size: inherit;
+color: var(--primary-text);
+background: var(--secondary-bg);
+border: 3px solid var(--border-color);
+box-shadow: 4px 4px 0 var(--border-color);
+cursor: pointer;
+transition: all 0.1s ease-in-out;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--secondary-bg);
-    min-width: 160px;
-    /* border: 3px solid var(--border-color); */
-    box-shadow: 4px 4px 0 var(--border-color);
-    z-index: 1;
+display: none;
+position: absolute;
+background-color: var(--secondary-bg);
+min-width: 160px;
+box-shadow: 4px 4px 0 var(--border-color);
+z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: var(--primary-text);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  transition: 0.1s;
+color: var(--primary-text);
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+transition: 0.1s;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+display: block;
 }
 
 /* Style dropdown links on hover */
 .dropdown-content a:hover {
-  background: var(--accent);
-  color: var(--secondary-bg);
+background: var(--accent);
+color: var(--secondary-bg);
 }
 
 /* Style dropdown button on hover */
 .dropdown:hover .dropdown-btn {
-  background: var(--accent);
-  color: var(--secondary-bg);
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--border-color);
+background: var(--accent);
+color: var(--secondary-bg);
+transform: translate(2px, 2px);
+box-shadow: 2px 2px 0 var(--border-color);
 }
 
 /* Arrow styling */
 .arrow {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.2s ease;
-  font-size: 0.8em;
+display: inline-block;
+margin-left: 8px;
+transition: transform 0.2s ease;
+font-size: 0.8em;
 }
 
 /* Rotate arrow when dropdown is hovered */
 .dropdown:hover .arrow {
-  transform: rotate(180deg);
+transform: rotate(180deg);
 }
 
 /* Adjust button padding to accommodate arrow */
 .dropdown-btn {
-  padding: 10px 15px 10px 15px; /* Added right padding */
-  /* ... rest of your existing dropdown-btn styles ... */
+padding: 10px 15px 10px 15px; /* Added right padding */
+/* ... rest of your existing dropdown-btn styles ... */
 }

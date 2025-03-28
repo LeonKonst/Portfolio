@@ -647,10 +647,8 @@ const printCertifications = ()=> {
                 <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
                 <div class="certification-duration"> ${element.month} of ${element.year}</div>
             </div>
+            ${i !== certifications.length - 1 ? '<hr class="certification-hr">' : ''}
         </div>`
-        if(i != certifications.length-1){
-            certificationContainer.innerHTML += `<hr>`;
-        }
     });
 };
 
