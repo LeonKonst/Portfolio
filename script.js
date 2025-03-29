@@ -361,9 +361,36 @@ const publications = [
 
 //projects
 
+const projects = [
+    {
+        name:"Spill The Beans",
+        shortDescription:"Discord bot",
+        longDescription:"Spill the Beans is a Discord bot that lets users send private messages to a dedicated server channel, with a configurable probability of revealing the sender’s name. It supports English and Greek and allows server admins to customize settings like anonymity probability, message cooldown, and relay channel via the Settings.py file. The bot requires no commands—users simply DM it, and messages are forwarded accordingly.",
+        toolsUsed:["python","discord.py","fly.io"],
+        imageUrl:"https://github.com/LeonKonst/Spill-The-Beans",
+        projectLink:"",
+        titleTags:["DC"],
+    },
+    {
+        name:"PhD thesis template",
+        shortDescription:"LaTeX template",
+        longDescription:"This is a LaTeX template for PhD theses in the Chemical Engineering Department of Aristotle University of Thessaloniki. It is written in Greek and can also be adapted for theses at the bachelor’s and master’s levels, as well as for other departments. The template is officially published on the Chemical Engineering Department’s website for student use (https://cheng.auth.gr/phd/)",
+        toolsUsed:["LaTeX","Overleaf"],
+        imageUrl:"",
+        projectLink:"https://www.overleaf.com/latex/templates/phd-template-cheng-auth/xfhzjtmhmdwk",
+        titleTags:["DC"],
+    },
+    {
+        name:"My Portfolio",
+        shortDescription:"This exact webpage",
+        longDescription:"",
+        toolsUsed:["HTML","CSS","JS"],
+        imageUrl:"",
+        projectLink:"https://leonkonst.github.io/Portfolio",
+        titleTags:["DC"],
+    },
+]
 
-//latex template phd
-//portfolio
 
 
 //Certifications
@@ -462,7 +489,7 @@ mytitles.innerText = `I am a `;
 //create the Title buttons
 titles.map((title,i)=>{
     if(i === titles.length -1){
-        mytitles.innerHTML += ` and a <button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
+        mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
     }
     else{
         mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
