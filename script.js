@@ -22,8 +22,21 @@ const titles = [
     ["Chemical Engineer", "CE"],
     ["Polymer Scientist","PS"],
     ["Material Scientist", "MS"],
-    ["Web developer", "WD"],
+    ["Developer//Coder", "DC"],
 ];
+
+//aboutme 
+
+const aboutMeHtml = `
+<h2>About me</h2>
+<p>I'm a multidisciplinary researcher and engineer with a strong background in chemical engineering, composite materials, and coatings technology. 
+Currently, I work as an R&D Scientist at Hempel A/S, where I focus on developing innovative solutions in materials science.</p>
+<p> My academic journey includes a PhD in the development and characterization of (micro and nano) composite polymeric materials, complemented by hands-on experience in research, teaching, and statistical analysis (Design of Experiments, ANOVA etc.)
+Over the years, I've developed expertise in material characterization (DSC, DMA, TGA, Tensile testing, XRD etc.)</p> 
+<p>Beyond my scientific career, I have a passion for technology and problem-solving.
+I’ve worked as a freelance sound engineer and lighting technician, blending technical knowledge with creativity.
+Recently, I’ve taken on a new challenge—teaching myself web development.
+I’m currently building my first project: <strong>this very portfolio!</strong></p>`
 
 //Work experience
 
@@ -127,7 +140,7 @@ const education = [
         endYear:"Present",
         field:"Electrical and Computer Engineering",
         description:"Suspended since December 2023",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
 ];
 
@@ -346,6 +359,13 @@ const publications = [
 ];
 
 
+//projects
+
+
+//latex template phd
+//portfolio
+
+
 //Certifications
 
 const certifications = [
@@ -358,7 +378,7 @@ const certifications = [
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
         name:"JavaScript Algorithms and Data Structures",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
     {
         id:2,
@@ -369,7 +389,7 @@ const certifications = [
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
         name:"JavaScript Algorithms and Data Structures",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
     {
         id:3,
@@ -380,7 +400,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"",
         name:"Git Course",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
     {
         id:4,
@@ -391,7 +411,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"",
         name:"Python Course",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
     {
         id:5,
@@ -402,7 +422,7 @@ const certifications = [
         credentialId:"",
         credentialUrl:"https://opensea.io/assets/matic/0xdBf2138593aeC61d55d86E80b8ed86D7b9ba51F5/1686",
         name:"Solidity foundation Bootcamp",
-        titleTags:["WD"],
+        titleTags:["DC"],
     },
     {
         id:5,
@@ -416,6 +436,9 @@ const certifications = [
         titleTags:["CE","MS"],
     },
 ];
+
+
+//other skills
 
 
 // get HTML elements to display the info above
@@ -436,6 +459,15 @@ const certificationContainer = document.getElementById("certificates")
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
 mytitles.innerText = `I am a `;
 
+//create the Title buttons
+titles.map((title,i)=>{
+    if(i === titles.length -1){
+        mytitles.innerHTML += ` and a <button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
+    }
+    else{
+        mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
+    }
+})
 
 mylocation.innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     // <g id="SVGRepo_bgCarrier" stroke-width="0">
@@ -493,22 +525,7 @@ ${personalInfo.github.name}
 
 
 //about me paragraph
-aboutme.innerHTML = `
-<h2>About me</h2>
-<p>I'm a multidisciplinary researcher and engineer with a strong background in chemical engineering, composite materials, and coatings technology. 
-Currently, I work as an R&D Scientist at Hempel A/S, where I focus on developing innovative solutions in materials science.</p>
-<p> My academic journey includes a PhD in the development and characterization of (micro and nano) composite polymeric materials, complemented by hands-on experience in research, teaching, and statistical analysis (Design of Experiments, ANOVA etc.)
-Over the years, I've developed expertise in material characterization (DSC, DMA, TGA, Tensile testing, XRD etc.)</p> 
-<p>Beyond my scientific career, I have a passion for technology and problem-solving.
-I’ve worked as a freelance sound engineer and lighting technician, blending technical knowledge with creativity.
-Recently, I’ve taken on a new challenge—teaching myself web development.
-I’m currently building my first project: <strong>this very portfolio!</strong></p>`;
-
-//create the Title buttons
-titles.map((title)=>{
-    mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
-})
-
+aboutme.innerHTML = aboutMeHtml;
 
 const currentYear = new Date().getFullYear();
             // Insert the current year into the footer

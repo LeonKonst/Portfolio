@@ -117,10 +117,9 @@ color: var(--secondary-bg);
 }
 
 
-
 /* FOOTER */
 footer {
-background: var(--primary-bg);
+background: var(--accent);
 padding: 20px;
 text-align: center;
 border-top: 4px solid var(--border-color);
