@@ -158,7 +158,7 @@ const publications = [
         year : 2019,
         doi :"https://doi.org/10.1016/j.fluid.2019.112254",
         url : "https://www.sciencedirect.com/science/article/pii/S0378381219303073",
-        author : [["Konstantinos","Leontiadis"],
+        authors : [["Konstantinos","Leontiadis"],
             ["Evangelos", "Tzimpilis"],
             ["Dimitra", "Aslanidou"], 
             ["Ioannis", "Tsivintzelis"]],
@@ -178,7 +178,7 @@ const publications = [
         year : 2022,
         doi :"https://doi.org/10.3390/polym14071329",
         url : "https://www.mdpi.com/2073-4360/14/7/1329",
-        author : [["Konstantinos","Leontiadis"],
+        authors : [["Konstantinos","Leontiadis"],
              ["Costas", "Tsioptsias"],
              ["Stavros", "Messaritakis"], 
              ["Aikaterini", "Terzaki"],
@@ -202,7 +202,7 @@ const publications = [
         year : 2022,
         doi :"https://doi.org/10.3390/polym14050924",
         url : "https://www.mdpi.com/2073-4360/14/5/924",
-        author : [["Konstantinos","Leontiadis"],
+        authors : [["Konstantinos","Leontiadis"],
              ["Costas", "Tsioptsias"],
              ["Stavros", "Messaritakis"], 
              ["Aikaterini", "Terzaki"],
@@ -226,7 +226,7 @@ const publications = [
         year : 2023,
         doi :"https://doi.org/10.3390/polym15142986",
         url : "https://www.mdpi.com/2073-4360/15/14/2986",
-        author : [["Konstantinos","Leontiadis"],
+        authors : [["Konstantinos","Leontiadis"],
              ["Dimitris", "Achilias"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
@@ -245,7 +245,7 @@ const publications = [
         year : 2022,
         doi :"https://doi.org/10.3390/textiles2030028",
         url : "https://www.mdpi.com/2673-7248/2/3/28",
-        author : [["Costas","Tsioptsias"],
+        authors : [["Costas","Tsioptsias"],
             ["Georgia", "Gkouzouma"],
             ["Konstantinos", "Leontiadis"],
              ["Ioannis", "Tsivintzelis"]],
@@ -265,7 +265,7 @@ const publications = [
         year : 2024,
         doi :"https://doi.org/10.3390/nano14020223",
         url : "https://www.mdpi.com/2079-4991/14/2/223",
-        author : [["Konstantinos","Leontiadis"],
+        authors : [["Konstantinos","Leontiadis"],
             ["Katerina", "Theodoratou"],
             ["Costas", "Tsioptsias"],
              ["Ioannis", "Tsivintzelis"]],
@@ -285,7 +285,7 @@ const publications = [
         year : 2024,
         doi :"https://doi.org/10.3390/jcs8030091",
         url : "https://www.mdpi.com/2504-477X/8/3/91",
-        author : [["Costas","Tsioptsias"],
+        authors : [["Costas","Tsioptsias"],
             ["Konstantinos", "Leontiadis"],
             ["Xanthi", "Ntampou"],
              ["Ioannis", "Tsivintzelis"]],
@@ -305,7 +305,7 @@ const publications = [
         year : 2022,
         doi :"https://www.mdpi.com/2073-4360/14/2/260",
         url : "https://www.mdpi.com/2073-4360/14/2/260",
-        author : [["Costas","Tsioptsias"],
+        authors : [["Costas","Tsioptsias"],
             ["Konstantinos", "Leontiadis"],
             ["Stavros", "Messaritakis"], 
             ["Aikaterini", "Terzaki"],
@@ -329,7 +329,7 @@ const publications = [
         year : 2023,
         doi :"https://doi.org/10.1016/j.fluid.2023.113800",
         url : "https://www.sciencedirect.com/science/article/pii/S037838122300081X",
-        author : [["Giannis","Kontos"],
+        authors : [["Giannis","Kontos"],
             ["Konstantinos", "Leontiadis"],
             ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE"],
@@ -348,7 +348,7 @@ const publications = [
         year : 2021,
         doi :"https://doi.org/10.1177/8756087920972146",
         url : "https://journals.sagepub.com/doi/10.1177/8756087920972146",
-        author : [["Costas","Tsioptsias"],
+        authors : [["Costas","Tsioptsias"],
             ["Konstantinos", "Leontiadis"],
             ["Evangelos", "Tzimpilis"],
             ["Ioannis", "Tsivintzelis"]],
@@ -554,9 +554,8 @@ ${personalInfo.github.name}
 //about me paragraph
 aboutme.innerHTML = aboutMeHtml;
 
-const currentYear = new Date().getFullYear();
-            // Insert the current year into the footer
-document.getElementById('current-year').textContent = currentYear;
+
+
 
 
 const printEducation = ()=> {
@@ -617,15 +616,29 @@ const printPublications = (range)=> {
         
         track.innerHTML = ""; 
         publications.forEach(element => {
+            let authorsDisplayed = "";
+            const authorLength = element.authors.length - 1;
+            element.authors.forEach((author,index)=>{  
+                if(index < 2){
+                    authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
+                } else if (index === 2) {
+                    if(index === authorLength){
+                        authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
+                    }
+                    else{
+                        authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et.al.`;
+                    }
+                } 
+            });
             if(element.id<=range[1]&&element.id>=range[0]){
                 track.innerHTML += `<div class="panel">
                     <button class="publication" id="${element.id}">
-                        <p>${element.artOrProc}</p>
                         <h4>${element.title}</h4>
+                        <h3>${element.year}</h3>
+                        <p>${authorsDisplayed}</p>
                     </button>
                     <div class="hidden" id="div ${element.id}">
                         ${element.abstract.split(" ",60).join(" ")}
-                        
                         
                         ...
                         <a  target="_blank" href="${element.url}">Read more here</a>
@@ -681,6 +694,8 @@ prevBtn.addEventListener("click",()=>{
 }
 );
 
+//printProjects
+
 const printCertifications = ()=> {
     certifications.forEach((element,i) => {
         certificationContainer.innerHTML += `
@@ -696,6 +711,16 @@ const printCertifications = ()=> {
 };
 
 printCertifications();
+
+
+
+//printOthers
+
+
+//footer year generation
+const currentYear = new Date().getFullYear();
+            // Insert the current year into the footer
+document.getElementById('current-year').textContent = currentYear;
 
 mytitles.addEventListener("click", (e) => {
     if (e.target.classList.contains("title-tags")) {
