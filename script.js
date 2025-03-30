@@ -467,19 +467,31 @@ const certifications = [
 
 //other skills
 
+const skiils = [
+    {
+        skillName:"Python",
+    },
+]
+
 
 // get HTML elements to display the info above
 const myname = document.getElementById("name");
-const mylocation = document.getElementById("location");
 const mytitles = document.getElementById("titles");
+
+const mylocation = document.getElementById("location");
 const mylinkedin = document.getElementById("linkedin");
 const mygithub = document.getElementById("github");
+
 const aboutme = document.getElementById("aboutme");
-const track = document.getElementById("carousel-track");
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
+
+
 const workExpContainer = document.getElementById("work-experience");
 const educationContainer = document.getElementById("education");
+
+const track = document.getElementById("publications");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+
 const certificationContainer = document.getElementById("certificates")
 let activeTitleFilters = []; // Track active filters globally
 
@@ -491,7 +503,7 @@ mytitles.innerText = `I am a `;
 //create the Title buttons
 titles.map((title,i)=>{
     if(i === titles.length -1){
-        mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
+        mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button> `;
     }
     else{
         mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
@@ -588,116 +600,117 @@ const printEducation = ()=> {
 
 printEducation();
 
-const activateAccordeon = () =>{
-    const accordeon = document.querySelectorAll(".publication-tab");
-    accordeon.forEach(button => {
-        button.addEventListener('click', () => {
-            const divEl = document.getElementById(`div ${button.id}`);
-            if (divEl) {
-                divEl.classList.toggle('hidden');
-                divEl.classList.toggle('shown');
-            }
-            else{
-                return;
-            }
-            return;
-        });
-    });
+// const activateAccordeon = () =>{
+//     const accordeon = document.querySelectorAll(".publication-tab");
+//     accordeon.forEach(button => {
+//         button.addEventListener('click', () => {
+//             const divEl = document.getElementById(`div ${button.id}`);
+//             if (divEl) {
+//                 divEl.classList.toggle('hidden');
+//                 divEl.classList.toggle('shown');
+//             }
+//             else{
+//                 return;
+//             }
+//             return;
+//         });
+//     });
     
-};
+// };
 
-const printPublications = (range) => {
-    track.innerHTML = `<div class="publications-container"></div>`;
-    const container = track.querySelector('.publications-container');
+// const printPublications = (range) => {
+//     track.innerHTML = `<div class="publications-container"></div>`;
+//     const container = track.querySelector('.publications-container');
     
-    publications.forEach(element => {
-        if (activeTitleFilters.length > 0 && 
-            !element.titleTags.some(tag => activeTitleFilters.includes(tag))) {
-            return;
-        }
+//     publications.forEach(element => {
+//             //Αuthors display logic
+//             let authorsDisplayed = "";
+//             const authorLength = element.authors.length - 1;
+//             element.authors.forEach((author,index)=>{  
+//                 if(index < 2){
+//                     authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
+//                 } else if (index === 2) {
+//                     if(index === authorLength){
+//                         authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
+//                     }
+//                     else{
+//                         authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
+//                     }
+//                 } 
+//             });
 
-            //Αuthors display logic
-            let authorsDisplayed = "";
-            const authorLength = element.authors.length - 1;
-            element.authors.forEach((author,index)=>{  
-                if(index < 2){
-                    authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
-                } else if (index === 2) {
-                    if(index === authorLength){
-                        authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
-                    }
-                    else{
-                        authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
-                    }
-                } 
-            });
+//             let keywordTags = "";
+//             element.keywords.forEach(keyword=>{
+//                 keywordTags += `<div class="keywordTag">${keyword}</div>`
+//             })
 
-            //Element creation for publications
-            if(element.id<=range[1]&&element.id>=range[0]){
-                track.innerHTML += `<div class="panel">
-                    <button class="publication-tab" data-tags="${element.titleTags.join(' ')}" id="${element.id}">
-                        <h4>${element.title}</h4>
-                        <h3>${element.year}</h3>
-                        <p>${authorsDisplayed}</p>
-                        <p class="abstract" tabindex="0" aria-haspopup="true" aria-expanded="false">Abstract <span class="dropdown arrow">▼</span></p>
-                    </button>
-                    <div class="hidden" id="div ${element.id}">
-                        ${element.abstract.split(" ",60).join(" ")}
-                        
-                        ...
-                        <a  target="_blank" href="${element.url}">Read more here</a>
-                    </div>
-                </div>
-                `;
-            }
-        });
-        track.innerHTML += `</div>`;
+//             //Element creation for publications
+//             track.innerHTML += `<div class="panel">
+//                 <button class="publication-tab" data-tags="${element.titleTags.join(' ')}" id="${element.id}">
+//                     <div class="pub-header">
+//                         <h3>${element.year}</h3>
+//                         <div class="keywords">Keywords: ${keywordTags}</div>
+//                     </div>
+//                     <hr>    
+//                     <h4>${element.title}</h4>
+//                     <p class="authors">${authorsDisplayed}</p>
+//                     <p class="abstract" tabindex="0" aria-haspopup="true" aria-expanded="false"><strong>Abstract: </strong><span class="small abstract">${element.abstract.split(" ",10).join(" ")}</span> <span class="dropdown arrow">▼</span></p>
+//                     <div class="hidden" id="div ${element.id}">
+//                         ${element.abstract.split(" ",60).join(" ")}
+//                         ...
+//                         <a  target="_blank" href="${element.url}">Read more here</a>
+//                     </div>
+//                 </button>    
+//             </div>`;
+//         });
+
+
         
-        activateAccordeon();
-        return range;
+//         activateAccordeon();
+//         return range;
         
-    };
+//     };
 
 //Creating the publications section
-prevBtn.disabled = true;
-currRange = printPublications([1,2]);
+// prevBtn.disabled = true;
+// currRange = printPublications([1,2]);
 
-const activateBtn = (btn) =>{
-    btn.disabled = false;
-}
+// const activateBtn = (btn) =>{
+//     btn.disabled = false;
+// }
 
-const disableBtn = (btn) =>{
-    btn.disabled = true;
-}
+// const disableBtn = (btn) =>{
+//     btn.disabled = true;
+// }
 
 
-nextBtn.addEventListener("click",()=>{  
-    activateBtn(prevBtn);
-    if(currRange[1]<publications.length){   
-        currRange[0]+=1;
-        currRange[1]+=1;     
-        currRange = printPublications(currRange);    
-    } 
-    if(currRange[1]==publications.length){
-        disableBtn(nextBtn);
-    }
-}
-); 
+// nextBtn.addEventListener("click",()=>{  
+//     activateBtn(prevBtn);
+//     if(currRange[1]<publications.length){   
+//         currRange[0]+=1;
+//         currRange[1]+=1;     
+//         currRange = printPublications(currRange);    
+//     } 
+//     if(currRange[1]==publications.length){
+//         disableBtn(nextBtn);
+//     }
+// }
+// ); 
 
-prevBtn.addEventListener("click",()=>{ 
-    activateBtn(nextBtn);  
-    if(currRange[0]>1){
+// prevBtn.addEventListener("click",()=>{ 
+//     activateBtn(nextBtn);  
+//     if(currRange[0]>1){
         
-        currRange[0]-=1;
-        currRange[1]-=1;
-        currRange = printPublications(currRange);
+//         currRange[0]-=1;
+//         currRange[1]-=1;
+//         currRange = printPublications(currRange);
         
-    }
-    if(currRange[0]==1){
-        disableBtn(prevBtn);
-    }  
-}
-);
+//     }
+//     if(currRange[0]==1){
+//         disableBtn(prevBtn);
+//     }  
+// }
+// );
 
 //printProjects
 

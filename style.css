@@ -4,12 +4,11 @@
 - Main element width
  */
 :root {
-  --primary-bg: #e0f7fa;  
-  --secondary-bg: #ffffff; 
-  --primary-text: #005f6b;
-  --accent: #00acc1;
-  --border-color: #005f6b;
-
+  --primary-bg: #FB9F89;
+  --secondary-bg: #A9DEF9;
+  --primary-text: #1E1E24;
+  --accent: #21A179;
+  --border-color: #1E1E24;
 
   --header-height:40px;
   --scroll-padding:45px;
@@ -234,7 +233,7 @@ a:active {
   padding: 4px 4px;
   margin: 5px;
   font-weight: bold;
-  background: var(--accent);
+  background: var(--primary-bg);
   border: 3px solid var(--primary-text);
   /* box-shadow: 4px 4px 0 var(--primary-text); */
   cursor: pointer;
@@ -248,7 +247,7 @@ a:active {
 }
 
 .title-tags[data-active="on"] {
-  background: var(--primary-bg);
+  background: var(--accent);
   color: var(--border-color);
   box-shadow: 4px 4px 0 var(--primary-text);
 }
@@ -263,13 +262,20 @@ a:active {
   gap: 1rem;
 }
 
+/* sizing SVGs */
+#links h3 svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
 #links h3{
   padding:0;
 }
 
 #links h3 a{
   /* color */
-  background: var(--accent);
   color: var(--primary-text);
 
   /* shape */
@@ -280,7 +286,7 @@ a:active {
 
   display: inline-block;
   font-size: 14px;
-  background: var(--secondary-bg);
+  background: var(--primary-bg);
   transition: all 0.1s;
 }
 
@@ -325,7 +331,7 @@ a:active {
   margin-top: -10px;
   margin-left: -10px;
   font-size: 18px;
-  background: var(--secondary-bg);
+  background: var(--primary-bg);
   transition: all 0.1s;
 
 }
@@ -344,7 +350,7 @@ a:active {
   
 .work-description {
   /* shape */
-  padding: 10px;f
+  padding: 10px;
   line-height: 1.4;
   border-radius: 10px;
   font-size: 16px;
@@ -355,7 +361,7 @@ a:active {
 
   /* color */
 
-  background: var(--primary-bg);
+  background: var(--accent);
   border: 2px solid var(--border-color);
   box-shadow: 2px 2px 0px var(--border-color);
 }
@@ -406,43 +412,78 @@ a:active {
 /* ------------------------------ */
 
 
-#publications-carous {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.publication-tab{
+  /* shape */
+  border-radius:5px;
+  width:350px;
+  height:250px;
+
+  /* color */
+  background-color:white;
+  border:1px solid black;
 }
 
-.carousel-button {
-  background: var(--primary-text);
-  color: var(--secondary-bg);
+.publication-tab h4{
+  text-align: left;
+}
+
+.publication-tab h3{
+  text-align: left;
+  border:1px solid var(--primary-bg);
+  
+}
+
+.keywords{
+  font-size: 14px;
+  display:flex;
+  justify-content:right;
+  border:1px solid black;
+}
+
+.keywordTag{
+  background-color: var(--primary-bg);
+  margin-left:0.5rem;
+  border:3px solid var(--border-color);
+  border-radius:5px;
+  color:var(--primary-text);
+  height:1rem;
+  padding:6px 0px;
+
+}
+
+.pub-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.publication-tab .authors{
+  text-align: left;
+}
+
+/* .carousel-button {
+  background: var(--primary-bg);
+  color: var(--primary-text);
   border: 3px solid var(--border-color);
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
   box-shadow: 4px 4px 0px var(--border-color);
-  transition: transform 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .carousel-button:hover {
-  transform: scale(1.1);
-  background: var(--accent);
-}
+  transform: translate(4px,4px);
+  box-shadow: 0px 0px 0px var(--border-color);
+} */
 
-#carousel-track {
-  width: 80%;
-  min-height: 150px;
-  border: 3px solid var(--border-color);
-  box-shadow: 4px 4px 0px var(--border-color);
-  background: var(--secondary-bg);
-}
+
 
 .hidden{
-  height:0;
   display:none;
 }
 
 .shown{
-  height:auto;
   padding:5px;
 }
 
@@ -477,7 +518,7 @@ a:active {
   display: inline-block;
   margin-top: -10px;
   font-size: 14px;
-  background: var(--secondary-bg);
+  background: var(--primary-bg);
   transition: all 0.1s;
 
 }
@@ -506,9 +547,14 @@ footer {
   font-weight: bold;
 }
 
+/* major breakpoints to be responsive
+@media (max-width: 576px) {
+  body{
+    --primary-bg:green;
+  }
+}
 
 
-/* major breakpoints to be responsive */
 @media (min-width: 576px) and (max-width:768px) {
   body{
     --primary-bg:yellow;
@@ -524,11 +570,4 @@ footer {
     --primary-bg:blue;
   }
 }
-
-/* sizing SVGs */
-#links h3 svg {
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em;
-  vertical-align: middle;
-}
+ */
