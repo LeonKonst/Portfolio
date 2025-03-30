@@ -1,439 +1,534 @@
+/* Variables for
+- the colors
+- Header height
+- Main element width
+ */
 :root {
---primary-bg: #e0f7fa;  
---secondary-bg: #ffffff; 
---primary-text: #005f6b;
---accent: #00acc1;
---border-color: #005f6b;
+  --primary-bg: #e0f7fa;  
+  --secondary-bg: #ffffff; 
+  --primary-text: #005f6b;
+  --accent: #00acc1;
+  --border-color: #005f6b;
+
+
+  --header-height:40px;
+  --scroll-padding:45px;
 }
 
+/* Navigation buttons scrolling behavior */
 html {
-scroll-padding-top: var(--header-height, 80px);
-scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + var(--scroll-padding));  /* Header is fixed so it scrolls 80px + header height to be accurate */
+  scroll-behavior: smooth;
 }
 
-
+/* Setting the font, font color, background color and the padding of the page based on the sticky header. */
 body {
-background: var(--primary-bg);
-color: var(--primary-text);
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
-padding-top: calc(1em + 40px + 4px); 
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: calc(1em + 40px + 4px); 
+  
 }
 
+/* ------------------------------ */
+/* ----------HEADER PART--------- */
+/* ------------------------------ */
+
+/* Header for page navigation*/
 #header {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-background: var(--accent);
-padding: 10px;
-border-bottom: 4px solid var(--border-color);
-text-align: center;
-z-index: 1000;
+    /* position */
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 1000;
+
+  /* color */
+  background: var(--accent);
+  border: 2px solid var(--border-color);
+
+  /* shape */
+  height:var(--header-height);
+  padding: 5px;
+  border-radius:10px;
+
+  /* others */
+  text-align: center;
 }
 
+/* Menu navigation */
 .menu {
-display: flex;
-justify-content: center;
-gap: 15px;
+  /* Positioning of elements in navigation */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
 }
 
+/* navigation links */
 .menu a {
-color: var(--primary-text);
-text-decoration: none;
-font-weight: bold;
-border: 3px solid var(--border-color);
-padding: 10px 15px;
-background: var(--secondary-bg);
-box-shadow: 4px 4px 0 var(--border-color);
-transition: transform 0.1s ease-in-out;
+  /* color */
+  color: var(--primary-text);
+  border: 3px solid var(--border-color);
+  background: var(--secondary-bg);
+  
+  /* shape */
+  box-sizing: border-box;
+  height:2rem;
+  width:9rem;
+  border-radius:10px;
+  box-shadow: 4px 4px 0 var(--border-color);
+  padding: 6px 5px 6px 5px; 
+
+  /* other */
+  text-decoration: none; 
+  transition: all 0.05s;
 }
 
+/* Navigation buttons moving on their shadows */
 .menu a:hover {
-transform: scale(1.05);
-background: var(--accent);
-color: var(--secondary-bg);
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 var(--border-color);
 }
 
-/* MAIN SECTIONS */
+/* Dropdown menu navigation buttons */
+.dropdown-btn {
+  /* color */
+  color: var(--primary-text);
+  background: var(--secondary-bg);
+  border: 3px solid var(--border-color);
+
+  /* shape */
+  box-sizing: border-box;
+  height:2rem;
+  width:9rem;
+  border-radius:10px;
+  padding: 6px 5px 6px 5px;
+  font-family: inherit;
+  font-size: inherit;
+  
+
+  /* other */
+  box-shadow: 4px 4px 0 var(--border-color);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  /* color */
+  color: var(--primary-text);
+  
+  text-decoration: none;
+  display: block;
+  
+  margin-top:3px;
+
+  /* other */
+  transition: 0.1s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+  background: var(--accent);
+  color: var(--secondary-bg);
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0 var(--border-color);
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+  font-size: 0.8em;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+  
+/* ------------------------------ */
+/* -----------MAIN PART---------- */
+/* ------------------------------ */
+
 main {
-padding: 20px;
-max-width: 900px;
-margin: auto;
+  padding: 20px;
+  max-width: 760px;
+  margin: auto;
 }
 
+/* SECTIONS */
 section {
-background: var(--secondary-bg);
-padding: 20px;
-border: 3px solid var(--border-color);
-box-shadow: 6px 6px 10px var(--border-color);
-margin-bottom: 20px;
+  /* color */
+  background: var(--secondary-bg);
+
+  /* shape */
+  padding: 20px;
+  padding-top: 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 6px 6px 10px var(--border-color);
+  margin-bottom: 20px;
+  border-radius:10px;
 }
 
 .section-title {
-font-size: 24px;
-font-weight: bold;
-text-transform: uppercase;
-background: var(--accent);
-color: var(--secondary-bg);
-padding: 5px 10px;
-display: inline-block;
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0px var(--border-color);
+  /* color */
+  background: var(--accent);
+  color: var(--secondary-bg);
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 10px;
+
+  /* other */
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
 }
 
-/* PERSONAL INFO */
+hr {
+  border: 2px solid var(--border-color);
+  margin-top:20px;
+} 
+
+a {
+  text-decoration: none; 
+}
+
+a:active {
+  color: inherit;
+}
+
+/* ------------------------------ */
+/* ---------PERSONAL INFO-------- */
+/* ------------------------------ */
 .personal-info {
-text-align: center;
-}
-
-.personal-info hr{
-border: 2px solid var(--border-color);
-margin-top:20px;
+  text-align: center;
 }
 
 #name {
-font-size: 36px;
-font-weight: 900;
-}
-
-#titles {
-font-size: 24px;
-color: var(--border-color);
-}
-
-#links h3 {
-display: inline-block;
-margin: 5px 10px;
-font-size: 18px;
-padding: 5px 10px;
-background: var(--secondary-bg);
-}
-
-#links h3:hover {
-background: var(--accent);
-color: var(--secondary-bg);
-}
-
-
-/* FOOTER */
-footer {
-background: var(--accent);
-padding: 20px;
-text-align: center;
-border-top: 4px solid var(--border-color);
-font-weight: bold;
-}
-
-#links h3 svg {
-width: 1em;
-height: 1em;
-margin-right: 0.5em;
-vertical-align: middle;
-}
-
-.hidden{
-height:0;
-display:none;
-}
-
-.shown{
-height:auto;
-padding:5px;
-}
-
-/* WORK EXPERIENCE SECTION */
-.work-tab {
-background: var(--secondary-bg);
-padding: 5px;
-margin: 15px auto;
-max-width: 700px;
-text-align: left;
-}
-
-.work-hr {
-border: 2px solid var(--border-color);
-margin-top:20px;
-}
-
-.work-info {
-font-size: 18px;
-font-weight: normal;
-}
-
-.work-position {
-font-size: 22px;
-font-weight: 900;
-color: var(--accent);
-}
-
-.work-company {
-margin-top: 5px;
-font-size: 18px;
-}
-
-.work-company a {
-color: var(--primary-text);
-text-decoration: none;
-border-bottom: 3px solid var(--border-color);
-font-weight: bold;
-}
-
-.work-company a:hover {
-background: var(--accent);
-color: var(--secondary-bg);
-border-bottom: none;
-}
-
-.work-duration {
-margin-top: 8px;
-font-size: 16px;
-font-style: italic;
-color: var(--primary-text);
-}
-
-.work-description {
-margin-top: 10px;
-font-size: 16px;
-line-height: 1.4;
-background: var(--primary-bg);
-padding: 10px;
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0px var(--border-color);
-}
-
-
-/* EDUCATION SECTION */
-.edu-tab {
-background: var(--secondary-bg);
-padding: 5px;
-margin: 15px auto;
-max-width: 700px;
-text-align: left;
-}
-
-.edu-hr {
-border: 2px solid var(--border-color);
-margin: 0px 0px 10px 20px;
-}
-
-.edu-duration {
-font-size: 16px;
-font-style: italic;
-color: var(--primary-text);
-}
-
-.edu-position {
-font-size: 22px;
-font-weight: 900;
-color: var(--accent);
-margin-top: 5px;
-}
-
-.edu-company {
-font-size: 18px;
-font-weight: bold;
-margin-top: 5px;
-}
-
-.edu-description {
-margin-top: 10px;
-font-size: 16px;
-line-height: 1.4;
-background: var(--primary-bg);
-padding: 10px;
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0px var(--border-color);
+  font-size: 32px;
+  font-weight: 900;
 }
 
 .title-tags {
-padding: 8px 16px;
-margin: 5px;
-font-weight: bold;
-background: var(--accent);
-border: 3px solid var(--primary-text);
-box-shadow: 4px 4px 0 var(--primary-text);
-cursor: pointer;
-transition: all 0.1s;
+  border-radius:5px;
+  padding: 4px 4px;
+  margin: 5px;
+  font-weight: bold;
+  background: var(--accent);
+  border: 3px solid var(--primary-text);
+  /* box-shadow: 4px 4px 0 var(--primary-text); */
+  cursor: pointer;
+  transition: all 0.1s;
+  
 }
-
-.title-tags:hover {
-transform: translate(2px, 2px); 
-
-box-shadow: 2px 2px 0 var(--primary-text);
+  
+.title-tags:hover, .title-tags[data-active="on"]:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 var(--primary-text);
 }
 
 .title-tags[data-active="on"] {
-/* Active state style */
-background: var(--primary-bg);
-color: var(--border-color);
-box-shadow: 4px 4px 0 var(--primary-text);
+  background: var(--primary-bg);
+  color: var(--border-color);
+  box-shadow: 4px 4px 0 var(--primary-text);
 }
 
-/* CAROUSEL (Publications) */
-.carousel-container {
-text-align: center;
+.title-tags[data-active="off"] {
+  transform: translate(4px, 4px);
 }
+
+#links {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+#links h3{
+  padding:0;
+}
+
+#links h3 a{
+  /* color */
+  background: var(--accent);
+  color: var(--primary-text);
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 10px;
+
+  display: inline-block;
+  font-size: 14px;
+  background: var(--secondary-bg);
+  transition: all 0.1s;
+}
+
+#links h3 a:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 var(--border-color);
+}
+
+/* ------------------------------ */
+/* ---------WORK SECTION--------- */
+/* ------------------------------ */
+
+/* main div of position and company */
+.work-info {
+  padding-top:10px;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  gap: 1rem;
+}
+  
+.work-position {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--accent);
+}
+  
+.work-company a {
+
+  /* color */
+  color:var(--primary-text);
+  text-decoration: none;
+  font-weight: bold;
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 10px;
+
+  display: inline-block;
+  margin-top: -10px;
+  margin-left: -10px;
+  font-size: 18px;
+  background: var(--secondary-bg);
+  transition: all 0.1s;
+
+}
+  
+.work-company a:hover {
+  transform: translate(4px,4px);
+  box-shadow: 0px 0px 0px var(--border-color);
+}
+  
+.work-duration {
+  margin-top: 8px;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--primary-text);
+}
+  
+.work-description {
+  /* shape */
+  padding: 10px;f
+  line-height: 1.4;
+  border-radius: 10px;
+  font-size: 16px;
+
+  /* position */
+  margin-top: 10px;
+
+
+  /* color */
+
+  background: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+/* ------------------------------ */
+/* ------EDUCATION SECTION------- */
+/* ------------------------------ */
+  
+.edu-duration {
+  margin-top: 8px;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--primary-text);
+}
+  
+.edu-field {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--accent);
+}
+  
+.edu-degree {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+  
+.edu-description {
+  /* shape */
+  padding: 10px;
+  line-height: 1.4;
+  border-radius: 10px;
+  font-size: 16px;
+
+  /* position */
+  margin-top: 10px;
+
+
+  /* color */
+
+  background: var(--primary-bg);
+  border: 2px solid var(--border-color);
+  box-shadow: 2px 2px 0px var(--border-color);
+}  
+
+/* ------------------------------ */
+/* -----PUBLICATIONS SECTION----- */
+/* ------------------------------ */
+
 
 #publications-carous {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-button {
-background: var(--primary-text);
-color: var(--secondary-bg);
-border: 3px solid var(--border-color);
-padding: 10px;
-font-size: 20px;
-cursor: pointer;
-box-shadow: 4px 4px 0px var(--border-color);
-transition: transform 0.1s ease-in-out;
+  background: var(--primary-text);
+  color: var(--secondary-bg);
+  border: 3px solid var(--border-color);
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.1s ease-in-out;
 }
 
 .carousel-button:hover {
-transform: scale(1.1);
-background: var(--accent);
+  transform: scale(1.1);
+  background: var(--accent);
 }
 
 #carousel-track {
-width: 80%;
-min-height: 150px;
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0px var(--border-color);
-background: var(--secondary-bg);
+  width: 80%;
+  min-height: 150px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  background: var(--secondary-bg);
 }
 
-/* CERTIFICATIONS SECTION */
-#certificates {
-text-align: left;
+.hidden{
+  height:0;
+  display:none;
 }
 
-.certification-tab {
-background: var(--secondary-bg);
-padding: 5px;
-margin: 15px auto;
-max-width: 600px;
-text-align: left;
+.shown{
+  height:auto;
+  padding:5px;
 }
 
-.certification-hr {
-  border: 2px solid var(--border-color);
-  margin: 20px 0px 0px 0px;
-  }
+/* ------------------------------ */
+/* ----CERTIFICATIONS SECTION---- */
+/* ------------------------------ */
 
-.certification-info {
-font-size: 18px;
-font-weight: normal;
-}
-
-.certification-position {
-font-size: 20px;
-font-weight: 900;
-color: var(--accent);
+.certification-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--accent);
 }
 
 .certification-company {
-margin-top: 5px;
-font-size: 16px;
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .certification-company a {
-color: var(--primary-text);
-text-decoration: none;
-border-bottom: 3px solid var(--border-color);
-font-weight: bold;
+
+  /* color */
+  color:var(--primary-text);
+  text-decoration: none;
+  font-weight: bold;
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 10px;
+
+  display: inline-block;
+  margin-top: -10px;
+  font-size: 14px;
+  background: var(--secondary-bg);
+  transition: all 0.1s;
+
 }
-
-
+  
 .certification-company a:hover {
-background: var(--accent);
-color: var(--secondary-bg);
-border-bottom: none;
+  transform: translate(4px,4px);
+  box-shadow: 0px 0px 0px var(--border-color);
 }
 
-.certification-duration {
-margin-top: 8px;
-font-size: 14px;
-font-style: italic;
-color: var(--primary-text);
+.certification-date {
+  margin-top: 8px;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--primary-text);
 }
 
-/* Dropdown container */
-.dropdown {
-position: relative;
-display: inline-block;
+/* ------------------------------ */
+/* --------FOOTER SECTION-------- */
+/* ------------------------------ */
+
+footer {
+  background: var(--accent);
+  padding: 20px;
+  text-align: center;
+  border-top: 4px solid var(--border-color);
+  font-weight: bold;
 }
 
-/* Dropdown button */
-.dropdown-btn {
-padding: 10px 15px;
-font-weight: bold;
-font-family: inherit;
-font-size: inherit;
-color: var(--primary-text);
-background: var(--secondary-bg);
-border: 3px solid var(--border-color);
-box-shadow: 4px 4px 0 var(--border-color);
-cursor: pointer;
-transition: all 0.1s ease-in-out;
+
+
+/* major breakpoints to be responsive */
+@media (min-width: 576px) and (max-width:768px) {
+  body{
+    --primary-bg:yellow;
+  }
 }
 
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: var(--secondary-bg);
-min-width: 160px;
-box-shadow: 4px 4px 0 var(--border-color);
-z-index: 1;
+@media (min-width: 768px) and (max-width: 992px){
+
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-color: var(--primary-text);
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-transition: 0.1s;
+@media (min-width: 992px) {
+  body{
+    --primary-bg:blue;
+  }
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-display: block;
-}
-
-/* Style dropdown links on hover */
-.dropdown-content a:hover {
-background: var(--accent);
-color: var(--secondary-bg);
-}
-
-/* Style dropdown button on hover */
-.dropdown:hover .dropdown-btn {
-background: var(--accent);
-color: var(--secondary-bg);
-transform: translate(2px, 2px);
-box-shadow: 2px 2px 0 var(--border-color);
-}
-
-/* Arrow styling */
-.arrow {
-display: inline-block;
-margin-left: 8px;
-transition: transform 0.2s ease;
-font-size: 0.8em;
-}
-
-/* Rotate arrow when dropdown is hovered */
-.dropdown:hover .arrow {
-transform: rotate(180deg);
-}
-
-/* Adjust button padding to accommodate arrow */
-.dropdown-btn {
-padding: 10px 15px 10px 15px; /* Added right padding */
-/* ... rest of your existing dropdown-btn styles ... */
+/* sizing SVGs */
+#links h3 svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  vertical-align: middle;
 }

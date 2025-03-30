@@ -404,7 +404,7 @@ const certifications = [
         year:"2025",
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
-        name:"JavaScript Algorithms and Data Structures",
+        title:"JavaScript Algorithms and Data Structures",
         titleTags:["DC"],
     },
     {
@@ -415,7 +415,7 @@ const certifications = [
         year:"2025",
         credentialId:"leonkonst-jaads",
         credentialUrl:"https://freecodecamp.org/certification/LeonKonst/javascript-algorithms-and-data-structures-v8",
-        name:"JavaScript Algorithms and Data Structures",
+        title:"JavaScript Algorithms and Data Structures",
         titleTags:["DC"],
     },
     {
@@ -426,7 +426,7 @@ const certifications = [
         year:"2023",
         credentialId:"",
         credentialUrl:"",
-        name:"Git Course",
+        title:"Git Course",
         titleTags:["DC"],
     },
     {
@@ -437,7 +437,7 @@ const certifications = [
         year:"2023",
         credentialId:"",
         credentialUrl:"",
-        name:"Python Course",
+        title:"Python Course",
         titleTags:["DC"],
     },
     {
@@ -448,7 +448,7 @@ const certifications = [
         year:"2022",
         credentialId:"",
         credentialUrl:"https://opensea.io/assets/matic/0xdBf2138593aeC61d55d86E80b8ed86D7b9ba51F5/1686",
-        name:"Solidity foundation Bootcamp",
+        title:"Solidity foundation Bootcamp",
         titleTags:["DC"],
     },
     {
@@ -459,7 +459,7 @@ const certifications = [
         year:"2012",
         credentialId:"C-NDN5HCN8ZV",
         credentialUrl:"",
-        name:"SolidWorks Associate - Mechanical Design",
+        title:"SolidWorks Associate - Mechanical Design",
         titleTags:["CE","MS"],
     },
 ];
@@ -481,6 +481,8 @@ const prevBtn = document.getElementById("prev");
 const workExpContainer = document.getElementById("work-experience");
 const educationContainer = document.getElementById("education");
 const certificationContainer = document.getElementById("certificates")
+let activeTitleFilters = []; // Track active filters globally
+
 
 // Display info in the webpage
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
@@ -526,7 +528,7 @@ ${personalInfo.linkedin.name}
 </a>`;
 
 mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink}">
-<svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                        <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0">
                             </g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
@@ -547,42 +549,22 @@ mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink
                                 </g> 
                             </g>
                         </svg>
-${personalInfo.github.name}
-</a>`;
+                        ${personalInfo.github.name}
+                    </a>`;
 
 
 //about me paragraph
 aboutme.innerHTML = aboutMeHtml;
-
-
-
-
-
-const printEducation = ()=> {
-    education.forEach((element, i) => {
-        educationContainer.innerHTML += `
-        <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
-            <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
-            <div class="edu-position"> ${element.degree}</div>
-            <div class="edu-company">${element.field} - ${element.institution}</div>
-            <div class="edu-description"> ${element.description}</div>
-        ${i !== education.length - 1 ? '<hr class="work-hr">' : ''}
-        </div>`
-    });
-};
-
-printEducation();
-
 
 const printWorkExperience = () => {
     workExperience.forEach((element,i) => {
         workExpContainer.innerHTML += `
         <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="work-info">
-                <div class="work-position"> ${element.position}</div>
+                <div class="work-position"> ${element.position} at</div>
                 <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
-                <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
             </div>
+            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
             <div class="work-description"> ${element.description}</div>
             ${i !== workExperience.length - 1 ? '<hr class="work-hr">' : ''}
         </div>`
@@ -591,8 +573,23 @@ const printWorkExperience = () => {
 
 printWorkExperience();
 
+const printEducation = ()=> {
+    education.forEach((element, i) => {
+        educationContainer.innerHTML += `
+        <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
+            <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
+            <div class="edu-field">${element.field} - ${element.institution}</div>
+            <div class="edu-degree"> ${element.degree}</div>
+            <div class="edu-description"> ${element.description}</div>
+        ${i !== education.length - 1 ? '<hr class="edu-hr">' : ''}
+        </div>`
+    });
+};
+
+printEducation();
+
 const activateAccordeon = () =>{
-    const accordeon = document.querySelectorAll(".publication");
+    const accordeon = document.querySelectorAll(".publication-tab");
     accordeon.forEach(button => {
         button.addEventListener('click', () => {
             const divEl = document.getElementById(`div ${button.id}`);
@@ -609,13 +606,17 @@ const activateAccordeon = () =>{
     
 };
 
+const printPublications = (range) => {
+    track.innerHTML = `<div class="publications-container"></div>`;
+    const container = track.querySelector('.publications-container');
+    
+    publications.forEach(element => {
+        if (activeTitleFilters.length > 0 && 
+            !element.titleTags.some(tag => activeTitleFilters.includes(tag))) {
+            return;
+        }
 
-
-const printPublications = (range)=> {
-    // ) 
-        
-        track.innerHTML = ""; 
-        publications.forEach(element => {
+            //Αuthors display logic
             let authorsDisplayed = "";
             const authorLength = element.authors.length - 1;
             element.authors.forEach((author,index)=>{  
@@ -626,16 +627,19 @@ const printPublications = (range)=> {
                         authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
                     }
                     else{
-                        authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et.al.`;
+                        authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
                     }
                 } 
             });
+
+            //Element creation for publications
             if(element.id<=range[1]&&element.id>=range[0]){
                 track.innerHTML += `<div class="panel">
-                    <button class="publication" id="${element.id}">
+                    <button class="publication-tab" data-tags="${element.titleTags.join(' ')}" id="${element.id}">
                         <h4>${element.title}</h4>
                         <h3>${element.year}</h3>
                         <p>${authorsDisplayed}</p>
+                        <p class="abstract" tabindex="0" aria-haspopup="true" aria-expanded="false">Abstract <span class="dropdown arrow">▼</span></p>
                     </button>
                     <div class="hidden" id="div ${element.id}">
                         ${element.abstract.split(" ",60).join(" ")}
@@ -647,6 +651,7 @@ const printPublications = (range)=> {
                 `;
             }
         });
+        track.innerHTML += `</div>`;
         
         activateAccordeon();
         return range;
@@ -701,9 +706,9 @@ const printCertifications = ()=> {
         certificationContainer.innerHTML += `
         <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="certification-info">
-                <div class="certification-position"> ${element.name}</div>
+                <div class="certification-title"> ${element.title}</div>
                 <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
-                <div class="certification-duration"> ${element.month} of ${element.year}</div>
+                <div class="certification-date"> ${element.month} of ${element.year}</div>
             </div>
             ${i !== certifications.length - 1 ? '<hr class="certification-hr">' : ''}
         </div>`
@@ -722,32 +727,34 @@ const currentYear = new Date().getFullYear();
             // Insert the current year into the footer
 document.getElementById('current-year').textContent = currentYear;
 
-mytitles.addEventListener("click", (e) => {
+
+const titlesDispaly = (e) => {
     if (e.target.classList.contains("title-tags")) {
         const titleBtn = e.target;
-        const allTabs = document.querySelectorAll('[class*="-tab"]');
         
         // Toggle button state
         const isActive = titleBtn.getAttribute("data-active") === "on";
         titleBtn.setAttribute("data-active", isActive ? "off" : "on");
         
-        // Get all active filters (buttons that are "on")
-        const activeFilters = Array.from(document.querySelectorAll('.title-tags[data-active="on"]'))
-                                .map(btn => btn.id);
+        // Update global filters
+        activeTitleFilters = Array.from(document.querySelectorAll('.title-tags[data-active="on"]'))
+                               .map(btn => btn.id);
         
-        // Update visibility
+        // Apply filtering to existing DOM
+        const allTabs = document.querySelectorAll('[class*="-tab"]');
         allTabs.forEach(tab => {
             const tabTags = tab.getAttribute('data-tags').split(' ').filter(Boolean);
-            
-            // Show element if:
-            // 1. No filters are active (all buttons off), OR
-            // 2. Element contains at least one active tag
-            const shouldShow = activeFilters.length === 0 || 
-                             tabTags.some(tag => activeFilters.includes(tag));
-            
+            const shouldShow = activeTitleFilters.length === 0 || 
+                            tabTags.some(tag => activeTitleFilters.includes(tag));
             tab.style.display = shouldShow ? "block" : "none";
         });
     }
+}
+
+
+
+mytitles.addEventListener("click", (e) => {
+    titlesDispaly(e)
 });
 
 
