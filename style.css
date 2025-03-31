@@ -4,10 +4,13 @@
 - Main element width
  */
 :root {
-  --primary-bg: #FB9F89;
-  --secondary-bg: #A9DEF9;
-  --primary-text: #1E1E24;
-  --accent: #21A179;
+  --primary-bg: #f6f6f6;
+  --secondary-bg: #e4e3e3;
+  /* --primary-text: #0000ff; */
+  --primary-text: #000000; 
+  --secondary-text:#fcfcfc;
+  --accent: #3dbb3d;
+  /* --accent: #0000ff; */
   --border-color: #1E1E24;
 
   --header-height:40px;
@@ -188,7 +191,7 @@ section {
 .section-title {
   /* color */
   background: var(--accent);
-  color: var(--secondary-bg);
+  color: var(--secondary-text);
 
   /* shape */
   padding: 5px 10px;
@@ -234,8 +237,7 @@ a:active {
   margin: 5px;
   font-weight: bold;
   background: var(--primary-bg);
-  border: 3px solid var(--primary-text);
-  /* box-shadow: 4px 4px 0 var(--primary-text); */
+  border: 3px solid var(--border-color);
   cursor: pointer;
   transition: all 0.1s;
   
@@ -243,13 +245,13 @@ a:active {
   
 .title-tags:hover, .title-tags[data-active="on"]:hover {
   transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0 var(--primary-text);
+  box-shadow: 0px 0px 0 var(--border-color);
 }
 
 .title-tags[data-active="on"] {
   background: var(--accent);
-  color: var(--border-color);
-  box-shadow: 4px 4px 0 var(--primary-text);
+  color: var(--primary-text);
+  box-shadow: 4px 4px 0 var(--border-color);
 }
 
 .title-tags[data-active="off"] {
@@ -361,7 +363,7 @@ a:active {
 
   /* color */
 
-  background: var(--accent);
+  background: var(--primary-bg);
   border: 2px solid var(--border-color);
   box-shadow: 2px 2px 0px var(--border-color);
 }
@@ -417,9 +419,8 @@ a:active {
 
 
   scrollbar-width: auto;
-  scrollbar-shadow-color: var(--border-color);
-  scrollbar-color: #ff4d4d #f0f0f0; /* thumb and track */
-  scrollbar-gutter: stable; /* Prevent layout shifts */
+  scrollbar-color: var(--accent) var(--primary-bg); 
+  scrollbar-gutter: stable; 
 }
 
 .pub-tab{
@@ -428,11 +429,11 @@ a:active {
   min-width:350px;
   width:350px;
   min-height:250px;
-  box-shadow: 3px 3px 0px black;
+  box-shadow: 3px 3px 0px var(--border-color);
 
   /* color */
-  background-color:white;
-  border:3px solid black;
+  background-color:var(--primary-bg);
+  border:3px solid var(--border-color);
 
   /* other */
   display: flex;
@@ -511,16 +512,16 @@ a:active {
 
 .pub-abstract-tooltip, .pub-btn-tooltip {
   /* color */
-  background-color:white;
-  border:3px solid black;
+  background-color: var(--primary-bg);
+  border:3px solid var(--border-color);
 
   /* shape */
   border-radius:5px;
-  box-shadow: 3px 3px 0px black;
+  box-shadow: 3px 3px 0px var(--border-color);
 
   position: fixed;
   width: 300px;
-  background: white;
+  background: var(--primary-bg);
   padding: 10px;
   z-index: 1000;
   pointer-events: none;

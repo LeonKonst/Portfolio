@@ -501,7 +501,7 @@ mytitles.innerText = `I am a `;
 //create the Title buttons
 titles.map((title,i)=>{
     if(i === titles.length -1){
-        mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button> `;
+        mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button> and this is my portfolio!`;
     }
     else{
         mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
