@@ -366,8 +366,8 @@ const projects = [
         shortDescription:"Discord bot",
         longDescription:"Spill the Beans is a Discord bot that lets users send private messages to a dedicated server channel, with a configurable probability of revealing the sender’s name. It supports English and Greek and allows server admins to customize settings like anonymity probability, message cooldown, and relay channel via the Settings.py file. The bot requires no commands—users simply DM it, and messages are forwarded accordingly.",
         toolsUsed:["python","discord.py","fly.io"],
-        imageUrl:"https://github.com/LeonKonst/Spill-The-Beans",
-        projectLink:"",
+        imageUrl:"https://static.vecteezy.com/system/resources/previews/018/930/500/non_2x/discord-logo-discord-icon-transparent-free-png.png",
+        projectLink:"https://github.com/LeonKonst/Spill-The-Beans",
         titleTags:["DC"],
     },
     {
@@ -375,7 +375,7 @@ const projects = [
         shortDescription:"LaTeX template",
         longDescription:"This is a LaTeX template for PhD theses in the Chemical Engineering Department of Aristotle University of Thessaloniki. It is written in Greek and can also be adapted for theses at the bachelor’s and master’s levels, as well as for other departments. The template is officially published on the Chemical Engineering Department’s website for student use (https://cheng.auth.gr/phd/)",
         toolsUsed:["LaTeX","Overleaf"],
-        imageUrl:"",
+        imageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/LaTeX_logo.svg/1200px-LaTeX_logo.svg.png",
         projectLink:"https://www.overleaf.com/latex/templates/phd-template-cheng-auth/xfhzjtmhmdwk",
         titleTags:["DC"],
     },
@@ -384,7 +384,7 @@ const projects = [
         shortDescription:"This exact webpage",
         longDescription:"",
         toolsUsed:["HTML","CSS","JS"],
-        imageUrl:"",
+        imageUrl:"LeonKonst/Portfolio/images/Portfolio.jpg",
         projectLink:"https://leonkonst.github.io/Portfolio",
         titleTags:["DC"],
     },
@@ -486,11 +486,13 @@ const aboutme = document.getElementById("aboutme");
 const workExpContainer = document.getElementById("work-experience");
 const educationContainer = document.getElementById("education");
 const publicationsContainer = document.getElementById("publications-container")
+const projectsContainer = document.getElementById("projects");
+const certificationContainer = document.getElementById("certificates")
 
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 
-const certificationContainer = document.getElementById("certificates")
+
 let activeTitleFilters = []; // Track active filters globally
 
 
@@ -660,10 +662,26 @@ const printPublications = () => {
     });
 };
 
-
 printPublications();
 
-//printProjects
+const printProjects = () =>{
+    const baseUrl = window.location.origin;
+    projects.forEach((element, i) => {
+        projectsContainer.innerHTML += `
+        
+        <div class="proj-tab" data-tags="${element.titleTags.join(' ')}">
+            <img src="https://github.com/LeonKonst/Portfolio/blob/main/Images/Portfolio.jpg" alt="Test">    
+        <div class="proj-name">${element.name}</div>
+            <div class="proj-short"> ${element.shortDescription}</div>
+            <div class="proj-description"> ${element.longDescription}</div>
+            
+            <a target="_blank" href="${element.projectLink}">Link</a>
+        ${i !== projects.length - 1 ? '<hr class="proj-hr">' : ''}
+        </div>`
+    });
+};
+
+printProjects();
 
 const printCertifications = ()=> {
     certifications.forEach((element,i) => {
