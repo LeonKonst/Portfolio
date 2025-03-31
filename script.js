@@ -187,7 +187,7 @@ const publications = [
              ["Evangelos", "Tzimpilis"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
-        keywords:["Polymer Composites", "Polypropylene"],
+        keywords:["Polymer Composites", "DoE"],
         abstract:"A large portion of the produced Polypropylene (PP) is used in the form of fibers. In this industrially oriented study, the development of composite PP drawn fibers was investigated. Two types of fillers were used (ultra-fine talc and single-wall carbon nanotubes). Optimization of the thermal and mechanical properties of the produced composite drawn fibers was performed, based on the Box-Behnken design of experiments method (surface response analysis). The effect of additives, other than the filler, but typical in industrial applications, such as an antioxidant and a common compatibilizer, was investigated. The drawing ratio, the filler, and the compatibilizer or the antioxidant content were selected as design variables, whereas the tensile strength and the onset decomposition temperature were set as response variables. Fibers with very high tensile strength (up to 806 MPa) were obtained. The results revealed that the maximization of both the tensile strength and the thermal stability was not feasible for composites with talc due to multiple interactions among the used additives (antioxidant, compatibilizer, and filler). Additionally, it was found that the addition of talc in the studied particle size improved the mechanical strength of fibers only if low drawing ratios were used. On the other hand, the optimization targeting maximization of both tensile strength and thermal stability was feasible in the case of SWCNT composite fibers. It was found that the addition of carbon nanotubes improved the tensile strength; however, such improvement was rather small compared with the tremendous increase of tensile strength due to drawing.",
     },
 
@@ -230,7 +230,7 @@ const publications = [
              ["Dimitris", "Achilias"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
-        keywords:["Polymer Composites", "Wollastonite"],
+        keywords:["Polymer Composites", "Filler modification"],
         abstract:"Polypropylene (PP) is one of the most commercially used thermoplastics, while a significant amount of PP is used in the form of fibers. In this study, the effects of modification of the filler on the thermal and mechanical properties of composite polypropylene/wollastonite drawn fibers were investigated. In this direction, the surface modification of wollastonite with various organic acids, such as myristic, maleic, malonic glutaric, pimelic, and suberic acid, and the use of two solvents were studied. The surface-modified wollastonite particles were used to produce composite polypropylene drawn fibers. The modification efficiency was found to be slightly better when a non-polar solvent (carbon tetrachloride) was used instead of a polar one (ethanol). FTIR experiments showed that myristic, maleic, malonic, and pimelic acid can strongly interact with wollastonite’s surface. However, the mechanical strength of the composite fibers was not increased compared to that of the neat PP fibers, suggesting inadequate interactions between PP and wollastonite particles. Furthermore, it was observed that the drawing process increased around 10% the crystallinity of all samples. Wollastonite modified with malonic acid acted as a nucleating agent for β-crystals. The onset decomposition temperature increased by 5–10 °C for all samples containing 2% wollastonite, either modified or not. The suggested modifications of wollastonite might be more suitable for less hydrophobic polymers.",
     },
     
@@ -270,7 +270,7 @@ const publications = [
             ["Costas", "Tsioptsias"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
-        keywords:["Polymer Composites", "Aging"],
+        keywords:["Polymer Composites", "DoE"],
         abstract:"In this study, the mechanical properties and thermal stability of composite polypropylene (PP) drawn fibers with two different organically modified montmorillonites were experimentally investigated and optimized using a response surface methodology. Specifically, the Box-Behnken Design of Experiments method was used in order to investigate the effect of the filler content, the compatibilizer content, and the drawing temperature on the tensile strength and the onset decomposition temperature of the PP composite drawn fibers. The materials were characterized by tensile tests, thermogravimetry, and X-ray diffraction. Two types of composites were investigated with the only difference being the type of filler, namely, Cloisite&reg; 10A or Cloisite&reg; 15A. In both cases, statistically significant models were obtained regarding the effect of design variables on tensile strength, while poor significance was observed for the onset decomposition temperature. Nanocomposite fibers with tensile strength up to 540 MPa were obtained. Among the design variables, the drawing temperature exhibited the most notable effect on tensile strength, while the effect of both clays was not significant."
     },
 
@@ -290,7 +290,7 @@ const publications = [
             ["Xanthi", "Ntampou"],
              ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
-        keywords:["Polymer Composites", "Aging"],
+        keywords:["Polymer Composites", "Filler modification"],
         abstract:"A large amount of the polypropylene (PP) produced worldwide is used in the form of fibers. In this work, a new modification route for talc and PP is investigated, which is based on the in situ polymerization of a silane–siloxane monomer mixture on the surface of talc particles or PP pellets, respectively. The obtained modified talc and PP samples were used for the development of PP-talc composite drawn fibers. Tensile tests, thermogravimetry (TGA), and X-ray diffraction (XRD) were used for the characterization of the materials. It was observed that such a modification procedure resulted in the exfoliation of some talc particles. Enhanced tensile strength was observed for composite drawn fibers of a low talc content (1% with respect to PP) and a low modifier content (2% with respect to talc), while co-aggregation of talc and silicone may occur at high silicone and talc contents, resulting in the inferior mechanical performance of the corresponding composites. It was concluded that the produced silicone polymer simultaneously acts as a modifier, antioxidant, and compatibilizer. The proposed modification route is promising and should be further optimized."
     },
       
@@ -314,7 +314,7 @@ const publications = [
             ["Evangelos", "Tzimpilis"],
             ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE","MS","PS"],
-        keywords:["Polymer Composites", "Aging"],
+        keywords:["Polymer Composites", "Polypropylene"],
         abstract:"Isotactic polypropylene (PP) composite drawn fibers were prepared using melt extrusion and high-temperature solid-state drawing at a draw ratio of 7. Five different fillers were used as reinforcement agents (microtalc, ultrafine talc, wollastonite, attapulgite and single-wall carbon nanotubes). In all the prepared samples, antioxidant was added, while all samples were prepared with and without using PP grafted with maleic anhydride as compatibilizer. Material characterization was performed by tensile tests, differential scanning calorimetry, thermogravimetric analysis and Fourier transform infrared spectroscopy. Attapulgite composite fibers exhibited poor results in terms of tensile strength and thermal stability. The use of ultrafine talc particles yields better results, in terms of thermal stability and tensile strength, compared to microtalc. Better results were observed using needle-like fillers, such as wollastonite and single-wall carbon nanotubes, since, as was previously observed, high aspect ratio particles tend to align during the drawing process and, thus, contribute to a more symmetrical distribution of stresses. Competitive and synergistic effects were recognized to occur among the additives and fillers, such as the antioxidant effect being enhanced by the addition of the compatibilizer, while the antioxidant itself acts as a compatibilizing agent."
     },
 
@@ -353,11 +353,10 @@ const publications = [
             ["Evangelos", "Tzimpilis"],
             ["Ioannis", "Tsivintzelis"]],
         titleTags:["CE"],
-        keywords:["CO<sub>2</sub> capture", "Alkanolamines"],
+        keywords:["Polymer Composites", "Review"],
         abstract:"In this review, traditional and novel techniques for producing micro- and nano- fibers are discussed and various nanofillers, their modifications and polypropylene (PP) functionalization routes are presented. Their influence on PP properties is discussed and new PP composite fiber applications are presented. This review reveals interesting conclusions, such as that in terms of mechanical reinforcement, there is no nano-filler that can improve tensile strength to the extent that it is improved by drawing. However, in some cases, composite drawn fibers are characterized by higher tensile strength than drawn neat PP. With some notable exceptions, the PP nanocomposites lack of “dramatic” properties improvement is mainly due to the non-polar nature of the hydrocarbon chain, which does not favor strong intermolecular interactions with most popular (mainly inorganic) nano-fillers. However, other properties such as electric conductivity, water contact angle and others can be effectively altered using various nanofillers in PP matrices."
     },         
 ];
-
 
 //projects
 
@@ -484,11 +483,10 @@ const mygithub = document.getElementById("github");
 
 const aboutme = document.getElementById("aboutme");
 
-
 const workExpContainer = document.getElementById("work-experience");
 const educationContainer = document.getElementById("education");
+const publicationsContainer = document.getElementById("publications-container")
 
-const track = document.getElementById("publications");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 
@@ -600,117 +598,70 @@ const printEducation = ()=> {
 
 printEducation();
 
-// const activateAccordeon = () =>{
-//     const accordeon = document.querySelectorAll(".publication-tab");
-//     accordeon.forEach(button => {
-//         button.addEventListener('click', () => {
-//             const divEl = document.getElementById(`div ${button.id}`);
-//             if (divEl) {
-//                 divEl.classList.toggle('hidden');
-//                 divEl.classList.toggle('shown');
-//             }
-//             else{
-//                 return;
-//             }
-//             return;
-//         });
-//     });
+const printPublications = () => {
+    // Αuthors display logic
+    const sortedPublications = publications.sort((a, b) => b.year - a.year);;
+    sortedPublications.forEach((element, i) => {
+        let authorsDisplayed = "";
+        const authorLength = element.authors.length - 1;
+        element.authors.forEach((author,index)=>{  
+            if(index < 2){
+                authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
+            } else if (index === 2) {
+                if(index === authorLength){
+                    authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
+                }
+                else{
+                    authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
+                }
+            } 
+        });
+
+        let keywords = "";
+        element.keywords.forEach(keyword =>{
+            keywords += `<div class="pub-keyword">${keyword}</div>`
+        })
+
     
-// };
+        publicationsContainer.innerHTML += `
+        <div class="pub-tab" data-tags="${element.titleTags.join(' ')}">
+            <div class="pub-header"><div class="pub-year">${element.year}</div><div class="pub-journal">${element.journal}</div></div>
+            <hr>
+            <div class="pub-title"> ${element.title}</div>
+            <div class="pub-authors"> ${authorsDisplayed}</div>
+            <div class="pub-keywords">Keywords: ${keywords}</div>
+            <p class="pub-abstract-tooltip hidden" >
+            <strong>Abstract: </strong>${element.abstract.split(" ",50).join(" ")}...</p>
+            <a class="pub-btn-tooltip hidden" target="_blank" href="${element.url}">Link</a>
+        </div>`
+    });    
 
-// const printPublications = (range) => {
-//     track.innerHTML = `<div class="publications-container"></div>`;
-//     const container = track.querySelector('.publications-container');
-    
-//     publications.forEach(element => {
-//             //Αuthors display logic
-//             let authorsDisplayed = "";
-//             const authorLength = element.authors.length - 1;
-//             element.authors.forEach((author,index)=>{  
-//                 if(index < 2){
-//                     authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
-//                 } else if (index === 2) {
-//                     if(index === authorLength){
-//                         authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
-//                     }
-//                     else{
-//                         authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
-//                     }
-//                 } 
-//             });
+    document.querySelectorAll('.pub-tab').forEach(tab => {
+        const abstractTooltip = tab.querySelector('.pub-abstract-tooltip');
+        const btnTooltip = tab.querySelector('.pub-btn-tooltip');
 
-//             let keywordTags = "";
-//             element.keywords.forEach(keyword=>{
-//                 keywordTags += `<div class="keywordTag">${keyword}</div>`
-//             })
+        tab.addEventListener('mousemove', (e) => {
+            // Position both tooltips near the cursor
+            abstractTooltip.style.left = `${e.clientX + 15}px`;
+            abstractTooltip.style.top = `${e.clientY + 15}px`;
+            btnTooltip.style.left = `${e.clientX - 15}px`;
+            btnTooltip.style.top = `${e.clientY -15}px`; // Offset below abstract
+        });
 
-//             //Element creation for publications
-//             track.innerHTML += `<div class="panel">
-//                 <button class="publication-tab" data-tags="${element.titleTags.join(' ')}" id="${element.id}">
-//                     <div class="pub-header">
-//                         <h3>${element.year}</h3>
-//                         <div class="keywords">Keywords: ${keywordTags}</div>
-//                     </div>
-//                     <hr>    
-//                     <h4>${element.title}</h4>
-//                     <p class="authors">${authorsDisplayed}</p>
-//                     <p class="abstract" tabindex="0" aria-haspopup="true" aria-expanded="false"><strong>Abstract: </strong><span class="small abstract">${element.abstract.split(" ",10).join(" ")}</span> <span class="dropdown arrow">▼</span></p>
-//                     <div class="hidden" id="div ${element.id}">
-//                         ${element.abstract.split(" ",60).join(" ")}
-//                         ...
-//                         <a  target="_blank" href="${element.url}">Read more here</a>
-//                     </div>
-//                 </button>    
-//             </div>`;
-//         });
+        tab.addEventListener('mouseenter', () => {
+            abstractTooltip.classList.remove('hidden');
+            btnTooltip.classList.remove('hidden');
+        });
+
+        tab.addEventListener('mouseleave', () => {
+            abstractTooltip.classList.add('hidden');
+            btnTooltip.classList.add('hidden');
+        });
+    });
+};
 
 
-        
-//         activateAccordeon();
-//         return range;
-        
-//     };
-
-//Creating the publications section
-// prevBtn.disabled = true;
-// currRange = printPublications([1,2]);
-
-// const activateBtn = (btn) =>{
-//     btn.disabled = false;
-// }
-
-// const disableBtn = (btn) =>{
-//     btn.disabled = true;
-// }
-
-
-// nextBtn.addEventListener("click",()=>{  
-//     activateBtn(prevBtn);
-//     if(currRange[1]<publications.length){   
-//         currRange[0]+=1;
-//         currRange[1]+=1;     
-//         currRange = printPublications(currRange);    
-//     } 
-//     if(currRange[1]==publications.length){
-//         disableBtn(nextBtn);
-//     }
-// }
-// ); 
-
-// prevBtn.addEventListener("click",()=>{ 
-//     activateBtn(nextBtn);  
-//     if(currRange[0]>1){
-        
-//         currRange[0]-=1;
-//         currRange[1]-=1;
-//         currRange = printPublications(currRange);
-        
-//     }
-//     if(currRange[0]==1){
-//         disableBtn(prevBtn);
-//     }  
-// }
-// );
+printPublications();
 
 //printProjects
 

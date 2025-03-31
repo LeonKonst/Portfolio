@@ -411,73 +411,156 @@ a:active {
 /* -----PUBLICATIONS SECTION----- */
 /* ------------------------------ */
 
+#publications-container{
+  display:flex;
+  overflow: auto; 
 
 
-.publication-tab{
+  scrollbar-width: auto;
+  scrollbar-shadow-color: var(--border-color);
+  scrollbar-color: #ff4d4d #f0f0f0; /* thumb and track */
+  scrollbar-gutter: stable; /* Prevent layout shifts */
+}
+
+.pub-tab{
   /* shape */
   border-radius:5px;
+  min-width:350px;
   width:350px;
-  height:250px;
+  min-height:250px;
+  box-shadow: 3px 3px 0px black;
 
   /* color */
   background-color:white;
-  border:1px solid black;
-}
+  border:3px solid black;
 
-.publication-tab h4{
-  text-align: left;
-}
-
-.publication-tab h3{
-  text-align: left;
-  border:1px solid var(--primary-bg);
-  
-}
-
-.keywords{
-  font-size: 14px;
-  display:flex;
-  justify-content:right;
-  border:1px solid black;
-}
-
-.keywordTag{
-  background-color: var(--primary-bg);
-  margin-left:0.5rem;
-  border:3px solid var(--border-color);
-  border-radius:5px;
-  color:var(--primary-text);
-  height:1rem;
-  padding:6px 0px;
-
+  /* other */
+  display: flex;
+  flex-direction: column;
+  margin:0px 5px 10px 5px;
 }
 
 .pub-header{
   display: flex;
   justify-content: space-between;
+  margin:5px;
 }
 
-.publication-tab .authors{
+.pub-year{
+  font-weight: bold;
+  padding-left:5px;
+  padding-top:5px;
+}
+
+.pub-journal{
+  font-style: italic;
+  padding-right:5px;
+  padding-top:5px;
+}
+
+.pub-tab hr{
+  margin:5px;
+}
+
+.pub-title{
+  font-weight: bold;
+  font-size:15px;
+  text-align:justify;
+  margin:10px;
+  max-height:100px;
+}
+
+.pub-authors{
   text-align: left;
+  font-size:13px;
+  margin:5px;
+  margin-left:10px;
+  margin-bottom:15px;
 }
 
-/* .carousel-button {
-  background: var(--primary-bg);
-  color: var(--primary-text);
-  border: 3px solid var(--border-color);
+.pub-keywords{
+  margin-top: auto;
+  display:flex;
+  justify-content: left;
+  margin-bottom:10px;
+  margin-left:10px;
+}
+
+.pub-keyword{
+  margin-top:-4px;
+  margin-left:5px;
+  margin-right:5px;
+  padding:4px;
+  font-size:12px;
+  background:var(--primary-bg);
+  border-radius:5px;
+  border:1px solid var(--border-color);
+  box-shadow:3px 3px 0px var(--border-color);
+}
+
+
+.pub-abstract-tooltip {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.pub-tab:hover .pub-abstract-tooltip,
+.pub-tab:hover .pub-btn-tooltip {
+  opacity: 1;
+}
+
+.pub-abstract-tooltip, .pub-btn-tooltip {
+  /* color */
+  background-color:white;
+  border:3px solid black;
+
+  /* shape */
+  border-radius:5px;
+  box-shadow: 3px 3px 0px black;
+
+  position: fixed;
+  width: 300px;
+  background: white;
   padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 4px 4px 0px var(--border-color);
-  transition: all 0.1s ease-in-out;
+  z-index: 1000;
+  pointer-events: none;
+
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-.carousel-button:hover {
+.pub-btn-tooltip {
+
+  /* color */
+  color:var(--primary-text);
+  text-decoration: none;
+  font-weight: bold;
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 8px 8px 0px var(--border-color);
+  border-radius: 10px;
+  width:auto;
+
+  display: inline-block;
+  margin-top: -10px;
+  margin-left: -10px;
+  font-size: 18px;
+  background: var(--primary-bg);
+  transition: all 0.3s;
+
+  text-decoration: none;
+  pointer-events: auto;  /* Allow clicks on the link */
+
+}
+  
+.pub-btn-tooltip:hover {
   transform: translate(4px,4px);
   box-shadow: 0px 0px 0px var(--border-color);
-} */
-
-
+}
 
 .hidden{
   display:none;
