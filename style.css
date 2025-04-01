@@ -741,14 +741,17 @@ footer {
   font-weight: bold;
 }
 
-/* major breakpoints to be responsive
+
 @media (max-width: 576px) {
   body{
     --primary-bg:green;
   }
+
+  
 }
 
 
+/* 
 @media (min-width: 576px) and (max-width:768px) {
   body{
     --primary-bg:yellow;
