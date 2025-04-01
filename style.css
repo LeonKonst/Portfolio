@@ -272,6 +272,13 @@ a:active {
   vertical-align: middle;
 }
 
+#others svg {
+  width: 2em;
+  height: 2em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
 #links h3{
   padding:0;
 }
@@ -572,6 +579,101 @@ a:active {
 }
 
 /* ------------------------------ */
+/* -------PROJECTS SECTION------- */
+/* ------------------------------ */
+
+#projects-container{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 16px; 
+  justify-content:space-evenly;
+  
+}
+
+.proj-tab {
+  align-content: start;
+  padding: 5px 10px;
+  grid-template-rows: auto auto auto 1fr;
+  min-width: 200px;
+  width:300px;
+  border:3px solid var(--border-color);
+  border-radius:10px;
+  box-shadow:4px 4px 0px var(--border-color);
+  background-color: var(--primary-bg);
+  display:grid;
+}
+
+.proj-name{
+  font-size: 20px;
+  color:var(--accent);
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.proj-short{
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.proj-img{  
+  width:200px;
+  height:150px;
+}
+
+.proj-description{
+  margin-top: 8px;
+  margin-bottom:15px;
+}
+
+.proj-link{
+  align-self: end;
+  /* color */
+  color:var(--primary-text);
+  text-decoration: none;
+  font-weight: bold;
+
+  /* shape */
+  padding: 5px 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: 4px 4px 0px var(--border-color);
+  border-radius: 10px;
+  height:1rem;
+
+  text-align: center;
+  
+  margin-bottom:4px;
+  font-size: 14px;
+  background: var(--primary-bg);
+  transition: all 0.1s;
+}
+
+.proj-link:hover {
+  transform: translate(4px,4px);
+  box-shadow: 0px 0px 0px var(--border-color);
+}
+
+.text-link{
+  align-self: end;
+  /* color */
+  color:var(--primary-text);
+  text-decoration: none;
+  font-weight: bold;
+
+  /* shape */
+  padding:0 2px;
+  border-bottom: 3px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--secondary-bg);
+  height:1rem;
+  transition: all 0.1s;
+}
+
+.text-link:hover{
+  border-bottom: 0px solid var(--border-color);
+  background-color: var(--accent);
+}
+
+/* ------------------------------ */
 /* ----CERTIFICATIONS SECTION---- */
 /* ------------------------------ */
 
@@ -617,6 +719,14 @@ a:active {
   font-size: 16px;
   font-style: italic;
   color: var(--primary-text);
+}
+
+/* ------------------------------ */
+/* --------OTHERS SECTION-------- */
+/* ------------------------------ */
+
+#others h2{
+  color:var(--accent)
 }
 
 /* ------------------------------ */
