@@ -385,7 +385,7 @@ const projects = [
     {
         name:"My Portfolio",
         shortDescription:"This exact webpage",
-        longDescription:"Nothing to add here, just check the portfolio!",
+        longDescription:`The design of the portfolio is based on Neobrutalism. "Neubrutalism in web design is a trend characterized by minimalist aesthetics, stark typography, and a raw, unpolished appearance." <a class="text-link" href="https://www.designstudiouiux.com/blog/what-is-neubrutalism-web-design-trend/">More info here</a> `,
         toolsUsed:["HTML","CSS","JS"],
         imageUrl:"https://github.com/LeonKonst/Portfolio/blob/main/Images/Portfolio.jpg?raw=true",
         imgAlt:"Portfolio screenshot",
