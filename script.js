@@ -637,8 +637,8 @@ mylocation.innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/mYKjR7n
         // <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         // </path>
     // </g>
-// </svg>
-${personalInfo.location.city}, ${personalInfo.location.country}
+// </svg><span class="social-media">
+${personalInfo.location.city}, ${personalInfo.location.country}</span>
 </a>`;
 
 mylinkedin.innerHTML = `<a  target="_blank" href="${personalInfo.linkedin.profilelink}">
@@ -652,7 +652,7 @@ mylinkedin.innerHTML = `<a  target="_blank" href="${personalInfo.linkedin.profil
                                 </path> 
                             </g>
                         </svg>
-${personalInfo.linkedin.name}
+<span class="social-media">${personalInfo.linkedin.name}</span>
 </a>`;
 
 mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink}">
@@ -677,7 +677,7 @@ mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink
                                 </g> 
                             </g>
                         </svg>
-                        ${personalInfo.github.name}
+                        <span class="social-media">${personalInfo.github.name}</span>
                     </a>`;
 
 

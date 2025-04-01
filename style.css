@@ -744,10 +744,16 @@ footer {
 
 
 @media (max-width: 576px) {
-  body{
-    --primary-bg:green;
+  /* sizing SVGs */
+  #links h3 svg {
+    width: 2em;
+    height: 2em;
+    margin-right: 0em;
   }
 
+  .social-media{
+    display:none;
+  }
 
 }
 
