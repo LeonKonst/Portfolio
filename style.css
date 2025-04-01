@@ -618,6 +618,7 @@ a:active {
 .proj-img{  
   width:200px;
   height:150px;
+  object-fit: cover;
 }
 
 .proj-description{
@@ -747,7 +748,7 @@ footer {
     --primary-bg:green;
   }
 
-  
+
 }
 
 
