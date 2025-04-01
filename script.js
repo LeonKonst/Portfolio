@@ -52,6 +52,7 @@ const workExperience = [
         <ul>
             <li>Exploring materials with better performance against rain erosion.</li>
             <li>Cross-segment assistance with data analysis.</li>
+            <li>Responsible for design of experiments (statistical approach of experimentation).</li>
         </ul>`,
         titleTags:["CE", "PS", "MS"],
     },

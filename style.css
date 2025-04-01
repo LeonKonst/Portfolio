@@ -778,7 +778,6 @@ footer {
   /* Menu navigation */
   .menu {
     justify-content: end;
-    gap: 5px;
   }
 
   /* navigation links */
@@ -790,92 +789,50 @@ footer {
     display:block;
   }
 
-  /* Dropdown menu navigation buttons */
-  .dropdown-btn {
-  /* color */
-  color: var(--primary-text);
-  background: var(--secondary-bg);
-  border: 3px solid var(--border-color);
-
-  /* shape */
-  box-sizing: border-box;
-  height:2rem;
-  width:9rem;
-  border-radius:10px;
-  padding: 6px 5px 6px 5px;
-  font-family: inherit;
-  font-size: inherit;
-
-
-  /* other */
-  box-shadow: 4px 4px 0 var(--border-color);
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  .dropdown-content a {
+  display: block;
   }
 
-  .dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  z-index: 1;
+
+  .proj-tab {
+    min-width: 280px;
+    width:500px;
+  }
+}
+
+/* -----TABLET----- */
+
+@media (min-width: 576px) and (max-width:768px) {
+
+  /* Header for page navigation*/
+  #header {
+    /* position */
+    top: 0px;
+
+    /* shape */
+    width:100%;
   }
 
-  .dropdown {
-  position: relative;
-  display: inline-block;
+  /* Menu navigation */
+  .menu {
+    justify-content: end;
+  }
+
+  /* navigation links */
+  .menu a, .dropdown-btn{
+    display:none;
+  }
+
+  .phone-dropdown{
+    display:block;
   }
 
   .dropdown-content a {
-  /* color */
-  color: var(--primary-text);
-
-  text-decoration: none;
-  display: block;
-
-  margin-top:3px;
-
-  /* other */
-  transition: 0.1s;
-  }
-
-  .dropdown:hover .dropdown-content {
   display: block;
   }
 
-  .dropdown:hover .dropdown-btn {
-  background: var(--accent);
-  color: var(--secondary-bg);
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0 var(--border-color);
-  }
-
-  .arrow {
-  display: inline-block;
-  margin-left: 8px;
-  transition: transform 0.2s ease;
-  font-size: 0.8em;
-  }
-
-  .dropdown:hover .arrow {
-  transform: rotate(180deg);
+  .proj-tab {
+    min-width: 400px;
+    width:600px;
   }
 }
-
-
-/* 
-@media (min-width: 576px) and (max-width:768px) {
-  body{
-    --primary-bg:yellow;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px){
-
-}
-
-@media (min-width: 992px) {
-  body{
-    --primary-bg:blue;
-  }
-}
- */
