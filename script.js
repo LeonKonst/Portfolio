@@ -1,4 +1,6 @@
-// Info that will be displayed in the webpage
+//----------------------------------
+//INFORMATION THAT WILL BE DISPLAYED
+//----------------------------------
 
 const personalInfo = {
     name:"Konstantinos",
@@ -25,7 +27,7 @@ const titles = [
     ["Developer//Coder", "DC"],
 ];
 
-//aboutme 
+//ABOUT ME
 
 const aboutMeHtml = `
 <h2>About me</h2>
@@ -145,7 +147,7 @@ const education = [
     },
 ];
 
-//publications
+//Academic publications
 
 const publications = [
     {
@@ -250,7 +252,7 @@ const publications = [
             ["Georgia", "Gkouzouma"],
             ["Konstantinos", "Leontiadis"],
              ["Ioannis", "Tsivintzelis"]],
-        titleTags:["CE","MS","PS"],
+        titleTags:["MS","PS"],
         keywords:["Polymer Composites", "Aging"],
         abstract:"Polypropylene (PP), like all polymers, is susceptible to various forms of aging. Drawn fibers exhibit increased mechanical properties; however, the drawing results in non-equilibrium (decreased entropy) structures, due to the orientation of the polymer chains. Consequently, the drawn fibers are susceptible to an additional form of physical aging. In this work, the effect of common industrial additives on the mechanical strength of virgin and thermally aged PP fibers was studied. Thermogravimetry and tensile strength tests were used to characterize the drawn fibers, before and after physical thermal aging. PP drawn at 120 °C and at a drawing ratio of 7 exhibited a tensile strength of 549 MPa, while the incorporation of an antioxidant and a compatibilizer lowered the tensile strength down to 449 MPA. This reduction was related to the constraint of chain alignment due to the low molecular weight and poor dispersion of the additives. Depending on the aging temperature, shrinking occurred to different extents in pure PP fibers, accompanied by a 6–7% reduction in tensile strength. The fibers with incorporated additives exhibited higher rate and degree of shrinking. Briefly, the incorporation of such additives in drawn PP resulted in the deterioration of the fibers’ mechanical tensile properties. Since such additives have an indisputable value for non-drawn samples and their usage is necessary for various reasons also in drawn samples, e.g., for their protection from chemical aging/decomposition, additives specific for drawn samples should be developed.",
     },
@@ -314,7 +316,7 @@ const publications = [
             ["Kyriakos", "Mystikos"],
             ["Evangelos", "Tzimpilis"],
             ["Ioannis", "Tsivintzelis"]],
-        titleTags:["CE","MS","PS"],
+        titleTags:["MS","PS"],
         keywords:["Polymer Composites", "Polypropylene"],
         abstract:"Isotactic polypropylene (PP) composite drawn fibers were prepared using melt extrusion and high-temperature solid-state drawing at a draw ratio of 7. Five different fillers were used as reinforcement agents (microtalc, ultrafine talc, wollastonite, attapulgite and single-wall carbon nanotubes). In all the prepared samples, antioxidant was added, while all samples were prepared with and without using PP grafted with maleic anhydride as compatibilizer. Material characterization was performed by tensile tests, differential scanning calorimetry, thermogravimetric analysis and Fourier transform infrared spectroscopy. Attapulgite composite fibers exhibited poor results in terms of tensile strength and thermal stability. The use of ultrafine talc particles yields better results, in terms of thermal stability and tensile strength, compared to microtalc. Better results were observed using needle-like fillers, such as wollastonite and single-wall carbon nanotubes, since, as was previously observed, high aspect ratio particles tend to align during the drawing process and, thus, contribute to a more symmetrical distribution of stresses. Competitive and synergistic effects were recognized to occur among the additives and fillers, such as the antioxidant effect being enhanced by the addition of the compatibilizer, while the antioxidant itself acts as a compatibilizing agent."
     },
@@ -353,13 +355,13 @@ const publications = [
             ["Konstantinos", "Leontiadis"],
             ["Evangelos", "Tzimpilis"],
             ["Ioannis", "Tsivintzelis"]],
-        titleTags:["CE"],
+        titleTags:["PS","MS"],
         keywords:["Polymer Composites", "Review"],
         abstract:"In this review, traditional and novel techniques for producing micro- and nano- fibers are discussed and various nanofillers, their modifications and polypropylene (PP) functionalization routes are presented. Their influence on PP properties is discussed and new PP composite fiber applications are presented. This review reveals interesting conclusions, such as that in terms of mechanical reinforcement, there is no nano-filler that can improve tensile strength to the extent that it is improved by drawing. However, in some cases, composite drawn fibers are characterized by higher tensile strength than drawn neat PP. With some notable exceptions, the PP nanocomposites lack of “dramatic” properties improvement is mainly due to the non-polar nature of the hydrocarbon chain, which does not favor strong intermolecular interactions with most popular (mainly inorganic) nano-fillers. However, other properties such as electric conductivity, water contact angle and others can be effectively altered using various nanofillers in PP matrices."
     },         
 ];
 
-//projects
+//Projects
 
 const projects = [
     {
@@ -581,12 +583,12 @@ const skills = [
                 <path fill="#888888" d="M96.3 86.2l19.7-7.6v27.7H96.3V86.2z"/>
                 </svg>`,
     },
-
-
 ]
 
+//----------------------------------
+//---GET ELEMENTS FROM HTML---------
+//----------------------------------
 
-// get HTML elements to display the info above
 const myname = document.getElementById("name");
 const mytitles = document.getElementById("titles");
 
@@ -596,12 +598,14 @@ const mygithub = document.getElementById("github");
 
 const aboutme = document.getElementById("aboutme");
 
+//Main sections containers
 const workExpContainer = document.getElementById("work-experience");
 const educationContainer = document.getElementById("education");
 const publicationsContainer = document.getElementById("publications-container")
 const projectsContainer = document.getElementById("projects-container");
 const certificationContainer = document.getElementById("certificates")
 
+//Other skill containers
 const codingContainer = document.getElementById("coding");
 const softwareContainer = document.getElementById("software");
 const languageContainer = document.getElementById("languages");
@@ -609,15 +613,18 @@ const languageContainer = document.getElementById("languages");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 
+// Track active filters globally
+let activeTitleFilters = []; 
 
-let activeTitleFilters = []; // Track active filters globally
+//------------------------------
+//----DISPLAYING INFO ON PAGE---
+//------------------------------
 
-
-// Display info in the webpage
 myname.innerText = `My name is ${personalInfo.name} ${personalInfo.surname}`;
 mytitles.innerText = `I am a `;
 
 //create the Title buttons
+
 titles.map((title,i)=>{
     if(i === titles.length -1){
         mytitles.innerHTML += ` and a<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button> and this is my portfolio!`;
@@ -626,6 +633,11 @@ titles.map((title,i)=>{
         mytitles.innerHTML += `<button class="title-tags" data-active="on" id="${title[1]}"> ${title[0]}</button>`;
     }
 })
+
+//Create a constant for the title buttons to add functionality later.
+const titleBtns = document.querySelectorAll(".title-tags");
+
+//Social media links
 
 mylocation.innerHTML = `<a target="_blank" href="https://maps.app.goo.gl/mYKjR7nUGG9D9bMC6"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     // <g id="SVGRepo_bgCarrier" stroke-width="0">
@@ -643,16 +655,9 @@ ${personalInfo.location.city}, ${personalInfo.location.country}</span>
 </a>`;
 
 mylinkedin.innerHTML = `<a  target="_blank" href="${personalInfo.linkedin.profilelink}">
-<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0">
-                            </g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
-                            </g>
-                            <g id="SVGRepo_iconCarrier">
-                                <path d="M18.72 3.99997H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.24997V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.24997C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 3.99997ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.12997C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.89997C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.66997C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.89997C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.12997ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 9.99997C16.2 9.99997 17.34 11 17.34 13.13V17.34Z" fill="#000000">
-                                </path> 
-                            </g>
-                        </svg>
+<svg viewBox="4 4 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.72 4H5.37C5.19793 3.99191 5.02595 4.01786 4.86392 4.07635C4.70189 4.13484 4.55299 4.22471 4.42573 4.34081C4.29848 4.45692 4.19537 4.59699 4.12232 4.75299C4.04927 4.909 4.0077 5.07788 4 5.25V18.63C4.01008 18.9901 4.15766 19.3328 4.41243 19.5875C4.6672 19.8423 5.00984 19.9899 5.37 20H18.72C19.0701 19.9844 19.4002 19.8322 19.6395 19.5761C19.8788 19.32 20.0082 18.9804 20 18.63V5.25C20.0029 5.08247 19.9715 4.91616 19.9078 4.76122C19.8441 4.60629 19.7494 4.466 19.6295 4.34895C19.5097 4.23191 19.3672 4.14059 19.2108 4.08058C19.0544 4.02057 18.8874 3.99314 18.72 4ZM9 17.34H6.67V10.21H9V17.34ZM7.89 9.13C7.72741 9.13564 7.5654 9.10762 7.41416 9.04768C7.26291 8.98774 7.12569 8.89717 7.01113 8.78166C6.89656 8.66615 6.80711 8.5282 6.74841 8.37647C6.6897 8.22474 6.66301 8.06251 6.67 7.9C6.66281 7.73567 6.69004 7.57169 6.74995 7.41854C6.80986 7.26538 6.90112 7.12644 7.01787 7.01063C7.13463 6.89481 7.2743 6.80468 7.42793 6.74602C7.58157 6.68735 7.74577 6.66145 7.91 6.67C8.07259 6.66431 8.2346 6.69232 8.38584 6.75226C8.53709 6.8122 8.67431 6.90277 8.78887 7.01828C8.90344 7.13379 8.99289 7.27174 9.05159 7.42347C9.1103 7.5752 9.13699 7.73743 9.13 7.9C9.13719 8.06427 9.10996 8.22825 9.05005 8.3814C8.99014 8.53456 8.89888 8.6735 8.78213 8.78931C8.66537 8.90513 8.5257 8.99526 8.37207 9.05392C8.21843 9.11259 8.05423 9.13849 7.89 9.13ZM17.34 17.34H15V13.44C15 12.51 14.67 11.87 13.84 11.87C13.5822 11.8722 13.3313 11.9541 13.1219 12.1045C12.9124 12.2549 12.7546 12.4664 12.67 12.71C12.605 12.8926 12.5778 13.0865 12.59 13.28V17.34H10.29V10.21H12.59V11.21C12.7945 10.8343 13.0988 10.5225 13.4694 10.3089C13.84 10.0954 14.2624 9.98848 14.69 10C16.2 10 17.34 11 17.34 13.13V17.34Z" fill="#000000"/>
+</svg>
 <span class="social-media">${personalInfo.linkedin.name}</span>
 </a>`;
 
@@ -681,81 +686,93 @@ mygithub.innerHTML = `<a target="_blank" href="${personalInfo.github.profilelink
                         <span class="social-media">${personalInfo.github.name}</span>
                     </a>`;
 
-
 //about me paragraph
+
 aboutme.innerHTML = aboutMeHtml;
 
-const printWorkExperience = () => {
+//----------------------------------
+//---Logic to populate containers---
+//----------------------------------
+
+// WORK EXPERIENCE 
+
+const printWorkExperience = (filters) => {
     workExpContainer.innerHTML = ``;
     workExperience.forEach((element,i) => {
+        if(!element.titleTags.every(item => filters.includes(item))){
         workExpContainer.innerHTML += `
-        <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
-            <div class="work-info">
-                <div class="work-position"> ${element.position} at</div>
-                <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
-            </div>
-            <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
-            <div class="work-description"> ${element.description}</div>
-            ${i !== workExperience.length - 1 ? '<hr class="work-hr">' : ''}
-        </div>`
+            <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
+                <div class="work-info">
+                    <div class="work-position"> ${element.position} at</div>
+                    <div class="work-company"> <a target="_blank" href="${element.link}">${element.company}</a></div>
+                </div>
+                <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
+                <div class="work-description"> ${element.description}</div>
+                ${i !== workExperience.length - 1 ? '<hr class="work-hr">' : ''}
+            </div>`
+        }
     });
 };
 
-printWorkExperience();
+//EDUCATIONS
 
-const printEducation = ()=> {
+const printEducation = (filters)=> {
     educationContainer.innerHTML = ``;
     education.forEach((element, i) => {
-        educationContainer.innerHTML += `
-        <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
-            <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
-            <div class="edu-field">${element.field} - ${element.institution}</div>
-            <div class="edu-degree"> ${element.degree}</div>
-            <div class="edu-description"> ${element.description}</div>
-        ${i !== education.length - 1 ? '<hr class="edu-hr">' : ''}
-        </div>`
+        if(!element.titleTags.every(item => filters.includes(item))){
+            educationContainer.innerHTML += `
+            <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
+                <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
+                <div class="edu-field">${element.field} - ${element.institution}</div>
+                <div class="edu-degree"> ${element.degree}</div>
+                <div class="edu-description"> ${element.description}</div>
+            ${i !== education.length - 1 ? '<hr class="edu-hr">' : ''}
+            </div>`
+        }
     });
 };
 
-printEducation();
+//PUBLICATIONS
 
-const printPublications = () => {
+const printPublications = (filters) => {
     publicationsContainer.innerHTML =``;
     // Αuthors display logic
     const sortedPublications = publications.sort((a, b) => b.year - a.year);;
     sortedPublications.forEach((element, i) => {
-        let authorsDisplayed = "";
-        const authorLength = element.authors.length - 1;
-        element.authors.forEach((author,index)=>{  
-            if(index < 2){
-                authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
-            } else if (index === 2) {
-                if(index === authorLength){
-                    authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
-                }
-                else{
-                    authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
-                }
-            } 
-        });
+        if(!element.titleTags.every(item => filters.includes(item))){
+            let authorsDisplayed = "";
+            const authorLength = element.authors.length - 1;
+            element.authors.forEach((author,index)=>{  
+                if(index < 2){
+                    authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
+                } else if (index === 2) {
+                    if(index === authorLength){
+                        authorsDisplayed += `and ${author[0].charAt(0)}. ${author[1]}.`;
+                    }
+                    else{
+                        authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}. et al.`;
+                    }
+                } 
+            });
 
-        let keywords = "";
-        element.keywords.forEach(keyword =>{
-            keywords += `<div class="pub-keyword">${keyword}</div>`
-        })
+            let keywords = "";
+            element.keywords.forEach(keyword =>{
+                keywords += `<div class="pub-keyword">${keyword}</div>`
+            })
 
-    
-        publicationsContainer.innerHTML += `
-        <div class="pub-tab" data-tags="${element.titleTags.join(' ')}">
-            <div class="pub-header"><div class="pub-year">${element.year}</div><div class="pub-journal">${element.journal}</div></div>
-            <hr>
-            <div class="pub-title"> ${element.title}</div>
-            <div class="pub-authors"> ${authorsDisplayed}</div>
-            <div class="pub-keywords">Keywords: ${keywords}</div>
-            <p class="pub-abstract-tooltip hidden" >
-            <strong>Abstract: </strong>${element.abstract.split(" ",50).join(" ")}...</p>
-            <a class="pub-btn-tooltip hidden" target="_blank" href="${element.url}">Link</a>
-        </div>`
+        
+            publicationsContainer.innerHTML += `
+            <div class="pub-tab" data-tags="${element.titleTags.join(' ')}">
+                <div class="pub-header"><div class="pub-year">${element.year}</div><div class="pub-journal">${element.journal}</div></div>
+                <hr>
+                <div class="pub-title"> ${element.title}</div>
+                <div class="pub-authors"> ${authorsDisplayed}</div>
+                <div class="pub-keywords">Keywords: ${keywords}</div>
+                <p class="pub-abstract-tooltip hidden" >
+                <strong>Abstract: </strong>${element.abstract.split(" ",50).join(" ")}...</p>
+                <a class="pub-btn-tooltip hidden" target="_blank" href="${element.url}">Link</a>
+            </div>`
+        }
     });    
 
     document.querySelectorAll('.pub-tab').forEach(tab => {
@@ -782,12 +799,13 @@ const printPublications = () => {
     });
 };
 
-printPublications();
+//PROJECTS
 
-const printProjects = () =>{
+const printProjects = (filters) =>{
     projectsContainer.innerHTML = ``;
     const baseUrl = window.location.origin;
     projects.forEach((element, i) => {
+        if(!element.titleTags.every(item => filters.includes(item))){
         projectsContainer.innerHTML += `
         
         <div class="proj-tab" data-tags="${element.titleTags.join(' ')}">  
@@ -798,14 +816,16 @@ const printProjects = () =>{
             
             <a class="proj-link" target="_blank" href="${element.projectLink}">Link</a>
         </div>`
+        }
     });
 };
 
-printProjects();
+//CERTIFICATIONS
 
-const printCertifications = ()=> {
+const printCertifications = (filters) => {
     certificationContainer.innerHTML = ``;
     certifications.forEach((element,i) => {
+        if(!element.titleTags.every(item => filters.includes(item))){
         certificationContainer.innerHTML += `
         <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
             <div class="certification-info">
@@ -815,11 +835,11 @@ const printCertifications = ()=> {
             </div>
             ${i !== certifications.length - 1 ? '<hr class="certification-hr">' : ''}
         </div>`
+        };
     });
 };
 
-printCertifications();
-
+//OTHER SKILLS
 
 const printOthers = () =>{
     codingContainer.innerHTML = `<h2>Coding</h2>`;
@@ -843,10 +863,18 @@ const printOthers = () =>{
     codingContainer.innerHTML += `<div>${coding}</div>`;
     softwareContainer.innerHTML += `<div>${software}</div>`;
     languageContainer.innerHTML += `<div>${languages}</div>`;
-
 }
 
-printOthers();
+//Populate website calling all the prints
+
+const populateWebsite = (filters) =>{
+    printWorkExperience(filters);
+    printEducation(filters);
+    printPublications(filters);
+    printProjects(filters);
+    printCertifications(filters);
+    printOthers();
+}
 
 
 //footer year generation
@@ -855,42 +883,46 @@ const currentYear = new Date().getFullYear();
 document.getElementById('current-year').textContent = currentYear;
 
 
-const titlesDispaly = (e) => {
-    if (e.target.classList.contains("title-tags")) {
-        const titleBtn = e.target;
-        
-        // Toggle button state
+//Logic of title buttons.
+titleBtns.forEach(titleBtn =>{
+    titleBtn.addEventListener("click",()=>{
+        //every time a title button is pressed
+        //activeTitleFilters list is refreshed by
+        // either adding the id of the button to the list if
+        // it isnt in the filters list or removes it if it is 
+        //there. 
+        const index = activeTitleFilters.indexOf(titleBtn.id);
+        if(index !==-1){
+            activeTitleFilters.splice(index,1);
+        } else {
+            activeTitleFilters.push(titleBtn.id);
+        }
+
+        // Also, this changes the attribute of the titleBtn element "data-active"
+        // and toggles among off and on. 
         const isActive = titleBtn.getAttribute("data-active") === "on";
         titleBtn.setAttribute("data-active", isActive ? "off" : "on");
-        
-        // Update global filters
-        activeTitleFilters = Array.from(document.querySelectorAll('.title-tags[data-active="on"]'))
-                               .map(btn => btn.id);
-        
-        // Apply filtering to existing DOM
-        const allTabs = document.querySelectorAll('[class*="-tab"]');
-        allTabs.forEach(tab => {
-            const tabTags = tab.getAttribute('data-tags').split(' ').filter(Boolean);
-            const shouldShow = activeTitleFilters.length === 0 || 
-                            tabTags.some(tag => activeTitleFilters.includes(tag));
-            tab.style.display = shouldShow ? "block" : "none";
-        });
-    }
-    printWorkExperience();
-    printEducation();
-    printPublications();
-    printProjects();
-    printCertifications();
-}
 
+        //resets the filters if all are deactivated
+        if(activeTitleFilters.length === titleBtns.length){
+            activeTitleFilters = [];
+            titleBtns.forEach((btn)=>{
+                btn.setAttribute("data-active", "on" );
+            });
+        }
 
-
-mytitles.addEventListener("click", (e) => {
-    titlesDispaly(e)
+        //After the press of the button the page is being repopulated 
+        //based on the new active filters.
+        populateWebsite(activeTitleFilters); 
+    });
 });
 
-
+//accesibility related to Dropdown menus on navigation bar, FULLY generated by
+//deep seek. 
 document.addEventListener("DOMContentLoaded", function () {
+    
+    //Also populates the website when the DOM is loaded. 
+    populateWebsite(activeTitleFilters);
     const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
     dropdownButtons.forEach(button => {
