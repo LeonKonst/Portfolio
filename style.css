@@ -537,12 +537,10 @@ a:active {
   box-shadow:3px 3px 0px var(--border-color);
 }
 
-
 /* hides abstract element from publications */
 .hidden{
   display:none;
 }
-
 
 /* ------------------------------ */
 /* -------PROJECTS SECTION------- */
@@ -653,6 +651,10 @@ a:active {
 .certification-company {
   margin-top: 5px;
   font-size: 16px;
+}
+
+.certification-title{
+  margin-bottom:0.6rem;
 }
 
 .certification-company a {
