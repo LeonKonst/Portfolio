@@ -435,6 +435,32 @@ a:active {
   scrollbar-gutter: stable; 
 }
 
+#publication-title{
+    /* color */
+    background: var(--accent);
+    color: var(--secondary-text);
+  
+    /* shape */
+    padding: 5px 10px;
+    border: 3px solid var(--border-color);
+    box-shadow: 4px 4px 0px var(--border-color);
+    border-radius: 10px;
+  
+    /* other */
+    margin:0.67em 0 0.67em 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;   
+    transition: all 0.1s;
+}
+
+#publication-title:hover{
+  box-shadow: 0px 0px 0px var(--border-color);
+  transform: translate(4px,4px);
+}
+
+
 .pub-tab{
   /* shape */
   border-radius:5px;
@@ -512,76 +538,11 @@ a:active {
 }
 
 
-.pub-abstract-tooltip {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.pub-tab:hover .pub-abstract-tooltip,
-.pub-tab:hover .pub-btn-tooltip {
-  opacity: 1;
-}
-
-.pub-abstract-tooltip, .pub-btn-tooltip {
-  /* color */
-  background-color: var(--primary-bg);
-  border:3px solid var(--border-color);
-
-  /* shape */
-  border-radius:5px;
-  box-shadow: 3px 3px 0px var(--border-color);
-
-  position: fixed;
-  width: 300px;
-  background: var(--primary-bg);
-  padding: 10px;
-  z-index: 1000;
-  pointer-events: none;
-
-  z-index: 1000;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-.pub-btn-tooltip {
-
-  /* color */
-  color:var(--primary-text);
-  text-decoration: none;
-  font-weight: bold;
-
-  /* shape */
-  padding: 5px 10px;
-  border: 3px solid var(--border-color);
-  box-shadow: 8px 8px 0px var(--border-color);
-  border-radius: 10px;
-  width:auto;
-
-  display: inline-block;
-  margin-top: -10px;
-  margin-left: -10px;
-  font-size: 18px;
-  background: var(--primary-bg);
-  transition: all 0.3s;
-
-  text-decoration: none;
-  pointer-events: auto;  /* Allow clicks on the link */
-
-}
-  
-.pub-btn-tooltip:hover {
-  transform: translate(4px,4px);
-  box-shadow: 0px 0px 0px var(--border-color);
-}
-
+/* hides abstract element from publications */
 .hidden{
   display:none;
 }
 
-.shown{
-  padding:5px;
-}
 
 /* ------------------------------ */
 /* -------PROJECTS SECTION------- */

@@ -748,6 +748,8 @@ const printPublications = (filters) => {
         if(!element.titleTags.every(item => filters.includes(item))){
             let authorsDisplayed = "";
             const authorLength = element.authors.length - 1;
+
+            //Creating the authors string
             element.authors.forEach((author,index)=>{  
                 if(index < 2){
                     authorsDisplayed += `${author[0].charAt(0)}. ${author[1]}, `;
@@ -761,6 +763,7 @@ const printPublications = (filters) => {
                 } 
             });
 
+            //Creating the keywords element
             let keywords = "";
             element.keywords.forEach(keyword =>{
                 keywords += `<div class="pub-keyword">${keyword}</div>`
@@ -780,29 +783,6 @@ const printPublications = (filters) => {
             </div>`
         }
     });    
-
-    document.querySelectorAll('.pub-tab').forEach(tab => {
-        const abstractTooltip = tab.querySelector('.pub-abstract-tooltip');
-        const btnTooltip = tab.querySelector('.pub-btn-tooltip');
-
-        tab.addEventListener('mousemove', (e) => {
-            // Position both tooltips near the cursor
-            abstractTooltip.style.left = `${e.clientX + 15}px`;
-            abstractTooltip.style.top = `${e.clientY + 15}px`;
-            btnTooltip.style.left = `${e.clientX - 15}px`;
-            btnTooltip.style.top = `${e.clientY -15}px`; // Offset below abstract
-        });
-
-        tab.addEventListener('mouseenter', () => {
-            abstractTooltip.classList.remove('hidden');
-            btnTooltip.classList.remove('hidden');
-        });
-
-        tab.addEventListener('mouseleave', () => {
-            abstractTooltip.classList.add('hidden');
-            btnTooltip.classList.add('hidden');
-        });
-    });
 };
 
 //PROJECTS
