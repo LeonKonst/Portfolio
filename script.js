@@ -698,9 +698,11 @@ aboutme.innerHTML = aboutMeHtml;
 
 const printWorkExperience = (filters) => {
     workExpContainer.innerHTML = ``;
+    let count = 0;
     workExperience.forEach((element,i) => {
         if(!element.titleTags.every(item => filters.includes(item))){
-        workExpContainer.innerHTML += `
+            count++;
+            workExpContainer.innerHTML += `
             <div class="work-tab" data-tags="${element.titleTags.join(' ')}">
                 <div class="work-info">
                     <div class="work-position"> ${element.position} at</div>
@@ -708,28 +710,32 @@ const printWorkExperience = (filters) => {
                 </div>
                 <div class="work-duration"> ${element.startYear} - ${element.endYear}</div>
                 <div class="work-description"> ${element.description}</div>
-                ${i !== workExperience.length - 1 ? '<hr class="work-hr">' : ''}
+                <hr class="work-hr" id="work ${count}">
             </div>`
         }
     });
+    document.getElementById(`work ${count}`).style.display = "none";
 };
 
 //EDUCATIONS
 
 const printEducation = (filters)=> {
     educationContainer.innerHTML = ``;
+    let count = 0;
     education.forEach((element, i) => {
         if(!element.titleTags.every(item => filters.includes(item))){
+            count++;
             educationContainer.innerHTML += `
             <div class="edu-tab" data-tags="${element.titleTags.join(' ')}">
                 <div class="edu-duration"> ${element.startYear} - ${element.endYear}</div>
                 <div class="edu-field">${element.field} - ${element.institution}</div>
                 <div class="edu-degree"> ${element.degree}</div>
                 <div class="edu-description"> ${element.description}</div>
-            ${i !== education.length - 1 ? '<hr class="edu-hr">' : ''}
+                <hr class="edu-hr" id="edu ${count}">
             </div>`
         }
     });
+    document.getElementById(`edu ${count}`).style.display = "none";
 };
 
 //PUBLICATIONS
@@ -823,20 +829,23 @@ const printProjects = (filters) =>{
 //CERTIFICATIONS
 
 const printCertifications = (filters) => {
+    let count = 0;
     certificationContainer.innerHTML = ``;
     certifications.forEach((element,i) => {
         if(!element.titleTags.every(item => filters.includes(item))){
-        certificationContainer.innerHTML += `
-        <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
-            <div class="certification-info">
-                <div class="certification-title"> ${element.title}</div>
-                <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
-                <div class="certification-date"> ${element.month} of ${element.year}</div>
-            </div>
-            ${i !== certifications.length - 1 ? '<hr class="certification-hr">' : ''}
-        </div>`
+            count++;
+            certificationContainer.innerHTML += `
+            <div class="certification-tab" data-tags="${element.titleTags.join(' ')}">
+                <div class="certification-info">
+                    <div class="certification-title"> ${element.title}</div>
+                    <div class="certification-company">by <a target="_blank" href="${element.organizationLink}">${element.issuingOrganization}</a></div>
+                    <div class="certification-date"> ${element.month} of ${element.year}</div>
+                </div>
+                <hr class="certification-hr" id="cert ${count}">
+            </div>`
         };
     });
+    document.getElementById(`cert ${count}`).style.display = "none";
 };
 
 //OTHER SKILLS
