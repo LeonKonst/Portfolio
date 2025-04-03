@@ -756,10 +756,14 @@ footer {
   display: block;
   }
 
-
   .proj-tab {
     min-width: 280px;
     width:500px;
+  }
+
+  html {
+    scroll-padding-top: calc(var(--header-height) + 15px);  /* Header is fixed so it scrolls 80px + header height to be accurate */
+    scroll-behavior: smooth;
   }
 }
 
