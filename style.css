@@ -755,64 +755,6 @@ a:active {
   width:auto;
 }
 
-
-/* Style the range input to use --accent color */
-/* input[type="range"] {
-  min-width: 200px;
-  width: 100%;
-  -webkit-appearance: none;
-  background:var(--accent);
-  border-radius: var(--border-rad);
-  border:var(--border-thick) soldi var(--border-color);
-    
-} */
-
-/* Webkit browsers (Chrome, Safari) */
-/* input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
-    border: 2px solid white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-} */
-
-/* input[type="range"]::-moz-range-thumb {
-    background: var(--secondary-bg);
-    cursor: pointer;
-    box-shadow: calc(var(--shadow-thic)/2) calc(var(--shadow-thic)/2) 0px var(--border-color);
-} */
-
-/* Microsoft Edge
-input[type="range"]::-ms-thumb {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--accent);
-    cursor: pointer;
-    border: 2px solid white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-} */
-
-/* Optional: Style the track to also use the accent color
-input[type="range"]::-webkit-slider-runnable-track {
-    height: 8px;
-    background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--value-percent), #ddd var(--value-percent), #ddd 100%);
-    border-radius: 4px;
-} */
-
-/* input[type="range"]::-moz-range-track {
-    height: 8px;
-    background: linear-gradient(to right, var(--accent) 0%, var(--accent) var(--value-percent), #ddd var(--value-percent), #ddd 100%);
-    border-radius: 4px;
-} */
-
-
-
-
-
 /* ------------------------------ */
 /* --------FOOTER SECTION-------- */
 /* ------------------------------ */
