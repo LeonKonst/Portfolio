@@ -6,11 +6,9 @@
 :root {
   --primary-bg: #f6f6f6;
   --secondary-bg: #e4e3e3;
-  /* --primary-text: #0000ff; */
   --primary-text: #000000; 
   --secondary-text:#fcfcfc;
-  --accent: #3dbb3d;
-  /* --accent: #0000ff; */
+  --accent: #00bbb2;
   --border-color: #1E1E24;
 
   --header-height:40px;
@@ -255,7 +253,7 @@ a:active {
 
 .title-tags[data-active="on"] {
   background: var(--accent);
-  color: var(--primary-text);
+  color: var(--secondary-text);
   box-shadow: 4px 4px 0 var(--border-color);
 }
 
@@ -704,11 +702,13 @@ a:active {
 
 footer {
   background: var(--accent);
+  color:var(--secondary-text);
   padding: 20px;
   text-align: center;
   border-top: 4px solid var(--border-color);
   font-weight: bold;
 }
+
 
 /* ------------------------------ */
 /* ------RESPONSIVE SECTION------ */
@@ -803,3 +803,6 @@ footer {
     width:600px;
   }
 }
+
+
+
