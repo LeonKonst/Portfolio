@@ -714,7 +714,9 @@ const printWorkExperience = (filters) => {
             </div>`
         }
     });
+    if(count){
     document.getElementById(`work ${count}`).style.display = "none";
+    }
 };
 
 //EDUCATIONS
@@ -735,7 +737,9 @@ const printEducation = (filters)=> {
             </div>`
         }
     });
+    if(count){
     document.getElementById(`edu ${count}`).style.display = "none";
+    }
 };
 
 //PUBLICATIONS
@@ -833,7 +837,9 @@ const printCertifications = (filters) => {
             </div>`
         };
     });
+    if(count){
     document.getElementById(`cert ${count}`).style.display = "none";
+    }
 };
 
 //OTHER SKILLS
@@ -909,6 +915,7 @@ titleBtns.forEach(titleBtn =>{
 
         //After the press of the button the page is being repopulated 
         //based on the new active filters.
+        console.log(activeTitleFilters);
         populateWebsite(activeTitleFilters); 
     });
 });
