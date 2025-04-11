@@ -757,14 +757,15 @@ a:active {
 
 
 /* Style the range input to use --accent color */
-input[type="range"] {
+/* input[type="range"] {
   min-width: 200px;
   width: 100%;
   -webkit-appearance: none;
   background:var(--accent);
   border-radius: var(--border-rad);
+  border:var(--border-thick) soldi var(--border-color);
     
-}
+} */
 
 /* Webkit browsers (Chrome, Safari) */
 /* input[type="range"]::-webkit-slider-thumb {
@@ -778,12 +779,11 @@ input[type="range"] {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 } */
 
-input[type="range"]::-moz-range-thumb {
-    background: var(--accent);
+/* input[type="range"]::-moz-range-thumb {
+    background: var(--secondary-bg);
     cursor: pointer;
-    border:var(--border-thick) soldi var(--border-color);
     box-shadow: calc(var(--shadow-thic)/2) calc(var(--shadow-thic)/2) 0px var(--border-color);
-}
+} */
 
 /* Microsoft Edge
 input[type="range"]::-ms-thumb {
