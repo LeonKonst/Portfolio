@@ -866,7 +866,6 @@ const populateWebsite = (filters) =>{
     printOthers();
 }
 
-
 //footer year generation
 const currentYear = new Date().getFullYear();
             // Insert the current year into the footer
