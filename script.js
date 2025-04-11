@@ -368,7 +368,7 @@ const projects = [
         name:"Spill The Beans",
         shortDescription:"Discord bot",
         longDescription:"Spill the Beans is a Discord bot that lets users send private messages to a dedicated server channel, with a configurable probability of revealing the sender’s name. It supports English and Greek and allows server admins to customize settings like anonymity probability, message cooldown, and relay channel via the Settings.py file. The bot requires no commands—users simply DM it, and messages are forwarded accordingly.",
-        toolsUsed:["python","discord.py","fly.io"],
+        toolsUsed:["Python","discord.py","Fly.io"],
         imageUrl:"https://static.vecteezy.com/system/resources/previews/018/930/500/non_2x/discord-logo-discord-icon-transparent-free-png.png",
         imgAlt:"Discord Logo",
         projectLink:"https://github.com/LeonKonst/Spill-The-Beans",
@@ -388,9 +388,8 @@ const projects = [
         name:"My Portfolio",
         shortDescription:"This exact webpage",
         longDescription:`The design of the portfolio is based on Neobrutalism. "Neubrutalism in web design is a trend characterized by minimalist aesthetics, stark typography, and a raw, unpolished appearance." <a class="text-link" href="https://www.designstudiouiux.com/blog/what-is-neubrutalism-web-design-trend/">More info here</a> `,
-        toolsUsed:["HTML","CSS","JS"],
+        toolsUsed:["HTML","CSS","JavaScript"],
         imageUrl:"Images/Portfolio.jpg",
-        // imageUrl:"https://github.com/LeonKonst/Portfolio/blob/main/Images/Portfolio.jpg?raw=true",
         imgAlt:"Portfolio screenshot",
         projectLink:"https://leonkonst.github.io/Portfolio",
         titleTags:["DC"],
@@ -790,8 +789,16 @@ const printPublications = (filters) => {
 
 const printProjects = (filters) =>{
     projectsContainer.innerHTML = ``;
-    const baseUrl = window.location.origin;
+
+    //Creating the keywords element
+
+
     projects.forEach((element, i) => {
+        let tools = "";
+        element.toolsUsed.forEach(tool =>{
+            tools += `<div class="proj-tool">${tool}</div>`
+        });
+
         if(!element.titleTags.every(item => filters.includes(item))){
         projectsContainer.innerHTML += `
         
@@ -800,7 +807,7 @@ const printProjects = (filters) =>{
             <div class="proj-short"> ${element.shortDescription}</div>
             <img class="proj-img" src="${element.imageUrl}" alt="${element.imgAlt}"/>
             <div class="proj-description"> ${element.longDescription}</div>
-            
+            <div class="proj-tools">Tools:${tools}</div>
             <a class="proj-link" target="_blank" href="${element.projectLink}">Link</a>
         </div>`
         }
