@@ -375,6 +375,16 @@ const projects = [
         titleTags:["DC"],
     },
     {
+        name:"Quote this",
+        shortDescription:"Discord bot",
+        longDescription:"Quote this is a discord bot that creates a quote image from discord messages.",
+        toolsUsed:["Python","discord.py"],
+        imageUrl:"https://static.vecteezy.com/system/resources/previews/018/930/500/non_2x/discord-logo-discord-icon-transparent-free-png.png",
+        imgAlt:"Discord Logo",
+        projectLink:"https://github.com/LeonKonst/Quote_this_bot",
+        titleTags:["DC"],
+    },
+    {
         name:"PhD thesis template",
         shortDescription:"LaTeX template",
         longDescription:`This is a LaTeX template for PhD theses in the Chemical Engineering Department of Aristotle University of Thessaloniki. It is written in Greek and can also be adapted for theses at the bachelor’s and master’s levels, as well as for other departments. The template is officially published on the Chemical Engineering Department’s <a class="text-link" href="https://cheng.auth.gr/phd/">website</a> for student use`,
