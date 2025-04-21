@@ -555,7 +555,7 @@ a:active {
   display:flex;
   flex-wrap: wrap;
   gap: 16px; 
-  justify-content:space-evenly;
+  justify-content:space-between;
   
 }
 
@@ -564,7 +564,7 @@ a:active {
   padding: 5px 10px;
   grid-template-rows: auto auto auto 1fr;
   min-width: 200px;
-  width:300px;
+  width:320px;
   border: var(--border-thick) solid var(--border-color);
   border-radius: var(--border-rad);
   box-shadow: var(--shadow-thic) var(--shadow-thic) 0px var(--border-color);
@@ -834,14 +834,13 @@ footer {
   }
 
   html {
-    scroll-padding-top: calc(var(--header-height) + 15px);  /* Header is fixed so it scrolls 80px + header height to be accurate */
-    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 20px); 
   }
 }
 
 /* -----TABLET----- */
 
-@media (min-width: 576px) and (max-width:768px) {
+@media (min-width: 576px) and (max-width:808px) {
 
   /* Header for page navigation*/
   #header {
@@ -873,6 +872,10 @@ footer {
   .proj-tab {
     min-width: 400px;
     width:768px;
+  }
+
+  html {
+    scroll-padding-top: calc(var(--header-height) + 20px);
   }
 }
 
